@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1716pt" height="260pt" viewBox="0.00 0.00 1715.89 260.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>packages_MyProject</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 1711.8886,-256 1711.8886,4 -4,4"/>
+<!-- agent -->
+<g id="node1" class="node">
+<title>agent</title>
+<polygon fill="none" stroke="#000000" points="782.9748,-36 728.9748,-36 728.9748,0 782.9748,0 782.9748,-36"/>
+<text text-anchor="middle" x="755.9748" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent</text>
+</g>
+<!-- agent.agents -->
+<g id="node2" class="node">
+<title>agent.agents</title>
+<polygon fill="none" stroke="#000000" points="328.56,-108 243.3896,-108 243.3896,-72 328.56,-72 328.56,-108"/>
+<text text-anchor="middle" x="285.9748" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.agents</text>
+</g>
+<!-- agent&#45;&gt;agent.agents -->
+<g id="edge1" class="edge">
+<title>agent-&gt;agent.agents</title>
+<path fill="none" stroke="#000000" d="M728.6741,-22.1822C652.8146,-33.8033 438.5045,-66.6338 338.537,-81.9479"/>
+<polygon fill="#000000" stroke="#000000" points="328.6522,-83.4622 337.8554,-77.4997 333.5945,-82.705 338.5369,-81.9479 338.5369,-81.9479 338.5369,-81.9479 333.5945,-82.705 339.2183,-86.396 328.6522,-83.4622 328.6522,-83.4622"/>
+</g>
+<!-- agent.core -->
+<g id="node5" class="node">
+<title>agent.core</title>
+<polygon fill="none" stroke="#000000" points="792.8845,-108 719.0651,-108 719.0651,-72 792.8845,-72 792.8845,-108"/>
+<text text-anchor="middle" x="755.9748" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.core</text>
+</g>
+<!-- agent&#45;&gt;agent.core -->
+<g id="edge2" class="edge">
+<title>agent-&gt;agent.core</title>
+<path fill="none" stroke="#000000" d="M755.9748,-36.1686C755.9748,-43.869 755.9748,-53.0257 755.9748,-61.5834"/>
+<polygon fill="#000000" stroke="#000000" points="755.9748,-71.5867 751.4749,-61.5867 755.9748,-66.5867 755.9749,-61.5867 755.9749,-61.5867 755.9749,-61.5867 755.9748,-66.5867 760.4749,-61.5868 755.9748,-71.5867 755.9748,-71.5867"/>
+</g>
+<!-- agent.orchestration -->
+<g id="node12" class="node">
+<title>agent.orchestration</title>
+<polygon fill="none" stroke="#000000" points="1464.376,-108 1341.5736,-108 1341.5736,-72 1464.376,-72 1464.376,-108"/>
+<text text-anchor="middle" x="1402.9748" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.orchestration</text>
+</g>
+<!-- agent&#45;&gt;agent.orchestration -->
+<g id="edge3" class="edge">
+<title>agent-&gt;agent.orchestration</title>
+<path fill="none" stroke="#000000" d="M783.3623,-21.0478C877.3392,-31.5058 1188.7245,-66.1576 1330.9678,-81.9869"/>
+<polygon fill="#000000" stroke="#000000" points="1341.3228,-83.1392 1330.8865,-86.5055 1336.3535,-82.5862 1331.3842,-82.0331 1331.3842,-82.0331 1331.3842,-82.0331 1336.3535,-82.5862 1331.8819,-77.5607 1341.3228,-83.1392 1341.3228,-83.1392"/>
+</g>
+<!-- agent.agents.base_agent_impl -->
+<g id="node3" class="node">
+<title>agent.agents.base_agent_impl</title>
+<polygon fill="none" stroke="#000000" points="183.9244,-180 .0252,-180 .0252,-144 183.9244,-144 183.9244,-180"/>
+<text text-anchor="middle" x="91.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.agents.base_agent_impl</text>
+</g>
+<!-- agent.agents&#45;&gt;agent.agents.base_agent_impl -->
+<g id="edge4" class="edge">
+<title>agent.agents-&gt;agent.agents.base_agent_impl</title>
+<path fill="none" stroke="#000000" d="M242.9199,-105.9791C215.6227,-116.11 179.9683,-129.3426 150.1663,-140.4032"/>
+<polygon fill="#000000" stroke="#000000" points="140.714,-143.9112 148.5234,-136.2129 145.4016,-142.1715 150.0891,-140.4317 150.0891,-140.4317 150.0891,-140.4317 145.4016,-142.1715 151.6549,-144.6506 140.714,-143.9112 140.714,-143.9112"/>
+</g>
+<!-- agent.agents.support_agent -->
+<g id="node4" class="node">
+<title>agent.agents.support_agent</title>
+<polygon fill="none" stroke="#000000" points="370.3751,-180 201.5745,-180 201.5745,-144 370.3751,-144 370.3751,-180"/>
+<text text-anchor="middle" x="285.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.agents.support_agent</text>
+</g>
+<!-- agent.agents&#45;&gt;agent.agents.support_agent -->
+<g id="edge5" class="edge">
+<title>agent.agents-&gt;agent.agents.support_agent</title>
+<path fill="none" stroke="#000000" d="M285.9748,-108.1686C285.9748,-115.869 285.9748,-125.0257 285.9748,-133.5834"/>
+<polygon fill="#000000" stroke="#000000" points="285.9748,-143.5867 281.4749,-133.5867 285.9748,-138.5867 285.9749,-133.5867 285.9749,-133.5867 285.9749,-133.5867 285.9748,-138.5867 290.4749,-133.5868 285.9748,-143.5867 285.9748,-143.5867"/>
+</g>
+<!-- agent.core.base -->
+<g id="node6" class="node">
+<title>agent.core.base</title>
+<polygon fill="none" stroke="#000000" points="490.2586,-180 387.691,-180 387.691,-144 490.2586,-144 490.2586,-180"/>
+<text text-anchor="middle" x="438.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.core.base</text>
+</g>
+<!-- agent.core&#45;&gt;agent.core.base -->
+<g id="edge6" class="edge">
+<title>agent.core-&gt;agent.core.base</title>
+<path fill="none" stroke="#000000" d="M718.7218,-96.8048C670.4363,-105.8486 583.4639,-122.8973 500.1577,-143.7971"/>
+<polygon fill="#000000" stroke="#000000" points="490.2824,-146.2974 498.8719,-139.4806 495.1294,-145.0702 499.9765,-143.8429 499.9765,-143.8429 499.9765,-143.8429 495.1294,-145.0702 501.081,-148.2052 490.2824,-146.2974 490.2824,-146.2974"/>
+</g>
+<!-- agent.core.context -->
+<g id="node7" class="node">
+<title>agent.core.context</title>
+<polygon fill="none" stroke="#000000" points="626.0954,-180 507.8542,-180 507.8542,-144 626.0954,-144 626.0954,-180"/>
+<text text-anchor="middle" x="566.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.core.context</text>
+</g>
+<!-- agent.core&#45;&gt;agent.core.context -->
+<g id="edge7" class="edge">
+<title>agent.core-&gt;agent.core.context</title>
+<path fill="none" stroke="#000000" d="M718.6345,-104.2249C691.6482,-114.5054 654.7002,-128.5808 624.0298,-140.2647"/>
+<polygon fill="#000000" stroke="#000000" points="614.3131,-143.9664 622.056,-136.2011 618.9855,-142.1864 623.658,-140.4063 623.658,-140.4063 623.658,-140.4063 618.9855,-142.1864 625.26,-144.6115 614.3131,-143.9664 614.3131,-143.9664"/>
+</g>
+<!-- agent.core.llm -->
+<g id="node8" class="node">
+<title>agent.core.llm</title>
+<polygon fill="none" stroke="#000000" points="740.0562,-180 643.8934,-180 643.8934,-144 740.0562,-144 740.0562,-180"/>
+<text text-anchor="middle" x="691.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.core.llm</text>
+</g>
+<!-- agent.core&#45;&gt;agent.core.llm -->
+<g id="edge8" class="edge">
+<title>agent.core-&gt;agent.core.llm</title>
+<path fill="none" stroke="#000000" d="M739.8249,-108.1686C732.3031,-116.6306 723.2183,-126.8511 714.9944,-136.1029"/>
+<polygon fill="#000000" stroke="#000000" points="708.3421,-143.5867 711.6225,-133.123 711.664,-139.8497 714.9858,-136.1126 714.9858,-136.1126 714.9858,-136.1126 711.664,-139.8497 718.3492,-139.1023 708.3421,-143.5867 708.3421,-143.5867"/>
+</g>
+<!-- agent.core.memory -->
+<g id="node9" class="node">
+<title>agent.core.memory</title>
+<polygon fill="none" stroke="#000000" points="882.0408,-180 757.9088,-180 757.9088,-144 882.0408,-144 882.0408,-180"/>
+<text text-anchor="middle" x="819.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.core.memory</text>
+</g>
+<!-- agent.core&#45;&gt;agent.core.memory -->
+<g id="edge9" class="edge">
+<title>agent.core-&gt;agent.core.memory</title>
+<path fill="none" stroke="#000000" d="M772.1247,-108.1686C779.6465,-116.6306 788.7313,-126.8511 796.9552,-136.1029"/>
+<polygon fill="#000000" stroke="#000000" points="803.6075,-143.5867 793.6004,-139.1023 800.2856,-139.8497 796.9638,-136.1126 796.9638,-136.1126 796.9638,-136.1126 800.2856,-139.8497 800.3271,-133.123 803.6075,-143.5867 803.6075,-143.5867"/>
+</g>
+<!-- agent.core.tool_registry -->
+<g id="node10" class="node">
+<title>agent.core.tool_registry</title>
+<polygon fill="none" stroke="#000000" points="1049.4272,-180 900.5224,-180 900.5224,-144 1049.4272,-144 1049.4272,-180"/>
+<text text-anchor="middle" x="974.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.core.tool_registry</text>
+</g>
+<!-- agent.core&#45;&gt;agent.core.tool_registry -->
+<g id="edge10" class="edge">
+<title>agent.core-&gt;agent.core.tool_registry</title>
+<path fill="none" stroke="#000000" d="M793.1252,-102.2138C825.1878,-112.755 872.2301,-128.2209 910.4354,-140.7816"/>
+<polygon fill="#000000" stroke="#000000" points="919.9438,-143.9076 909.0385,-145.0592 915.1939,-142.346 910.444,-140.7843 910.444,-140.7843 910.444,-140.7843 915.1939,-142.346 911.8495,-136.5094 919.9438,-143.9076 919.9438,-143.9076"/>
+</g>
+<!-- agent.core.types -->
+<g id="node11" class="node">
+<title>agent.core.types</title>
+<polygon fill="none" stroke="#000000" points="1174.4342,-180 1067.5154,-180 1067.5154,-144 1174.4342,-144 1174.4342,-180"/>
+<text text-anchor="middle" x="1120.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.core.types</text>
+</g>
+<!-- agent.core&#45;&gt;agent.core.types -->
+<g id="edge11" class="edge">
+<title>agent.core-&gt;agent.core.types</title>
+<path fill="none" stroke="#000000" d="M792.9453,-95.3736C848.3315,-103.6928 956.2608,-120.943 1057.6638,-144.0544"/>
+<polygon fill="#000000" stroke="#000000" points="1067.4547,-146.3092 1056.6998,-148.4501 1062.5822,-145.1871 1057.7098,-144.0649 1057.7098,-144.0649 1057.7098,-144.0649 1062.5822,-145.1871 1058.7197,-139.6797 1067.4547,-146.3092 1067.4547,-146.3092"/>
+</g>
+<!-- agent.orchestration.groupchat -->
+<g id="node13" class="node">
+<title>agent.orchestration.groupchat</title>
+<polygon fill="none" stroke="#000000" points="1375.3568,-180 1192.5928,-180 1192.5928,-144 1375.3568,-144 1375.3568,-180"/>
+<text text-anchor="middle" x="1283.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.orchestration.groupchat</text>
+</g>
+<!-- agent.orchestration&#45;&gt;agent.orchestration.groupchat -->
+<g id="edge12" class="edge">
+<title>agent.orchestration-&gt;agent.orchestration.groupchat</title>
+<path fill="none" stroke="#000000" d="M1372.9461,-108.1686C1357.7252,-117.3779 1339.062,-128.6699 1322.7665,-138.5294"/>
+<polygon fill="#000000" stroke="#000000" points="1313.9939,-143.8372 1320.2203,-134.8103 1318.2718,-141.2488 1322.5498,-138.6605 1322.5498,-138.6605 1322.5498,-138.6605 1318.2718,-141.2488 1324.8793,-142.5106 1313.9939,-143.8372 1313.9939,-143.8372"/>
+</g>
+<!-- agent.orchestration.policies -->
+<g id="node14" class="node">
+<title>agent.orchestration.policies</title>
+<polygon fill="none" stroke="#000000" points="1515.9216,-252 1346.028,-252 1346.028,-216 1515.9216,-216 1515.9216,-252"/>
+<text text-anchor="middle" x="1430.9748" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.orchestration.policies</text>
+</g>
+<!-- agent.orchestration&#45;&gt;agent.orchestration.policies -->
+<g id="edge13" class="edge">
+<title>agent.orchestration-&gt;agent.orchestration.policies</title>
+<path fill="none" stroke="#000000" d="M1406.521,-108.2377C1411.3179,-132.9072 1419.9187,-177.1402 1425.5356,-206.0269"/>
+<polygon fill="#000000" stroke="#000000" points="1427.4574,-215.9104 1421.1313,-206.9532 1426.503,-211.0023 1425.5486,-206.0942 1425.5486,-206.0942 1425.5486,-206.0942 1426.503,-211.0023 1429.9659,-205.2353 1427.4574,-215.9104 1427.4574,-215.9104"/>
+</g>
+<!-- agent.orchestration.router -->
+<g id="node15" class="node">
+<title>agent.orchestration.router</title>
+<polygon fill="none" stroke="#000000" points="1707.8025,-252 1548.1471,-252 1548.1471,-216 1707.8025,-216 1707.8025,-252"/>
+<text text-anchor="middle" x="1627.9748" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.orchestration.router</text>
+</g>
+<!-- agent.orchestration&#45;&gt;agent.orchestration.router -->
+<g id="edge14" class="edge">
+<title>agent.orchestration-&gt;agent.orchestration.router</title>
+<path fill="none" stroke="#000000" d="M1464.5364,-105.6582C1467.7275,-106.4539 1470.8883,-107.2384 1473.9748,-108 1540.5382,-124.4245 1580.3428,-91.1163 1623.9748,-144 1637.9807,-160.9758 1637.7984,-186.4806 1634.7935,-206.0097"/>
+<polygon fill="#000000" stroke="#000000" points="1632.9659,-215.876 1630.3626,-205.2236 1633.8766,-210.9597 1634.7874,-206.0433 1634.7874,-206.0433 1634.7874,-206.0433 1633.8766,-210.9597 1639.2121,-206.863 1632.9659,-215.876 1632.9659,-215.876"/>
+</g>
+<!-- agent.orchestration.supervisor -->
+<g id="node16" class="node">
+<title>agent.orchestration.supervisor</title>
+<polygon fill="none" stroke="#000000" points="1615.1918,-180 1430.7578,-180 1430.7578,-144 1615.1918,-144 1615.1918,-180"/>
+<text text-anchor="middle" x="1522.9748" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.orchestration.supervisor</text>
+</g>
+<!-- agent.orchestration&#45;&gt;agent.orchestration.supervisor -->
+<g id="edge15" class="edge">
+<title>agent.orchestration-&gt;agent.orchestration.supervisor</title>
+<path fill="none" stroke="#000000" d="M1433.2559,-108.1686C1448.6046,-117.3779 1467.4246,-128.6699 1483.8571,-138.5294"/>
+<polygon fill="#000000" stroke="#000000" points="1492.7034,-143.8372 1481.8132,-142.5509 1488.4159,-141.2647 1484.1285,-138.6922 1484.1285,-138.6922 1484.1285,-138.6922 1488.4159,-141.2647 1486.4437,-134.8334 1492.7034,-143.8372 1492.7034,-143.8372"/>
+</g>
+<!-- agent.orchestration.supervisor&#45;&gt;agent.orchestration.policies -->
+<g id="edge16" class="edge">
+<title>agent.orchestration.supervisor-&gt;agent.orchestration.policies</title>
+<path fill="none" stroke="#000000" d="M1499.7593,-180.1686C1488.4278,-189.0368 1474.6284,-199.8363 1462.3721,-209.4282"/>
+<polygon fill="#000000" stroke="#000000" points="1454.1829,-215.8372 1459.2845,-206.1303 1458.1204,-212.7556 1462.0579,-209.6741 1462.0579,-209.6741 1462.0579,-209.6741 1458.1204,-212.7556 1464.8313,-213.2178 1454.1829,-215.8372 1454.1829,-215.8372"/>
+</g>
+<!-- agent.orchestration.supervisor&#45;&gt;agent.orchestration.router -->
+<g id="edge17" class="edge">
+<title>agent.orchestration.supervisor-&gt;agent.orchestration.router</title>
+<path fill="none" stroke="#000000" d="M1549.4707,-180.1686C1562.6522,-189.2073 1578.7595,-200.2524 1592.9459,-209.9802"/>
+<polygon fill="#000000" stroke="#000000" points="1601.4873,-215.8372 1590.6951,-213.8931 1597.3637,-213.0095 1593.24,-210.1818 1593.24,-210.1818 1593.24,-210.1818 1597.3637,-213.0095 1595.7849,-206.4706 1601.4873,-215.8372 1601.4873,-215.8372"/>
+</g>
+<!-- agent.tools -->
+<g id="node17" class="node">
+<title>agent.tools</title>
+<polygon fill="none" stroke="#000000" points="1626.5204,-36 1549.4292,-36 1549.4292,0 1626.5204,0 1626.5204,-36"/>
+<text text-anchor="middle" x="1587.9748" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.tools</text>
+</g>
+<!-- agent.tools.db -->
+<g id="node18" class="node">
+<title>agent.tools.db</title>
+<polygon fill="none" stroke="#000000" points="1577.0215,-108 1482.9281,-108 1482.9281,-72 1577.0215,-72 1577.0215,-108"/>
+<text text-anchor="middle" x="1529.9748" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.tools.db</text>
+</g>
+<!-- agent.tools&#45;&gt;agent.tools.db -->
+<g id="edge18" class="edge">
+<title>agent.tools-&gt;agent.tools.db</title>
+<path fill="none" stroke="#000000" d="M1573.339,-36.1686C1566.6587,-44.4614 1558.618,-54.443 1551.2844,-63.5467"/>
+<polygon fill="#000000" stroke="#000000" points="1544.8077,-71.5867 1547.5766,-60.9762 1547.9444,-67.693 1551.081,-63.7992 1551.081,-63.7992 1551.081,-63.7992 1547.9444,-67.693 1554.5854,-66.6222 1544.8077,-71.5867 1544.8077,-71.5867"/>
+</g>
+<!-- agent.tools.http -->
+<g id="node19" class="node">
+<title>agent.tools.http</title>
+<polygon fill="none" stroke="#000000" points="1697.3021,-108 1594.6475,-108 1594.6475,-72 1697.3021,-72 1697.3021,-108"/>
+<text text-anchor="middle" x="1645.9748" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">agent.tools.http</text>
+</g>
+<!-- agent.tools&#45;&gt;agent.tools.http -->
+<g id="edge19" class="edge">
+<title>agent.tools-&gt;agent.tools.http</title>
+<path fill="none" stroke="#000000" d="M1602.6106,-36.1686C1609.2909,-44.4614 1617.3316,-54.443 1624.6652,-63.5467"/>
+<polygon fill="#000000" stroke="#000000" points="1631.1419,-71.5867 1621.3642,-66.6222 1628.0052,-67.693 1624.8686,-63.7992 1624.8686,-63.7992 1624.8686,-63.7992 1628.0052,-67.693 1628.373,-60.9762 1631.1419,-71.5867 1631.1419,-71.5867"/>
+</g>
+</g>
+</svg>

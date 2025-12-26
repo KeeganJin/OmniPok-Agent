@@ -47,6 +47,14 @@ src/
 └─ common/                      # 通用工具
 ```
 
+[Packages Relations](./images/Class_Relation.svg)
+[Project UML](./images/Project_UMLProject_UML.svg)
+
+## Todo:
+[] 重新定义 Agent
+[] 任务编排
+
+
 ## Installation
 
 ```bash
@@ -58,7 +66,7 @@ pip install -r requirements.txt
 ### 1. Basic Usage
 
 ```python
-from src.agent.core import RunContext, InMemoryMemory, global_registry
+from src.agent.core import RunContext, InMemoryMemory, global_registry, OmniPokLLM, HelloAgentsLLM
 from src.agent.agents import BaseAgentImpl
 from src.agent.tools import http_get
 
@@ -69,12 +77,20 @@ global_registry.register(
     func=http_get
 )
 
-# Create an agent (requires LLM client)
+# Create LLM instance - framework auto-detects provider
+llm = HelloAgentsLLM()
+
+# Or manually specify provider (optional)
+# llm = HelloAgentsLLM(provider="openai", model="gpt-4")
+# llm = HelloAgentsLLM(provider="modelscope", model="qwen/Qwen2.5-7B-Instruct")
+
+# Create an agent
 memory = InMemoryMemory()
 agent = BaseAgentImpl(
     agent_id="agent-1",
-    name="My Agent",
-    llm_client=your_llm_client,  # Implement your LLM client
+    name="AI助手",
+    llm=llm,
+    system_prompt="你是一个有用的AI助手",
     memory=memory,
     tool_registry=global_registry
 )

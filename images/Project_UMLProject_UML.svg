@@ -1,0 +1,550 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4686pt" height="1296pt" viewBox="0.00 0.00 4686.06 1296.20">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1292.2)">
+<title>classes_MyProject</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1292.2 4682.0622,-1292.2 4682.0622,4 -4,4"/>
+<!-- agent.core.types.AgentState -->
+<g id="node1" class="node">
+<title>agent.core.types.AgentState</title>
+<polygon fill="none" stroke="#000000" points="447.4958,-447.9 447.4958,-606.3 701.8066,-606.3 701.8066,-447.9 447.4958,-447.9"/>
+<text text-anchor="start" x="543.5488" y="-589.7" font-family="Times,serif" font-size="14.00" fill="#000000">AgentState</text>
+<polyline fill="none" stroke="#000000" points="447.4958,-581.5 701.8066,-581.5 "/>
+<text text-anchor="start" x="502.7332" y="-564.9" font-family="Times,serif" font-size="14.00" fill="#000000">created_at : datetime</text>
+<text text-anchor="start" x="502.7332" y="-548.1" font-family="Times,serif" font-size="14.00" fill="#000000">current_step : int</text>
+<text text-anchor="start" x="502.7332" y="-531.3" font-family="Times,serif" font-size="14.00" fill="#000000">messages : List[Message]</text>
+<text text-anchor="start" x="502.7332" y="-514.5" font-family="Times,serif" font-size="14.00" fill="#000000">metadata : Dict[str, Any]</text>
+<text text-anchor="start" x="502.7332" y="-497.7" font-family="Times,serif" font-size="14.00" fill="#000000">updated_at : datetime</text>
+<polyline fill="none" stroke="#000000" points="447.4958,-489.5 701.8066,-489.5 "/>
+<text text-anchor="start" x="455.4958" y="-472.9" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(message: Message): None</text>
+<text text-anchor="start" x="455.4958" y="-456.1" font-family="Times,serif" font-size="14.00" fill="#000000">get_conversation_history(): List[Message]</text>
+</g>
+<!-- agent.core.base.BaseAgent -->
+<g id="node2" class="node">
+<title>agent.core.base.BaseAgent</title>
+<polygon fill="none" stroke="#000000" points="556.0515,-660.1 556.0515,-913.7 1015.2509,-913.7 1015.2509,-660.1 556.0515,-660.1"/>
+<text text-anchor="start" x="754.9401" y="-897.1" font-family="Times,serif" font-size="14.00" fill="#000000">BaseAgent</text>
+<polyline fill="none" stroke="#000000" points="556.0515,-888.9 1015.2509,-888.9 "/>
+<text text-anchor="start" x="678.337" y="-872.3" font-family="Times,serif" font-size="14.00" fill="#000000">agent_id : str</text>
+<text text-anchor="start" x="678.337" y="-855.5" font-family="Times,serif" font-size="14.00" fill="#000000">memory : Optional[Memory]</text>
+<text text-anchor="start" x="678.337" y="-838.7" font-family="Times,serif" font-size="14.00" fill="#000000">name : str</text>
+<text text-anchor="start" x="678.337" y="-821.9" font-family="Times,serif" font-size="14.00" fill="#000000">state</text>
+<text text-anchor="start" x="678.337" y="-805.1" font-family="Times,serif" font-size="14.00" fill="#000000">system_prompt : Optional[str]</text>
+<text text-anchor="start" x="678.337" y="-788.3" font-family="Times,serif" font-size="14.00" fill="#000000">tool_registry : Optional[ToolRegistry]</text>
+<polyline fill="none" stroke="#000000" points="556.0515,-780.1 1015.2509,-780.1 "/>
+<text text-anchor="start" x="564.0515" y="-764.5" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(message: Message): None</text>
+<text text-anchor="start" x="564.0515" y="-750.5" font-family="Times,serif" font-size="14.00" fill="#000000">clear_state(): None</text>
+<text text-anchor="start" x="564.0515" y="-736.5" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">execute_tool_call</text>
+<text text-anchor="start" x="662.7921" y="-736.5" font-family="Times,serif" font-size="14.00" fill="#000000">(tool_call: ToolCall, context: RunContext): Observation</text>
+<text text-anchor="start" x="564.0515" y="-722.5" font-family="Times,serif" font-size="14.00" fill="#000000">get_available_tools(user_permissions: Optional[List[str]]): List[Dict[str, Any]]</text>
+<text text-anchor="start" x="564.0515" y="-708.5" font-family="Times,serif" font-size="14.00" fill="#000000">get_state(): AgentState</text>
+<text text-anchor="start" x="564.0515" y="-694.5" font-family="Times,serif" font-size="14.00" fill="#000000">load_state(): None</text>
+<text text-anchor="start" x="564.0515" y="-680.5" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">process</text>
+<text text-anchor="start" x="606.0305" y="-680.5" font-family="Times,serif" font-size="14.00" fill="#000000">(message: str, context: RunContext): str</text>
+<text text-anchor="start" x="564.0515" y="-666.5" font-family="Times,serif" font-size="14.00" fill="#000000">save_state(): None</text>
+</g>
+<!-- agent.core.types.AgentState&#45;&gt;agent.core.base.BaseAgent -->
+<g id="edge15" class="edge">
+<title>agent.core.types.AgentState-&gt;agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M639.1047,-606.4602C650.4458,-620.4243 662.5366,-635.3115 674.7242,-650.3179"/>
+<polygon fill="#000000" stroke="#000000" points="674.7542,-650.3548 681.6418,-652.4905 682.3195,-659.6697 675.4319,-657.534 674.7542,-650.3548"/>
+<text text-anchor="middle" x="680.4787" y="-629" font-family="Times,serif" font-size="14.00" fill="#00ff00">state</text>
+</g>
+<!-- agent.agents.base_agent_impl.BaseAgentImpl -->
+<g id="node3" class="node">
+<title>agent.agents.base_agent_impl.BaseAgentImpl</title>
+<polygon fill="none" stroke="#000000" points="0,-473.1 0,-581.1 429.3024,-581.1 429.3024,-473.1 0,-473.1"/>
+<text text-anchor="start" x="170.7192" y="-564.5" font-family="Times,serif" font-size="14.00" fill="#000000">BaseAgentImpl</text>
+<polyline fill="none" stroke="#000000" points="0,-556.3 429.3024,-556.3 "/>
+<text text-anchor="start" x="160.2143" y="-539.7" font-family="Times,serif" font-size="14.00" fill="#000000">llm</text>
+<text text-anchor="start" x="160.2143" y="-522.9" font-family="Times,serif" font-size="14.00" fill="#000000">max_iterations : int</text>
+<polyline fill="none" stroke="#000000" points="0,-514.7 429.3024,-514.7 "/>
+<text text-anchor="start" x="8" y="-498.1" font-family="Times,serif" font-size="14.00" fill="#000000">execute_tool_call(tool_call: ToolCall, context: RunContext): Observation</text>
+<text text-anchor="start" x="8" y="-481.3" font-family="Times,serif" font-size="14.00" fill="#000000">process(message: str, context: RunContext): str</text>
+</g>
+<!-- agent.agents.base_agent_impl.BaseAgentImpl&#45;&gt;agent.core.base.BaseAgent -->
+<g id="edge1" class="edge">
+<title>agent.agents.base_agent_impl.BaseAgentImpl-&gt;agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M333.6565,-581.2464C395.4036,-609.3408 473.1221,-644.702 546.6188,-678.1424"/>
+<polygon fill="none" stroke="#000000" points="545.4727,-681.4661 556.0244,-682.4218 548.3717,-675.0946 545.4727,-681.4661"/>
+</g>
+<!-- agent.orchestration.policies.BudgetPolicy -->
+<g id="node4" class="node">
+<title>agent.orchestration.policies.BudgetPolicy</title>
+<polygon fill="none" stroke="#000000" points="1760.4481,-143.3 1760.4481,-251.3 2080.8543,-251.3 2080.8543,-143.3 1760.4481,-143.3"/>
+<text text-anchor="start" x="1882.5411" y="-234.7" font-family="Times,serif" font-size="14.00" fill="#000000">BudgetPolicy</text>
+<polyline fill="none" stroke="#000000" points="1760.4481,-226.5 2080.8543,-226.5 "/>
+<text text-anchor="start" x="1795.8608" y="-209.9" font-family="Times,serif" font-size="14.00" fill="#000000">per_agent_budget : Optional[Dict[str, float]]</text>
+<text text-anchor="start" x="1795.8608" y="-193.1" font-family="Times,serif" font-size="14.00" fill="#000000">per_task_budget : Optional[float]</text>
+<text text-anchor="start" x="1795.8608" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#000000">total_budget : float</text>
+<polyline fill="none" stroke="#000000" points="1760.4481,-168.1 2080.8543,-168.1 "/>
+<text text-anchor="start" x="1768.4481" y="-151.5" font-family="Times,serif" font-size="14.00" fill="#000000">can_allocate(agent_id: str, estimated_cost: float): bool</text>
+</g>
+<!-- agent.orchestration.policies.OrchestrationPolicy -->
+<g id="node16" class="node">
+<title>agent.orchestration.policies.OrchestrationPolicy</title>
+<polygon fill="none" stroke="#000000" points="1855.4078,-473.1 1855.4078,-581.1 2243.8946,-581.1 2243.8946,-473.1 1855.4078,-473.1"/>
+<text text-anchor="start" x="1993.668" y="-564.5" font-family="Times,serif" font-size="14.00" fill="#000000">OrchestrationPolicy</text>
+<polyline fill="none" stroke="#000000" points="1855.4078,-556.3 2243.8946,-556.3 "/>
+<text text-anchor="start" x="1914.3342" y="-539.7" font-family="Times,serif" font-size="14.00" fill="#000000">budget_policy : Optional[BudgetPolicy]</text>
+<text text-anchor="start" x="1914.3342" y="-522.9" font-family="Times,serif" font-size="14.00" fill="#000000">permission_policy : Optional[PermissionPolicy]</text>
+<text text-anchor="start" x="1914.3342" y="-506.1" font-family="Times,serif" font-size="14.00" fill="#000000">retry_policy</text>
+<polyline fill="none" stroke="#000000" points="1855.4078,-497.9 2243.8946,-497.9 "/>
+<text text-anchor="start" x="1863.4078" y="-481.3" font-family="Times,serif" font-size="14.00" fill="#000000">validate_task(task: Task, agent_id: str, context: RunContext): bool</text>
+</g>
+<!-- agent.orchestration.policies.BudgetPolicy&#45;&gt;agent.orchestration.policies.OrchestrationPolicy -->
+<g id="edge19" class="edge">
+<title>agent.orchestration.policies.BudgetPolicy-&gt;agent.orchestration.policies.OrchestrationPolicy</title>
+<path fill="none" stroke="#000000" d="M1941.8085,-251.3905C1964.3039,-308.9021 1999.8909,-399.8833 2023.9756,-461.458"/>
+<polygon fill="none" stroke="#000000" points="2024.111,-461.8045 2030.0219,-465.9351 2028.4824,-472.98 2022.5715,-468.8493 2024.111,-461.8045"/>
+<text text-anchor="middle" x="2048.7017" y="-416.8" font-family="Times,serif" font-size="14.00" fill="#00ff00">budget_policy</text>
+</g>
+<!-- agent.orchestration.groupchat.GroupChat -->
+<g id="node5" class="node">
+<title>agent.orchestration.groupchat.GroupChat</title>
+<polygon fill="none" stroke="#000000" points="1243.8909,-682.5 1243.8909,-891.3 1747.4115,-891.3 1747.4115,-682.5 1243.8909,-682.5"/>
+<text text-anchor="start" x="1464.5467" y="-874.7" font-family="Times,serif" font-size="14.00" fill="#000000">GroupChat</text>
+<polyline fill="none" stroke="#000000" points="1243.8909,-866.5 1747.4115,-866.5 "/>
+<text text-anchor="start" x="1379.4008" y="-849.9" font-family="Times,serif" font-size="14.00" fill="#000000">agents</text>
+<text text-anchor="start" x="1379.4008" y="-833.1" font-family="Times,serif" font-size="14.00" fill="#000000">conversation_history : List[Message], list</text>
+<text text-anchor="start" x="1379.4008" y="-816.3" font-family="Times,serif" font-size="14.00" fill="#000000">current_round : int</text>
+<text text-anchor="start" x="1379.4008" y="-799.5" font-family="Times,serif" font-size="14.00" fill="#000000">max_rounds : int</text>
+<text text-anchor="start" x="1379.4008" y="-782.7" font-family="Times,serif" font-size="14.00" fill="#000000">memory : Optional[Memory]</text>
+<polyline fill="none" stroke="#000000" points="1243.8909,-774.5 1747.4115,-774.5 "/>
+<text text-anchor="start" x="1251.8909" y="-757.9" font-family="Times,serif" font-size="14.00" fill="#000000">add_agent(agent: BaseAgent): None</text>
+<text text-anchor="start" x="1251.8909" y="-741.1" font-family="Times,serif" font-size="14.00" fill="#000000">clear_history(): None</text>
+<text text-anchor="start" x="1251.8909" y="-724.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_conversation_history(): List[Message]</text>
+<text text-anchor="start" x="1251.8909" y="-707.5" font-family="Times,serif" font-size="14.00" fill="#000000">process_message(message: str, sender_id: str, context: RunContext): List[Dict[str, str]]</text>
+<text text-anchor="start" x="1251.8909" y="-690.7" font-family="Times,serif" font-size="14.00" fill="#000000">remove_agent(agent_id: str): None</text>
+</g>
+<!-- agent.core.types.Message -->
+<g id="node10" class="node">
+<title>agent.core.types.Message</title>
+<polygon fill="none" stroke="#000000" points="1380.7325,-984.3 1380.7325,-1142.7 1610.5699,-1142.7 1610.5699,-984.3 1380.7325,-984.3"/>
+<text text-anchor="start" x="1471.1624" y="-1126.1" font-family="Times,serif" font-size="14.00" fill="#000000">Message</text>
+<polyline fill="none" stroke="#000000" points="1380.7325,-1117.9 1610.5699,-1117.9 "/>
+<text text-anchor="start" x="1388.7325" y="-1101.3" font-family="Times,serif" font-size="14.00" fill="#000000">content : str</text>
+<text text-anchor="start" x="1388.7325" y="-1084.5" font-family="Times,serif" font-size="14.00" fill="#000000">name : Optional[str]</text>
+<text text-anchor="start" x="1388.7325" y="-1067.7" font-family="Times,serif" font-size="14.00" fill="#000000">role</text>
+<text text-anchor="start" x="1388.7325" y="-1050.9" font-family="Times,serif" font-size="14.00" fill="#000000">timestamp : datetime</text>
+<text text-anchor="start" x="1388.7325" y="-1034.1" font-family="Times,serif" font-size="14.00" fill="#000000">tool_call_id : Optional[str]</text>
+<text text-anchor="start" x="1388.7325" y="-1017.3" font-family="Times,serif" font-size="14.00" fill="#000000">tool_calls : Optional[List['ToolCall']]</text>
+<polyline fill="none" stroke="#000000" points="1380.7325,-1009.1 1610.5699,-1009.1 "/>
+<text text-anchor="start" x="1493.9012" y="-992.5" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.orchestration.groupchat.GroupChat&#45;&gt;agent.core.types.Message -->
+<g id="edge8" class="edge">
+<title>agent.orchestration.groupchat.GroupChat-&gt;agent.core.types.Message</title>
+<path fill="none" stroke="#000000" d="M1495.6512,-891.4706C1495.6512,-918.6171 1495.6512,-947.61 1495.6512,-973.9089"/>
+<polygon fill="#000000" stroke="#000000" points="1495.6512,-984.2289 1491.1513,-974.2288 1495.6512,-979.2289 1495.6513,-974.2289 1495.6513,-974.2289 1495.6513,-974.2289 1495.6512,-979.2289 1500.1513,-974.2289 1495.6512,-984.2289 1495.6512,-984.2289"/>
+<text text-anchor="middle" x="1554.3595" y="-936.4" font-family="Times,serif" font-size="14.00" fill="#00ff00">conversation_history</text>
+</g>
+<!-- agent.core.memory.InMemoryMemory -->
+<g id="node6" class="node">
+<title>agent.core.memory.InMemoryMemory</title>
+<polygon fill="none" stroke="#000000" points="1309.0021,-126.5 1309.0021,-268.1 1682.3003,-268.1 1682.3003,-126.5 1309.0021,-126.5"/>
+<text text-anchor="start" x="1441.6105" y="-251.5" font-family="Times,serif" font-size="14.00" fill="#000000">InMemoryMemory</text>
+<polyline fill="none" stroke="#000000" points="1309.0021,-243.3 1682.3003,-243.3 "/>
+<polyline fill="none" stroke="#000000" points="1309.0021,-218.5 1682.3003,-218.5 "/>
+<text text-anchor="start" x="1317.0021" y="-201.9" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(agent_id: str, message: Message): None</text>
+<text text-anchor="start" x="1317.0021" y="-185.1" font-family="Times,serif" font-size="14.00" fill="#000000">clear(agent_id: str): None</text>
+<text text-anchor="start" x="1317.0021" y="-168.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_messages(agent_id: str, limit: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="1317.0021" y="-151.5" font-family="Times,serif" font-size="14.00" fill="#000000">load(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="1317.0021" y="-134.7" font-family="Times,serif" font-size="14.00" fill="#000000">save(agent_id: str, state: AgentState): None</text>
+</g>
+<!-- agent.core.memory.Memory -->
+<g id="node9" class="node">
+<title>agent.core.memory.Memory</title>
+<polygon fill="none" stroke="#000000" points="1309.0021,-463.3 1309.0021,-590.9 1682.3003,-590.9 1682.3003,-463.3 1309.0021,-463.3"/>
+<text text-anchor="start" x="1471.546" y="-574.3" font-family="Times,serif" font-size="14.00" fill="#000000">Memory</text>
+<polyline fill="none" stroke="#000000" points="1309.0021,-566.1 1682.3003,-566.1 "/>
+<polyline fill="none" stroke="#000000" points="1309.0021,-541.3 1682.3003,-541.3 "/>
+<text text-anchor="start" x="1317.0021" y="-525.7" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">add_message</text>
+<text text-anchor="start" x="1391.6403" y="-525.7" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str, message: Message): None</text>
+<text text-anchor="start" x="1317.0021" y="-511.7" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">clear</text>
+<text text-anchor="start" x="1344.1971" y="-511.7" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str): None</text>
+<text text-anchor="start" x="1317.0021" y="-497.7" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">get_messages</text>
+<text text-anchor="start" x="1393.9755" y="-497.7" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str, limit: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="1317.0021" y="-483.7" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">load</text>
+<text text-anchor="start" x="1341.1073" y="-483.7" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="1317.0021" y="-469.7" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">save</text>
+<text text-anchor="start" x="1341.8759" y="-469.7" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str, state: AgentState): None</text>
+</g>
+<!-- agent.core.memory.InMemoryMemory&#45;&gt;agent.core.memory.Memory -->
+<g id="edge5" class="edge">
+<title>agent.core.memory.InMemoryMemory-&gt;agent.core.memory.Memory</title>
+<path fill="none" stroke="#000000" d="M1495.6512,-268.4557C1495.6512,-322.9154 1495.6512,-397.8024 1495.6512,-452.9844"/>
+<polygon fill="none" stroke="#000000" points="1492.1513,-453.0494 1495.6512,-463.0495 1499.1513,-453.0495 1492.1513,-453.0494"/>
+</g>
+<!-- agent.core.llm.LLMProvider -->
+<g id="node7" class="node">
+<title>agent.core.llm.LLMProvider</title>
+<polygon fill="none" stroke="#000000" points="2422.3127,-484.3 2422.3127,-569.9 2940.9897,-569.9 2940.9897,-484.3 2422.3127,-484.3"/>
+<text text-anchor="start" x="2642.7718" y="-553.3" font-family="Times,serif" font-size="14.00" fill="#000000">LLMProvider</text>
+<polyline fill="none" stroke="#000000" points="2422.3127,-545.1 2940.9897,-545.1 "/>
+<polyline fill="none" stroke="#000000" points="2422.3127,-520.3 2940.9897,-520.3 "/>
+<text text-anchor="start" x="2430.3127" y="-504.7" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">chat</text>
+<text text-anchor="start" x="2453.6325" y="-504.7" font-family="Times,serif" font-size="14.00" fill="#000000">(messages: List[Dict[str, Any]], tools: Optional[List[Dict[str, Any]]]): LLMResponse</text>
+<text text-anchor="start" x="2430.3127" y="-490.7" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">get_model_name</text>
+<text text-anchor="start" x="2526.7335" y="-490.7" font-family="Times,serif" font-size="14.00" fill="#000000">(): str</text>
+</g>
+<!-- agent.core.llm.LLMResponse -->
+<g id="node8" class="node">
+<title>agent.core.llm.LLMResponse</title>
+<polygon fill="none" stroke="#000000" points="3496.0179,-126.5 3496.0179,-268.1 3745.2845,-268.1 3745.2845,-126.5 3496.0179,-126.5"/>
+<text text-anchor="start" x="3579.0488" y="-251.5" font-family="Times,serif" font-size="14.00" fill="#000000">LLMResponse</text>
+<polyline fill="none" stroke="#000000" points="3496.0179,-243.3 3745.2845,-243.3 "/>
+<text text-anchor="start" x="3504.0179" y="-226.7" font-family="Times,serif" font-size="14.00" fill="#000000">content : str</text>
+<text text-anchor="start" x="3504.0179" y="-209.9" font-family="Times,serif" font-size="14.00" fill="#000000">finish_reason : Optional[str]</text>
+<text text-anchor="start" x="3504.0179" y="-193.1" font-family="Times,serif" font-size="14.00" fill="#000000">role : str</text>
+<text text-anchor="start" x="3504.0179" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#000000">tool_calls : Optional[List[Dict[str, Any]]]</text>
+<text text-anchor="start" x="3504.0179" y="-159.5" font-family="Times,serif" font-size="14.00" fill="#000000">usage : Optional[Dict[str, int]]</text>
+<polyline fill="none" stroke="#000000" points="3496.0179,-151.3 3745.2845,-151.3 "/>
+<text text-anchor="start" x="3618.9012" y="-134.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.core.memory.Memory&#45;&gt;agent.core.base.BaseAgent -->
+<g id="edge16" class="edge">
+<title>agent.core.memory.Memory-&gt;agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M1341.6,-590.9201C1327.7888,-596.3821 1313.9891,-601.7459 1300.6512,-606.8 1211.857,-640.4463 1113.6314,-675.3591 1026.9775,-705.3869"/>
+<polygon fill="none" stroke="#000000" points="1026.7177,-705.4767 1022.3559,-711.2191 1015.3776,-709.4013 1019.7395,-703.659 1026.7177,-705.4767"/>
+<text text-anchor="middle" x="1268.9794" y="-629" font-family="Times,serif" font-size="14.00" fill="#00ff00">memory</text>
+</g>
+<!-- agent.core.memory.Memory&#45;&gt;agent.orchestration.groupchat.GroupChat -->
+<g id="edge17" class="edge">
+<title>agent.core.memory.Memory-&gt;agent.orchestration.groupchat.GroupChat</title>
+<path fill="none" stroke="#000000" d="M1495.6512,-590.987C1495.6512,-615.0026 1495.6512,-643.1182 1495.6512,-670.433"/>
+<polygon fill="none" stroke="#000000" points="1495.6513,-670.4908 1499.6512,-676.4909 1495.6512,-682.4908 1491.6512,-676.4908 1495.6513,-670.4908"/>
+<text text-anchor="middle" x="1518.9794" y="-629" font-family="Times,serif" font-size="14.00" fill="#00ff00">memory</text>
+</g>
+<!-- agent.core.types.MessageRole -->
+<g id="node11" class="node">
+<title>agent.core.types.MessageRole</title>
+<polygon fill="none" stroke="#000000" points="1449.9415,-1213.3 1449.9415,-1287.7 1541.3609,-1287.7 1541.3609,-1213.3 1449.9415,-1213.3"/>
+<text text-anchor="start" x="1457.9415" y="-1271.1" font-family="Times,serif" font-size="14.00" fill="#000000">MessageRole</text>
+<polyline fill="none" stroke="#000000" points="1449.9415,-1262.9 1541.3609,-1262.9 "/>
+<text text-anchor="start" x="1480.4913" y="-1246.3" font-family="Times,serif" font-size="14.00" fill="#000000">name</text>
+<polyline fill="none" stroke="#000000" points="1449.9415,-1238.1 1541.3609,-1238.1 "/>
+<text text-anchor="start" x="1493.9012" y="-1221.5" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.core.types.Message&#45;&gt;agent.core.types.MessageRole -->
+<g id="edge9" class="edge">
+<title>agent.core.types.Message-&gt;agent.core.types.MessageRole</title>
+<path fill="none" stroke="#000000" d="M1495.6512,-1142.8048C1495.6512,-1163.2037 1495.6512,-1184.5255 1495.6512,-1202.7638"/>
+<polygon fill="#000000" stroke="#000000" points="1495.6512,-1212.8335 1491.1513,-1202.8335 1495.6512,-1207.8335 1495.6513,-1202.8335 1495.6513,-1202.8335 1495.6513,-1202.8335 1495.6512,-1207.8335 1500.1513,-1202.8336 1495.6512,-1212.8335 1495.6512,-1212.8335"/>
+<text text-anchor="middle" x="1506.5341" y="-1182.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">role</text>
+</g>
+<!-- agent.core.llm.ModelScopeProvider -->
+<g id="node12" class="node">
+<title>agent.core.llm.ModelScopeProvider</title>
+<polygon fill="none" stroke="#000000" points="2422.3127,-154.5 2422.3127,-240.1 2940.9897,-240.1 2940.9897,-154.5 2422.3127,-154.5"/>
+<text text-anchor="start" x="2622.1659" y="-223.5" font-family="Times,serif" font-size="14.00" fill="#000000">ModelScopeProvider</text>
+<polyline fill="none" stroke="#000000" points="2422.3127,-215.3 2940.9897,-215.3 "/>
+<text text-anchor="start" x="2651.7101" y="-198.7" font-family="Times,serif" font-size="14.00" fill="#000000">model : str</text>
+<polyline fill="none" stroke="#000000" points="2422.3127,-190.5 2940.9897,-190.5 "/>
+<text text-anchor="start" x="2430.3127" y="-174.9" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">chat</text>
+<text text-anchor="start" x="2453.6325" y="-174.9" font-family="Times,serif" font-size="14.00" fill="#000000">(messages: List[Dict[str, Any]], tools: Optional[List[Dict[str, Any]]]): LLMResponse</text>
+<text text-anchor="start" x="2430.3127" y="-160.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_model_name(): str</text>
+</g>
+<!-- agent.core.llm.ModelScopeProvider&#45;&gt;agent.core.llm.LLMProvider -->
+<g id="edge3" class="edge">
+<title>agent.core.llm.ModelScopeProvider-&gt;agent.core.llm.LLMProvider</title>
+<path fill="none" stroke="#000000" d="M2681.6512,-240.4156C2681.6512,-300.4947 2681.6512,-409.304 2681.6512,-474.2096"/>
+<polygon fill="none" stroke="#000000" points="2678.1513,-474.2354 2681.6512,-484.2354 2685.1513,-474.2355 2678.1513,-474.2354"/>
+</g>
+<!-- agent.core.types.Observation -->
+<g id="node13" class="node">
+<title>agent.core.types.Observation</title>
+<polygon fill="none" stroke="#000000" points="3763.6806,-126.5 3763.6806,-268.1 3975.6218,-268.1 3975.6218,-126.5 3763.6806,-126.5"/>
+<text text-anchor="start" x="3835.4401" y="-251.5" font-family="Times,serif" font-size="14.00" fill="#000000">Observation</text>
+<polyline fill="none" stroke="#000000" points="3763.6806,-243.3 3975.6218,-243.3 "/>
+<text text-anchor="start" x="3771.6806" y="-226.7" font-family="Times,serif" font-size="14.00" fill="#000000">content : Union[str, Dict[str, Any]]</text>
+<text text-anchor="start" x="3771.6806" y="-209.9" font-family="Times,serif" font-size="14.00" fill="#000000">error_message : Optional[str]</text>
+<text text-anchor="start" x="3771.6806" y="-193.1" font-family="Times,serif" font-size="14.00" fill="#000000">is_error : bool</text>
+<text text-anchor="start" x="3771.6806" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#000000">timestamp : datetime</text>
+<text text-anchor="start" x="3771.6806" y="-159.5" font-family="Times,serif" font-size="14.00" fill="#000000">tool_call_id : str</text>
+<polyline fill="none" stroke="#000000" points="3763.6806,-151.3 3975.6218,-151.3 "/>
+<text text-anchor="start" x="3867.9012" y="-134.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.core.llm.OmniPokLLM -->
+<g id="node14" class="node">
+<title>agent.core.llm.OmniPokLLM</title>
+<polygon fill="none" stroke="#000000" points="2959.3127,-464.7 2959.3127,-589.5 3477.9897,-589.5 3477.9897,-464.7 2959.3127,-464.7"/>
+<text text-anchor="start" x="3177.0411" y="-572.9" font-family="Times,serif" font-size="14.00" fill="#000000">OmniPokLLM</text>
+<polyline fill="none" stroke="#000000" points="2959.3127,-564.7 3477.9897,-564.7 "/>
+<text text-anchor="start" x="3163.8349" y="-548.1" font-family="Times,serif" font-size="14.00" fill="#000000">provider</text>
+<text text-anchor="start" x="3163.8349" y="-531.3" font-family="Times,serif" font-size="14.00" fill="#000000">provider_name : str</text>
+<polyline fill="none" stroke="#000000" points="2959.3127,-523.1 3477.9897,-523.1 "/>
+<text text-anchor="start" x="2967.3127" y="-506.5" font-family="Times,serif" font-size="14.00" fill="#000000">chat(messages: List[Dict[str, Any]], tools: Optional[List[Dict[str, Any]]]): LLMResponse</text>
+<text text-anchor="start" x="2967.3127" y="-489.7" font-family="Times,serif" font-size="14.00" fill="#000000">get_model_name(): str</text>
+<text text-anchor="start" x="2967.3127" y="-472.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_provider_name(): str</text>
+</g>
+<!-- agent.core.llm.OpenAIProvider -->
+<g id="node15" class="node">
+<title>agent.core.llm.OpenAIProvider</title>
+<polygon fill="none" stroke="#000000" points="2959.3127,-134.9 2959.3127,-259.7 3477.9897,-259.7 3477.9897,-134.9 2959.3127,-134.9"/>
+<text text-anchor="start" x="3172.0025" y="-243.1" font-family="Times,serif" font-size="14.00" fill="#000000">OpenAIProvider</text>
+<polyline fill="none" stroke="#000000" points="2959.3127,-234.9 3477.9897,-234.9 "/>
+<text text-anchor="start" x="3161.5018" y="-218.3" font-family="Times,serif" font-size="14.00" fill="#000000">api_key : NoneType</text>
+<text text-anchor="start" x="3161.5018" y="-201.5" font-family="Times,serif" font-size="14.00" fill="#000000">client</text>
+<text text-anchor="start" x="3161.5018" y="-184.7" font-family="Times,serif" font-size="14.00" fill="#000000">model : str</text>
+<polyline fill="none" stroke="#000000" points="2959.3127,-176.5 3477.9897,-176.5 "/>
+<text text-anchor="start" x="2967.3127" y="-159.9" font-family="Times,serif" font-size="14.00" fill="#000000">chat(messages: List[Dict[str, Any]], tools: Optional[List[Dict[str, Any]]]): LLMResponse</text>
+<text text-anchor="start" x="2967.3127" y="-143.1" font-family="Times,serif" font-size="14.00" fill="#000000">get_model_name(): str</text>
+</g>
+<!-- agent.core.llm.OpenAIProvider&#45;&gt;agent.core.llm.LLMProvider -->
+<g id="edge4" class="edge">
+<title>agent.core.llm.OpenAIProvider-&gt;agent.core.llm.LLMProvider</title>
+<path fill="none" stroke="#000000" d="M3141.1166,-259.7525C3088.6777,-300.5721 3016.9659,-353.6991 2949.6512,-394.6 2897.9752,-425.9988 2837.8312,-456.2598 2787.6281,-479.9161"/>
+<polygon fill="none" stroke="#000000" points="2785.9423,-476.8408 2778.374,-484.2551 2788.914,-483.1787 2785.9423,-476.8408"/>
+</g>
+<!-- agent.core.llm.OpenAIProvider&#45;&gt;agent.core.llm.OmniPokLLM -->
+<g id="edge14" class="edge">
+<title>agent.core.llm.OpenAIProvider-&gt;agent.core.llm.OmniPokLLM</title>
+<path fill="none" stroke="#000000" d="M3218.6512,-259.7206C3218.6512,-314.5512 3218.6512,-394.4263 3218.6512,-452.5897"/>
+<polygon fill="#000000" stroke="#000000" points="3218.6513,-452.6548 3222.6512,-458.6548 3218.6512,-464.6548 3214.6512,-458.6547 3218.6513,-452.6548"/>
+<text text-anchor="middle" x="3242.3644" y="-416.8" font-family="Times,serif" font-size="14.00" fill="#00ff00">provider</text>
+</g>
+<!-- agent.orchestration.policies.RetryPolicy -->
+<g id="node18" class="node">
+<title>agent.orchestration.policies.RetryPolicy</title>
+<polygon fill="none" stroke="#000000" points="1823.5961,-724.5 1823.5961,-849.3 2071.7063,-849.3 2071.7063,-724.5 1823.5961,-724.5"/>
+<text text-anchor="start" x="1914.2108" y="-832.7" font-family="Times,serif" font-size="14.00" fill="#000000">RetryPolicy</text>
+<polyline fill="none" stroke="#000000" points="1823.5961,-824.5 2071.7063,-824.5 "/>
+<text text-anchor="start" x="1845.8075" y="-807.9" font-family="Times,serif" font-size="14.00" fill="#000000">backoff_factor : float</text>
+<text text-anchor="start" x="1845.8075" y="-791.1" font-family="Times,serif" font-size="14.00" fill="#000000">max_retries : int</text>
+<text text-anchor="start" x="1845.8075" y="-774.3" font-family="Times,serif" font-size="14.00" fill="#000000">retryable_errors : Optional[List[str]]</text>
+<polyline fill="none" stroke="#000000" points="1823.5961,-766.1 2071.7063,-766.1 "/>
+<text text-anchor="start" x="1831.5961" y="-749.5" font-family="Times,serif" font-size="14.00" fill="#000000">get_backoff_delay(attempt: int): float</text>
+<text text-anchor="start" x="1831.5961" y="-732.7" font-family="Times,serif" font-size="14.00" fill="#000000">should_retry(error: str, attempt: int): bool</text>
+</g>
+<!-- agent.orchestration.policies.OrchestrationPolicy&#45;&gt;agent.orchestration.policies.RetryPolicy -->
+<g id="edge12" class="edge">
+<title>agent.orchestration.policies.OrchestrationPolicy-&gt;agent.orchestration.policies.RetryPolicy</title>
+<path fill="none" stroke="#000000" d="M2028.3928,-581.2464C2013.1944,-619.9576 1992.5792,-672.4657 1975.984,-714.7347"/>
+<polygon fill="#000000" stroke="#000000" points="1972.2917,-724.1391 1971.7576,-713.1862 1974.119,-719.4849 1975.9463,-714.8308 1975.9463,-714.8308 1975.9463,-714.8308 1974.119,-719.4849 1980.1351,-716.4753 1972.2917,-724.1391 1972.2917,-724.1391"/>
+<text text-anchor="middle" x="2045.8623" y="-629" font-family="Times,serif" font-size="14.00" fill="#00ff00">retry_policy</text>
+</g>
+<!-- agent.orchestration.supervisor.Supervisor -->
+<g id="node23" class="node">
+<title>agent.orchestration.supervisor.Supervisor</title>
+<polygon fill="none" stroke="#000000" points="2089.6571,-674.1 2089.6571,-899.7 2439.6453,-899.7 2439.6453,-674.1 2089.6571,-674.1"/>
+<text text-anchor="start" x="2234.3244" y="-883.1" font-family="Times,serif" font-size="14.00" fill="#000000">Supervisor</text>
+<polyline fill="none" stroke="#000000" points="2089.6571,-874.9 2439.6453,-874.9 "/>
+<text text-anchor="start" x="2156.5677" y="-858.3" font-family="Times,serif" font-size="14.00" fill="#000000">agents</text>
+<text text-anchor="start" x="2156.5677" y="-841.5" font-family="Times,serif" font-size="14.00" fill="#000000">policy : Optional[OrchestrationPolicy]</text>
+<text text-anchor="start" x="2156.5677" y="-824.7" font-family="Times,serif" font-size="14.00" fill="#000000">router</text>
+<text text-anchor="start" x="2156.5677" y="-807.9" font-family="Times,serif" font-size="14.00" fill="#000000">tasks : Dict[str, Task]</text>
+<polyline fill="none" stroke="#000000" points="2089.6571,-799.7 2439.6453,-799.7 "/>
+<text text-anchor="start" x="2097.6571" y="-783.1" font-family="Times,serif" font-size="14.00" fill="#000000">assign_task(task: Task, context: RunContext): Optional[str]</text>
+<text text-anchor="start" x="2097.6571" y="-766.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_agent(agent_id: str): Optional[BaseAgent]</text>
+<text text-anchor="start" x="2097.6571" y="-749.5" font-family="Times,serif" font-size="14.00" fill="#000000">get_task(task_id: str): Optional[Task]</text>
+<text text-anchor="start" x="2097.6571" y="-732.7" font-family="Times,serif" font-size="14.00" fill="#000000">list_agents(): List[BaseAgent]</text>
+<text text-anchor="start" x="2097.6571" y="-715.9" font-family="Times,serif" font-size="14.00" fill="#000000">list_tasks(status: Optional[TaskStatus]): List[Task]</text>
+<text text-anchor="start" x="2097.6571" y="-699.1" font-family="Times,serif" font-size="14.00" fill="#000000">register_agent(agent: BaseAgent): None</text>
+<text text-anchor="start" x="2097.6571" y="-682.3" font-family="Times,serif" font-size="14.00" fill="#000000">unregister_agent(agent_id: str): None</text>
+</g>
+<!-- agent.orchestration.policies.OrchestrationPolicy&#45;&gt;agent.orchestration.supervisor.Supervisor -->
+<g id="edge20" class="edge">
+<title>agent.orchestration.policies.OrchestrationPolicy-&gt;agent.orchestration.supervisor.Supervisor</title>
+<path fill="none" stroke="#000000" d="M2094.4605,-581.2464C2114.5604,-605.5344 2139.1548,-635.2536 2163.331,-664.4675"/>
+<polygon fill="none" stroke="#000000" points="2163.5088,-664.6824 2170.4158,-666.7546 2171.1595,-673.9272 2164.2525,-671.855 2163.5088,-664.6824"/>
+<text text-anchor="middle" x="2162.1491" y="-629" font-family="Times,serif" font-size="14.00" fill="#00ff00">policy</text>
+</g>
+<!-- agent.orchestration.policies.PermissionPolicy -->
+<g id="node17" class="node">
+<title>agent.orchestration.policies.PermissionPolicy</title>
+<polygon fill="none" stroke="#000000" points="2099.0305,-151.7 2099.0305,-242.9 2404.2719,-242.9 2404.2719,-151.7 2099.0305,-151.7"/>
+<text text-anchor="start" x="2202.6526" y="-226.3" font-family="Times,serif" font-size="14.00" fill="#000000">PermissionPolicy</text>
+<polyline fill="none" stroke="#000000" points="2099.0305,-218.1 2404.2719,-218.1 "/>
+<text text-anchor="start" x="2107.0305" y="-201.5" font-family="Times,serif" font-size="14.00" fill="#000000">agent_permissions : Dict[str, List[str]]</text>
+<text text-anchor="start" x="2107.0305" y="-184.7" font-family="Times,serif" font-size="14.00" fill="#000000">required_permissions : Optional[Dict[str, List[str]]]</text>
+<polyline fill="none" stroke="#000000" points="2099.0305,-176.5 2404.2719,-176.5 "/>
+<text text-anchor="start" x="2127.0652" y="-159.9" font-family="Times,serif" font-size="14.00" fill="#000000">can_access(agent_id: str, resource: str): bool</text>
+</g>
+<!-- agent.orchestration.policies.PermissionPolicy&#45;&gt;agent.orchestration.policies.OrchestrationPolicy -->
+<g id="edge21" class="edge">
+<title>agent.orchestration.policies.PermissionPolicy-&gt;agent.orchestration.policies.OrchestrationPolicy</title>
+<path fill="none" stroke="#000000" d="M2223.564,-243.1573C2188.6495,-300.1612 2128.8439,-397.8042 2089.2779,-462.4025"/>
+<polygon fill="none" stroke="#000000" points="2089.1337,-462.6381 2089.4109,-469.8439 2082.866,-472.8712 2082.5888,-465.6654 2089.1337,-462.6381"/>
+<text text-anchor="middle" x="2167.3672" y="-416.8" font-family="Times,serif" font-size="14.00" fill="#00ff00">permission_policy</text>
+</g>
+<!-- agent.orchestration.router.RoundRobinRouter -->
+<g id="node19" class="node">
+<title>agent.orchestration.router.RoundRobinRouter</title>
+<polygon fill="none" stroke="#000000" points="2265.3646,-1026.3 2265.3646,-1100.7 2703.9378,-1100.7 2703.9378,-1026.3 2265.3646,-1026.3"/>
+<text text-anchor="start" x="2429.8181" y="-1084.1" font-family="Times,serif" font-size="14.00" fill="#000000">RoundRobinRouter</text>
+<polyline fill="none" stroke="#000000" points="2265.3646,-1075.9 2703.9378,-1075.9 "/>
+<polyline fill="none" stroke="#000000" points="2265.3646,-1051.1 2703.9378,-1051.1 "/>
+<text text-anchor="start" x="2273.3646" y="-1034.5" font-family="Times,serif" font-size="14.00" fill="#000000">route(task: Task, available_agents: List[BaseAgent]): Optional[BaseAgent]</text>
+</g>
+<!-- agent.orchestration.router.Router -->
+<g id="node20" class="node">
+<title>agent.orchestration.router.Router</title>
+<polygon fill="none" stroke="#000000" points="2144.3646,-1213.3 2144.3646,-1287.7 2582.9378,-1287.7 2582.9378,-1213.3 2144.3646,-1213.3"/>
+<text text-anchor="start" x="2344.6" y="-1271.1" font-family="Times,serif" font-size="14.00" fill="#000000">Router</text>
+<polyline fill="none" stroke="#000000" points="2144.3646,-1262.9 2582.9378,-1262.9 "/>
+<polyline fill="none" stroke="#000000" points="2144.3646,-1238.1 2582.9378,-1238.1 "/>
+<text text-anchor="start" x="2152.3646" y="-1222.5" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">route</text>
+<text text-anchor="start" x="2181.1304" y="-1222.5" font-family="Times,serif" font-size="14.00" fill="#000000">(task: Task, available_agents: List[BaseAgent]): Optional[BaseAgent]</text>
+</g>
+<!-- agent.orchestration.router.RoundRobinRouter&#45;&gt;agent.orchestration.router.Router -->
+<g id="edge6" class="edge">
+<title>agent.orchestration.router.RoundRobinRouter-&gt;agent.orchestration.router.Router</title>
+<path fill="none" stroke="#000000" d="M2460.4559,-1100.8928C2441.1657,-1130.7049 2414.0615,-1172.5931 2393.4378,-1204.4661"/>
+<polygon fill="none" stroke="#000000" points="2390.2987,-1202.8749 2387.8046,-1213.172 2396.1757,-1206.6777 2390.2987,-1202.8749"/>
+</g>
+<!-- agent.core.context.RunContext -->
+<g id="node21" class="node">
+<title>agent.core.context.RunContext</title>
+<polygon fill="none" stroke="#000000" points="3993.5933,-.5 3993.5933,-394.1 4227.7091,-394.1 4227.7091,-.5 3993.5933,-.5"/>
+<text text-anchor="start" x="4076.8167" y="-377.5" font-family="Times,serif" font-size="14.00" fill="#000000">RunContext</text>
+<polyline fill="none" stroke="#000000" points="3993.5933,-369.3 4227.7091,-369.3 "/>
+<text text-anchor="start" x="4023.952" y="-352.7" font-family="Times,serif" font-size="14.00" fill="#000000">budget : Optional[float]</text>
+<text text-anchor="start" x="4023.952" y="-335.9" font-family="Times,serif" font-size="14.00" fill="#000000">cost_incurred : float</text>
+<text text-anchor="start" x="4023.952" y="-319.1" font-family="Times,serif" font-size="14.00" fill="#000000">created_at : datetime</text>
+<text text-anchor="start" x="4023.952" y="-302.3" font-family="Times,serif" font-size="14.00" fill="#000000">end_time : Optional[datetime]</text>
+<text text-anchor="start" x="4023.952" y="-285.5" font-family="Times,serif" font-size="14.00" fill="#000000">max_steps : Optional[int]</text>
+<text text-anchor="start" x="4023.952" y="-268.7" font-family="Times,serif" font-size="14.00" fill="#000000">metadata : Dict[str, Any]</text>
+<text text-anchor="start" x="4023.952" y="-251.9" font-family="Times,serif" font-size="14.00" fill="#000000">request_id : str</text>
+<text text-anchor="start" x="4023.952" y="-235.1" font-family="Times,serif" font-size="14.00" fill="#000000">start_time : Optional[datetime]</text>
+<text text-anchor="start" x="4023.952" y="-218.3" font-family="Times,serif" font-size="14.00" fill="#000000">steps_taken : int</text>
+<text text-anchor="start" x="4023.952" y="-201.5" font-family="Times,serif" font-size="14.00" fill="#000000">tenant_id : str</text>
+<text text-anchor="start" x="4023.952" y="-184.7" font-family="Times,serif" font-size="14.00" fill="#000000">timeout : Optional[float]</text>
+<text text-anchor="start" x="4023.952" y="-167.9" font-family="Times,serif" font-size="14.00" fill="#000000">tokens_used : int</text>
+<text text-anchor="start" x="4023.952" y="-151.1" font-family="Times,serif" font-size="14.00" fill="#000000">user_id : str</text>
+<polyline fill="none" stroke="#000000" points="3993.5933,-142.9 4227.7091,-142.9 "/>
+<text text-anchor="start" x="4001.5933" y="-126.3" font-family="Times,serif" font-size="14.00" fill="#000000">add_cost(tokens: int, cost: float): None</text>
+<text text-anchor="start" x="4001.5933" y="-109.5" font-family="Times,serif" font-size="14.00" fill="#000000">end(): None</text>
+<text text-anchor="start" x="4001.5933" y="-92.7" font-family="Times,serif" font-size="14.00" fill="#000000">increment_step(): None</text>
+<text text-anchor="start" x="4001.5933" y="-75.9" font-family="Times,serif" font-size="14.00" fill="#000000">is_budget_exceeded(): bool</text>
+<text text-anchor="start" x="4001.5933" y="-59.1" font-family="Times,serif" font-size="14.00" fill="#000000">is_max_steps_reached(): bool</text>
+<text text-anchor="start" x="4001.5933" y="-42.3" font-family="Times,serif" font-size="14.00" fill="#000000">is_timeout(): bool</text>
+<text text-anchor="start" x="4001.5933" y="-25.5" font-family="Times,serif" font-size="14.00" fill="#000000">start(): None</text>
+<text text-anchor="start" x="4001.5933" y="-8.7" font-family="Times,serif" font-size="14.00" fill="#000000">to_dict(): Dict[str, Any]</text>
+</g>
+<!-- agent.orchestration.router.SimpleRouter -->
+<g id="node22" class="node">
+<title>agent.orchestration.router.SimpleRouter</title>
+<polygon fill="none" stroke="#000000" points="1808.3646,-1026.3 1808.3646,-1100.7 2246.9378,-1100.7 2246.9378,-1026.3 1808.3646,-1026.3"/>
+<text text-anchor="start" x="1988.7655" y="-1084.1" font-family="Times,serif" font-size="14.00" fill="#000000">SimpleRouter</text>
+<polyline fill="none" stroke="#000000" points="1808.3646,-1075.9 2246.9378,-1075.9 "/>
+<text text-anchor="start" x="1961.1701" y="-1059.3" font-family="Times,serif" font-size="14.00" fill="#000000">agent_capabilities : dict</text>
+<polyline fill="none" stroke="#000000" points="1808.3646,-1051.1 2246.9378,-1051.1 "/>
+<text text-anchor="start" x="1816.3646" y="-1034.5" font-family="Times,serif" font-size="14.00" fill="#000000">route(task: Task, available_agents: List[BaseAgent]): Optional[BaseAgent]</text>
+</g>
+<!-- agent.orchestration.router.SimpleRouter&#45;&gt;agent.orchestration.router.Router -->
+<g id="edge7" class="edge">
+<title>agent.orchestration.router.SimpleRouter-&gt;agent.orchestration.router.Router</title>
+<path fill="none" stroke="#000000" d="M2094.8383,-1100.8928C2150.579,-1131.9152 2229.8157,-1176.0142 2287.8214,-1208.2971"/>
+<polygon fill="none" stroke="#000000" points="2286.1406,-1211.3672 2296.5806,-1213.172 2289.5448,-1205.2506 2286.1406,-1211.3672"/>
+</g>
+<!-- agent.orchestration.supervisor.Supervisor&#45;&gt;agent.orchestration.router.SimpleRouter -->
+<g id="edge13" class="edge">
+<title>agent.orchestration.supervisor.Supervisor-&gt;agent.orchestration.router.SimpleRouter</title>
+<path fill="none" stroke="#000000" d="M2167.9124,-899.8028C2132.278,-941.3913 2093.9248,-986.1528 2066.3459,-1018.3399"/>
+<polygon fill="#000000" stroke="#000000" points="2059.5746,-1026.2425 2062.664,-1015.7208 2062.8279,-1022.4456 2066.0812,-1018.6488 2066.0812,-1018.6488 2066.0812,-1018.6488 2062.8279,-1022.4456 2069.4984,-1021.5767 2059.5746,-1026.2425 2059.5746,-1026.2425"/>
+<text text-anchor="middle" x="2156.3644" y="-936.4" font-family="Times,serif" font-size="14.00" fill="#00ff00">router</text>
+</g>
+<!-- agent.core.types.Task -->
+<g id="node25" class="node">
+<title>agent.core.types.Task</title>
+<polygon fill="none" stroke="#000000" points="2722.2865,-967.5 2722.2865,-1159.5 2907.0159,-1159.5 2907.0159,-967.5 2722.2865,-967.5"/>
+<text text-anchor="start" x="2801.0453" y="-1142.9" font-family="Times,serif" font-size="14.00" fill="#000000">Task</text>
+<polyline fill="none" stroke="#000000" points="2722.2865,-1134.7 2907.0159,-1134.7 "/>
+<text text-anchor="start" x="2730.2865" y="-1118.1" font-family="Times,serif" font-size="14.00" fill="#000000">assigned_agent : Optional[str]</text>
+<text text-anchor="start" x="2730.2865" y="-1101.3" font-family="Times,serif" font-size="14.00" fill="#000000">created_at : datetime</text>
+<text text-anchor="start" x="2730.2865" y="-1084.5" font-family="Times,serif" font-size="14.00" fill="#000000">description : str</text>
+<text text-anchor="start" x="2730.2865" y="-1067.7" font-family="Times,serif" font-size="14.00" fill="#000000">error : Optional[str]</text>
+<text text-anchor="start" x="2730.2865" y="-1050.9" font-family="Times,serif" font-size="14.00" fill="#000000">id : str</text>
+<text text-anchor="start" x="2730.2865" y="-1034.1" font-family="Times,serif" font-size="14.00" fill="#000000">result : Optional[Any]</text>
+<text text-anchor="start" x="2730.2865" y="-1017.3" font-family="Times,serif" font-size="14.00" fill="#000000">status</text>
+<text text-anchor="start" x="2730.2865" y="-1000.5" font-family="Times,serif" font-size="14.00" fill="#000000">updated_at : datetime</text>
+<polyline fill="none" stroke="#000000" points="2722.2865,-992.3 2907.0159,-992.3 "/>
+<text text-anchor="start" x="2812.9012" y="-975.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.orchestration.supervisor.Supervisor&#45;&gt;agent.core.types.Task -->
+<g id="edge10" class="edge">
+<title>agent.orchestration.supervisor.Supervisor-&gt;agent.core.types.Task</title>
+<path fill="none" stroke="#000000" d="M2439.8085,-840.0886C2525.7412,-870.3815 2628.5777,-913.1154 2712.6512,-967 2713.0489,-967.2549 2713.4463,-967.5114 2713.8436,-967.7696"/>
+<polygon fill="#000000" stroke="#000000" points="2722.1506,-973.4169 2711.3507,-971.5162 2718.0156,-970.6058 2713.8807,-967.7947 2713.8807,-967.7947 2713.8807,-967.7947 2718.0156,-970.6058 2716.4106,-964.0732 2722.1506,-973.4169 2722.1506,-973.4169"/>
+<text text-anchor="middle" x="2693.6484" y="-936.4" font-family="Times,serif" font-size="14.00" fill="#00ff00">tasks</text>
+</g>
+<!-- agent.agents.support_agent.SupportAgent -->
+<g id="node24" class="node">
+<title>agent.agents.support_agent.SupportAgent</title>
+<polygon fill="none" stroke="#000000" points="167.3784,-160.1 167.3784,-234.5 261.924,-234.5 261.924,-160.1 167.3784,-160.1"/>
+<text text-anchor="start" x="175.3784" y="-217.9" font-family="Times,serif" font-size="14.00" fill="#000000">SupportAgent</text>
+<polyline fill="none" stroke="#000000" points="167.3784,-209.7 261.924,-209.7 "/>
+<polyline fill="none" stroke="#000000" points="167.3784,-184.9 261.924,-184.9 "/>
+<text text-anchor="start" x="212.9012" y="-168.3" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.agents.support_agent.SupportAgent&#45;&gt;agent.agents.base_agent_impl.BaseAgentImpl -->
+<g id="edge2" class="edge">
+<title>agent.agents.support_agent.SupportAgent-&gt;agent.agents.base_agent_impl.BaseAgentImpl</title>
+<path fill="none" stroke="#000000" d="M214.6512,-234.8112C214.6512,-290.2933 214.6512,-394.9691 214.6512,-462.8306"/>
+<polygon fill="none" stroke="#000000" points="211.1513,-462.9789 214.6512,-472.9789 218.1513,-462.979 211.1513,-462.9789"/>
+</g>
+<!-- agent.core.types.TaskStatus -->
+<g id="node26" class="node">
+<title>agent.core.types.TaskStatus</title>
+<polygon fill="none" stroke="#000000" points="2775.9338,-1213.3 2775.9338,-1287.7 2853.3686,-1287.7 2853.3686,-1213.3 2775.9338,-1213.3"/>
+<text text-anchor="start" x="2783.9338" y="-1271.1" font-family="Times,serif" font-size="14.00" fill="#000000">TaskStatus</text>
+<polyline fill="none" stroke="#000000" points="2775.9338,-1262.9 2853.3686,-1262.9 "/>
+<text text-anchor="start" x="2799.4913" y="-1246.3" font-family="Times,serif" font-size="14.00" fill="#000000">name</text>
+<polyline fill="none" stroke="#000000" points="2775.9338,-1238.1 2853.3686,-1238.1 "/>
+<text text-anchor="start" x="2812.9012" y="-1221.5" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.core.types.Task&#45;&gt;agent.core.types.TaskStatus -->
+<g id="edge11" class="edge">
+<title>agent.core.types.Task-&gt;agent.core.types.TaskStatus</title>
+<path fill="none" stroke="#000000" d="M2814.6512,-1159.7389C2814.6512,-1174.7091 2814.6512,-1189.5856 2814.6512,-1202.8316"/>
+<polygon fill="#000000" stroke="#000000" points="2814.6512,-1213.0757 2810.1513,-1203.0756 2814.6512,-1208.0757 2814.6513,-1203.0757 2814.6513,-1203.0757 2814.6513,-1203.0757 2814.6512,-1208.0757 2819.1513,-1203.0757 2814.6512,-1213.0757 2814.6512,-1213.0757"/>
+<text text-anchor="middle" x="2830.5937" y="-1182.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">status</text>
+</g>
+<!-- agent.core.types.ToolCall -->
+<g id="node27" class="node">
+<title>agent.core.types.ToolCall</title>
+<polygon fill="none" stroke="#000000" points="4245.7851,-134.9 4245.7851,-259.7 4409.5173,-259.7 4409.5173,-134.9 4245.7851,-134.9"/>
+<text text-anchor="start" x="4302.7634" y="-243.1" font-family="Times,serif" font-size="14.00" fill="#000000">ToolCall</text>
+<polyline fill="none" stroke="#000000" points="4245.7851,-234.9 4409.5173,-234.9 "/>
+<text text-anchor="start" x="4253.7851" y="-218.3" font-family="Times,serif" font-size="14.00" fill="#000000">arguments : Dict[str, Any]</text>
+<text text-anchor="start" x="4253.7851" y="-201.5" font-family="Times,serif" font-size="14.00" fill="#000000">id : str</text>
+<text text-anchor="start" x="4253.7851" y="-184.7" font-family="Times,serif" font-size="14.00" fill="#000000">name : str</text>
+<text text-anchor="start" x="4253.7851" y="-167.9" font-family="Times,serif" font-size="14.00" fill="#000000">timestamp : datetime</text>
+<polyline fill="none" stroke="#000000" points="4245.7851,-159.7 4409.5173,-159.7 "/>
+<text text-anchor="start" x="4325.9012" y="-143.1" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.core.tool_registry.ToolDefinition -->
+<g id="node28" class="node">
+<title>agent.core.tool_registry.ToolDefinition</title>
+<polygon fill="none" stroke="#000000" points="4427.2402,-126.5 4427.2402,-268.1 4678.0622,-268.1 4678.0622,-126.5 4427.2402,-126.5"/>
+<text text-anchor="start" x="4510.6575" y="-251.5" font-family="Times,serif" font-size="14.00" fill="#000000">ToolDefinition</text>
+<polyline fill="none" stroke="#000000" points="4427.2402,-243.3 4678.0622,-243.3 "/>
+<text text-anchor="start" x="4435.2402" y="-226.7" font-family="Times,serif" font-size="14.00" fill="#000000">description : str</text>
+<text text-anchor="start" x="4435.2402" y="-209.9" font-family="Times,serif" font-size="14.00" fill="#000000">func : Callable</text>
+<text text-anchor="start" x="4435.2402" y="-193.1" font-family="Times,serif" font-size="14.00" fill="#000000">name : str</text>
+<text text-anchor="start" x="4435.2402" y="-176.3" font-family="Times,serif" font-size="14.00" fill="#000000">parameters : Dict[str, Any]</text>
+<text text-anchor="start" x="4435.2402" y="-159.5" font-family="Times,serif" font-size="14.00" fill="#000000">required_permissions : Optional[List[str]]</text>
+<polyline fill="none" stroke="#000000" points="4427.2402,-151.3 4678.0622,-151.3 "/>
+<text text-anchor="start" x="4550.9012" y="-134.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- agent.core.tool_registry.ToolRegistry -->
+<g id="node29" class="node">
+<title>agent.core.tool_registry.ToolRegistry</title>
+<polygon fill="none" stroke="#000000" points="719.8772,-456.3 719.8772,-597.9 1291.4252,-597.9 1291.4252,-456.3 719.8772,-456.3"/>
+<text text-anchor="start" x="968.7108" y="-581.3" font-family="Times,serif" font-size="14.00" fill="#000000">ToolRegistry</text>
+<polyline fill="none" stroke="#000000" points="719.8772,-573.1 1291.4252,-573.1 "/>
+<polyline fill="none" stroke="#000000" points="719.8772,-548.3 1291.4252,-548.3 "/>
+<text text-anchor="start" x="727.8772" y="-531.7" font-family="Times,serif" font-size="14.00" fill="#000000">execute(name: str, arguments: Dict[str, Any]): Any</text>
+<text text-anchor="start" x="727.8772" y="-514.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_tool(name: str): Optional[ToolDefinition]</text>
+<text text-anchor="start" x="727.8772" y="-498.1" font-family="Times,serif" font-size="14.00" fill="#000000">get_tool_schema(name: str): Optional[Dict[str, Any]]</text>
+<text text-anchor="start" x="727.8772" y="-481.3" font-family="Times,serif" font-size="14.00" fill="#000000">list_tools(user_permissions: Optional[List[str]]): List[ToolDefinition]</text>
+<text text-anchor="start" x="727.8772" y="-464.5" font-family="Times,serif" font-size="14.00" fill="#000000">register(name: str, description: str, func: Callable, required_permissions: Optional[List[str]]): None</text>
+</g>
+<!-- agent.core.tool_registry.ToolRegistry&#45;&gt;agent.core.base.BaseAgent -->
+<g id="edge18" class="edge">
+<title>agent.core.tool_registry.ToolRegistry-&gt;agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M945.5352,-598.0915C931.668,-614.4675 916.4588,-632.4281 901.1076,-650.5565"/>
+<polygon fill="none" stroke="#000000" points="900.8281,-650.8866 900.0033,-658.0504 893.0733,-660.0443 893.8981,-652.8805 900.8281,-650.8866"/>
+<text text-anchor="middle" x="958.4226" y="-629" font-family="Times,serif" font-size="14.00" fill="#00ff00">tool_registry</text>
+</g>
+</g>
+</svg>

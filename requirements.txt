@@ -8,9 +8,12 @@ httpx>=0.25.0
 chainlit>=1.0.0
 gradio>=4.0.0
 
+# LLM dependencies
+openai>=1.0.0  # For OpenAI integration
+
 # Optional dependencies
-# openai>=1.0.0  # For OpenAI integration
 # anthropic>=0.7.0  # For Anthropic integration
 # redis>=5.0.0  # For Redis memory backend
 # sqlalchemy>=2.0.0  # For database tools
+# modelscope>=1.0.0  # For ModelScope integration
 

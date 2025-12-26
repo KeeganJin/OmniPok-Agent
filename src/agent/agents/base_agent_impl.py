@@ -15,14 +15,42 @@ class BaseAgentImpl(BaseAgent):
         self,
         agent_id: str,
         name: str,
-        llm_client: Any,  # LLM client (OpenAI, Anthropic, etc.)
+        llm: Optional[OmniPokLLM] = None,
+        llm_client: Optional[Any] = None,  # Deprecated: use llm instead
         memory: Optional[Any] = None,
         tool_registry: Optional[ToolRegistry] = None,
         system_prompt: Optional[str] = None,
         max_iterations: int = 10
     ):
+        """
+        Initialize BaseAgentImpl.
+        
+        Args:
+            agent_id: Unique agent identifier
+            name: Agent name
+            llm: OmniPokLLM instance (recommended)
+            llm_client: Legacy LLM client (deprecated, use llm instead)
+            memory: Memory backend
+            tool_registry: Tool registry
+            system_prompt: System prompt
+            max_iterations: Maximum iterations for tool calling
+        """
         super().__init__(agent_id, name, memory, tool_registry, system_prompt)
-        self.llm_client = llm_client
+        
+        # Support both new llm parameter and legacy llm_client
+        if llm:
+            self.llm = llm
+        elif llm_client:
+            # For backward compatibility, wrap legacy client
+            if isinstance(llm_client, (OmniPokLLM, LLMProvider)):
+                self.llm = llm_client if isinstance(llm_client, OmniPokLLM) else OmniPokLLM(provider="openai")
+            else:
+                # Try to create OmniPokLLM with auto-detection
+                self.llm = OmniPokLLM()
+        else:
+            # Auto-detect and create LLM
+            self.llm = OmniPokLLM()
+        
         self.max_iterations = max_iterations
     
     async def process(self, message: str, context: RunContext) -> str:
@@ -45,6 +73,14 @@ class BaseAgentImpl(BaseAgent):
             
             # Call LLM
             response = await self._call_llm(messages, available_tools)
+            
+            # Update context with usage if available
+            if response.get("usage"):
+                usage = response["usage"]
+                tokens = usage.get("total_tokens", 0)
+                # Estimate cost (this is a placeholder - implement actual cost calculation)
+                cost = tokens * 0.000002  # Rough estimate
+                context.add_cost(tokens, cost)
             
             # Handle tool calls if any
             final_response = await self._handle_response(response, context)
@@ -99,24 +135,22 @@ class BaseAgentImpl(BaseAgent):
     async def _call_llm(
         self,
         messages: List[Dict[str, Any]],
-        tools: List[Dict[str, Any]]  # noqa: ARG002
+        tools: List[Dict[str, Any]]
     ) -> Dict[str, Any]:
         """Call the LLM with messages and tools."""
-        # This is a placeholder - implement based on your LLM client
-        # Example for OpenAI:
-        # response = await self.llm_client.chat.completions.create(
-        #     model="gpt-4",
-        #     messages=messages,
-        #     tools=[self._tool_to_openai_format(t) for t in tools] if tools else None
-        # )
-        # return response.choices[0].message
+        # Use the unified LLM interface
+        response = await self.llm.chat(messages, tools=tools if tools else None)
         
-        # Placeholder response - await is not needed here as this is a placeholder
-        # In real implementation, this would await the LLM client call
+        # Update context with usage if available
+        # This will be done in the process method if context is available
+        
+        # Convert LLMResponse to dict format
         return {
-            "role": "assistant",
-            "content": "This is a placeholder response. Implement LLM integration.",
-            "tool_calls": None
+            "role": response.role,
+            "content": response.content,
+            "tool_calls": response.tool_calls,
+            "finish_reason": response.finish_reason,
+            "usage": response.usage
         }
     
     async def _handle_response(
