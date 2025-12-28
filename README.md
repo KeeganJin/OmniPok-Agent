@@ -1,154 +1,244 @@
 # OmniPok Agent Framework
 
-A flexible and extensible multi-agent framework built with Python and FastAPI.
+一个灵活且可扩展的多智能体框架，基于 Python 和 FastAPI 构建。
 
-## Features
+## ✨ 特性
 
-- **Multi-Agent Support**: Create and manage multiple specialized agents
-- **Tool System**: Extensible tool registry with permission-based access control
-- **Memory Management**: Pluggable memory backends (in-memory, Redis, vector stores)
-- **Orchestration**: Supervisor pattern for task routing and coordination
-- **Group Chat**: Multi-agent collaboration and conversation
-- **REST API**: FastAPI-based RESTful API for agent interactions
-- **Web UI**: Chainlit interface for interactive agent chat with multimodal support
-- **Context Management**: Run context with budget, timeout, and step limits
+- 🤖 **多智能体支持**：创建和管理多个专业化的智能体
+- 🔧 **工具系统**：可扩展的工具注册表，支持基于权限的访问控制
+- 💾 **内存管理**：可插拔的内存后端（内存、SQLite、向量存储）
+- 🎯 **任务编排**：Supervisor 模式实现任务路由和协调
+- 💬 **群聊功能**：多智能体协作和对话
+- 🌐 **REST API**：基于 FastAPI 的 RESTful API
+- 🎨 **Web UI**：Chainlit 交互式聊天界面，支持多模态
+- 📊 **上下文管理**：支持预算、超时和步骤限制的运行上下文
 
-## Project Structure
+## 📁 项目结构
 
 ```
-src/
-├─ app/                         # FastAPI/Chainlit入口
-│  ├─ api/                      # FastAPI routes
-│  ├─ ui/                       # UI interfaces
-│  │  ├─ chainlit_app.py        # Chainlit UI
-│  │  └─ chainlit_main.py       # Chainlit entry point
-│  ├─ config/                   # Configuration management
-│  │  └─ agent_config.py        # Agent configuration
-│  └─ services/                 # Service layer
-│     └─ agent_service.py       # Agent service (singleton)
-│  └─ main.py                   # FastAPI app entry
-├─ agent/
-│  ├─ core/                     # 核心抽象和接口
-│  │  ├─ base.py                # BaseAgent 抽象类
-│  │  ├─ context.py             # RunContext
-│  │  ├─ types.py               # 类型定义
-│  │  ├─ tool_registry.py       # 工具注册系统
-│  │  └─ memory.py              # 内存接口
-│  ├─ tools/                     # 工具实现
-│  │  ├─ http.py                # HTTP 工具
-│  │  └─ db.py                  # 数据库工具
-│  ├─ agents/                    # Agent 实现
-│  │  ├─ base_agent_impl.py     # 基础实现
-│  │  └─ support_agent.py       # 支持 Agent
-│  └─ orchestration/            # 编排系统
-│     ├─ router.py              # 任务路由
-│     ├─ supervisor.py          # Supervisor
-│     ├─ groupchat.py           # 群聊
-│     └─ policies.py            # 策略
-├─ llm/                         # LLM 集成
-├─ observability/               # 可观测性
-└─ common/                      # 通用工具
+OmniPok-Agent/
+├── omnipok_agent/              # 主框架包（领域驱动设计）
+│   ├── core/                   # 核心抽象和基础类型
+│   │   ├── base.py            # BaseAgent 抽象类
+│   │   ├── context.py         # RunContext
+│   │   ├── types.py           # 类型定义
+│   │   └── exceptions.py      # 异常类
+│   ├── agents/                 # Agent 实现
+│   │   ├── text_agent.py
+│   │   ├── code_agent.py
+│   │   ├── chat_agent.py
+│   │   └── ...
+│   ├── orchestration/          # 编排系统
+│   │   ├── supervisor.py
+│   │   ├── router.py
+│   │   ├── groupchat.py
+│   │   └── langgraph/         # LangGraph 实现
+│   ├── tools/                  # 工具实现
+│   │   ├── registry.py        # 工具注册表
+│   │   ├── http.py
+│   │   └── db.py
+│   ├── memory/                 # 内存管理
+│   │   ├── base.py
+│   │   ├── in_memory.py
+│   │   ├── short_term.py
+│   │   ├── long_term.py
+│   │   └── manager.py
+│   ├── llm/                    # LLM 集成
+│   │   └── omnipok_llm.py
+│   └── config/                 # 配置管理
+│       └── agent_config.py
+│
+├── applications/                # 应用层
+│   ├── api/                    # FastAPI 应用
+│   │   ├── main.py
+│   │   └── routes.py
+│   ├── ui/                     # Chainlit UI
+│   │   ├── chainlit_app.py
+│   │   └── chainlit_main.py
+│   └── services/               # 服务层
+│       └── agent_service.py
+│
+├── examples/                    # 示例代码
+├── config/                      # 配置文件
+└── tests/                       # 测试目录
 ```
 
-![Packages Relations](./images/packages.svg)
-![Project UML](./images/UML.svg)
+## 🚀 快速开始
 
-## Todo:
-[] 重新定义 Agent
-[] 任务编排
-
-
-## Installation
+### 1. 安装
 
 ```bash
+# 克隆仓库（如果从 Git 克隆）
+git clone <repository-url>
+cd OmniPok-Agent
+
+# 创建虚拟环境（推荐）
+python -m venv venv
+
+# 激活虚拟环境
+# Windows:
+venv\Scripts\activate
+# Linux/Mac:
+source venv/bin/activate
+
+# 安装依赖
 pip install -r requirements.txt
 ```
 
-## Quick Start
+### 2. 配置环境变量
 
-### 1. Basic Usage
-
-```python
-from src.agent.core import RunContext, InMemoryMemory, global_registry, OmniPokLLM, BaseAgent
-from src.agent.tools import http_get
-
-# Register a tool
-global_registry.register(
-    name="http_get",
-    description="Make an HTTP GET request",
-    func=http_get
-)
-
-# Create LLM instance - framework auto-detects provider
-llm = OmniPokLLM()
-
-# Or manually specify provider (optional)
-# llm = OmniPokLLM(provider="openai", model="gpt-4")
-# llm = OmniPokLLM(provider="modelscope", model="qwen/Qwen2.5-7B-Instruct")
-
-# Create an agent
-memory = InMemoryMemory()
-agent = BaseAgent(
-    agent_id="agent-1",
-    name="AI助手",
-    llm=llm,
-    system_prompt="你是一个有用的AI助手",
-    memory=memory,
-    tool_registry=global_registry
-)
-
-# Create context
-context = RunContext(
-    tenant_id="tenant-1",
-    user_id="user-1",
-    budget=10.0,
-    max_steps=10
-)
-
-# Process a message
-response = await agent.process("Hello, world!", context)
-print(response)
-```
-
-### 2. Using Supervisor
-
-```python
-from src.agent.orchestration import Supervisor, SimpleRouter
-from src.agent.core import RunContext, Task
-
-# Create supervisor
-supervisor = Supervisor(
-    agents=[agent1, agent2, agent3],
-    router=SimpleRouter()
-)
-
-# Create and assign a task
-task = Task(id="task-1", description="Process this task")
-context = RunContext(tenant_id="t1", user_id="u1")
-agent_id = await supervisor.assign_task(task, context)
-```
-
-### 3. Running the API
+创建 `.env` 文件（项目根目录）：
 
 ```bash
-uvicorn src.app.main:app --reload
+# LLM 配置（至少配置一个）
+OPENAI_API_KEY=your-openai-api-key-here
+LLM_MODEL_ID=gpt-4
+LLM_BASE_URL=https://api.openai.com/v1
+
+# 或者使用其他提供商
+# DASHSCOPE_API_KEY=your-dashscope-key  # 阿里云通义千问
+# DEEPSEEK_API_KEY=your-deepseek-key    # DeepSeek
 ```
 
-Then visit `http://localhost:8000/docs` for API documentation.
+### 3. 基本使用示例
 
-### 4. Agent Configuration
+创建 `example.py`：
 
-The agent service uses a centralized configuration system. You can configure agents via:
+```python
+import asyncio
+from omnipok_agent.core import BaseAgent, RunContext
+from omnipok_agent.memory import InMemoryMemory
+from omnipok_agent.llm import OmniPokLLM
 
-**Option 1: Environment Variables**
+async def main():
+    # 创建 LLM 实例（自动检测环境变量配置）
+    llm = OmniPokLLM()
+    
+    # 创建智能体
+    agent = BaseAgent(
+        agent_id="my-agent",
+        name="我的助手",
+        llm=llm,
+        system_prompt="你是一个有用的AI助手",
+        memory=InMemoryMemory()
+    )
+    
+    # 创建运行上下文
+    context = RunContext(
+        tenant_id="tenant-1",
+        user_id="user-1",
+        budget=10.0,
+        max_steps=10
+    )
+    
+    # 处理消息
+    response = await agent.process("你好，请介绍一下你自己", context)
+    print(f"回复: {response}")
+    print(f"使用的Token: {context.tokens_used}")
+    print(f"成本: ${context.cost_incurred:.4f}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+运行：
+
 ```bash
-export OPENAI_API_KEY="your-api-key"
-export DEFAULT_LLM_MODEL="gpt-4"
-export AGENTS_CONFIG='[{"agent_type":"TextAgent","agent_id":"text-agent-1","name":"Text Agent","enabled":true}]'
+python example.py
 ```
 
-**Option 2: Configuration File (recommended)**
-Create `config/agents.json` (see `config/agents.json.example` for template):
+### 4. 使用预定义的 Agent
+
+```python
+import asyncio
+from omnipok_agent.agents import TextAgent
+from omnipok_agent.core import RunContext
+from omnipok_agent.llm import OmniPokLLM
+
+async def main():
+    # 创建文本处理 Agent
+    agent = TextAgent(
+        agent_id="text-agent-1",
+        llm=OmniPokLLM(),
+        system_prompt="你是一个专业的文本处理助手"
+    )
+    
+    context = RunContext(tenant_id="t1", user_id="u1")
+    response = await agent.process("请总结一下人工智能的发展历史", context)
+    print(response)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### 5. 使用工具
+
+```python
+import asyncio
+from omnipok_agent.core import BaseAgent, RunContext
+from omnipok_agent.tools import global_registry, http_get
+from omnipok_agent.llm import OmniPokLLM
+from omnipok_agent.memory import InMemoryMemory
+
+async def main():
+    # 注册工具
+    global_registry.register(tool=http_get)
+    
+    # 创建带工具的 Agent
+    agent = BaseAgent(
+        agent_id="tool-agent",
+        name="工具助手",
+        llm=OmniPokLLM(),
+        memory=InMemoryMemory(),
+        tool_registry=global_registry
+    )
+    
+    context = RunContext(tenant_id="t1", user_id="u1")
+    # Agent 现在可以使用 http_get 工具
+    response = await agent.process(
+        "请访问 https://api.github.com 并获取信息",
+        context
+    )
+    print(response)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## 🌐 运行 Web 应用
+
+### 启动 FastAPI 服务
+
+```bash
+uvicorn applications.api.main:app --reload
+```
+
+然后访问：
+- API 文档: http://localhost:8000/docs
+- 健康检查: http://localhost:8000/health
+
+### 启动 Chainlit UI
+
+**方式一：使用便捷脚本（推荐）**
+
+```bash
+python run_chainlit.py
+```
+
+**方式二：直接使用 chainlit**
+
+```bash
+chainlit run applications/ui/chainlit_main.py
+```
+
+然后访问 http://localhost:8000 开始聊天。
+
+## ⚙️ 配置 Agent
+
+### 方式一：使用配置文件（推荐）
+
+创建 `config/agents.json`（参考 `config/agents.json.example`）：
+
 ```json
 {
   "defaults": {
@@ -160,12 +250,13 @@ Create `config/agents.json` (see `config/agents.json.example` for template):
     {
       "agent_type": "TextAgent",
       "agent_id": "text-agent-1",
-      "name": "Text Agent",
+      "name": "文本处理助手",
       "enabled": true
     },
     {
       "agent_type": "CodeAgent",
       "agent_id": "code-agent-1",
+      "name": "代码助手",
       "programming_language": "python",
       "enabled": true
     }
@@ -173,95 +264,126 @@ Create `config/agents.json` (see `config/agents.json.example` for template):
 }
 ```
 
-The service automatically loads configuration on startup. The FastAPI backend and Chainlit UI share the same agent service instance (singleton pattern).
+### 方式二：环境变量
 
-### 5. Running Chainlit UI
-
-**Option 1: Using the convenience script (recommended)**
 ```bash
-python run_chainlit.py
+export OPENAI_API_KEY="your-api-key"
+export DEFAULT_LLM_MODEL="gpt-4"
+export AGENTS_CONFIG='[{"agent_type":"TextAgent","agent_id":"text-agent-1","name":"Text Agent","enabled":true}]'
 ```
 
-**Option 2: Using chainlit directly**
-```bash
-# From project root
-chainlit run src/app/ui/chainlit_main.py
-```
+## 📚 API 端点
 
-**Option 3: Using python module**
-```bash
-# From project root
-python -m chainlit run src/app/ui/chainlit_main.py
-```
+- `POST /api/v1/chat` - 与 Agent 聊天
+- `POST /api/v1/tasks` - 创建和分配任务
+- `GET /api/v1/tasks/{task_id}` - 获取任务状态
+- `GET /api/v1/agents` - 列出所有 Agent
 
-Then visit `http://localhost:8000` (default Chainlit port).
+## 🔧 扩展框架
 
-## API Endpoints
-
-- `POST /api/v1/chat` - Chat with an agent
-- `POST /api/v1/tasks` - Create and assign a task
-- `GET /api/v1/tasks/{task_id}` - Get task status
-- `GET /api/v1/agents` - List all agents
-
-## UI Features
-
-### Chainlit UI
-- Interactive chat interface with multimodal support
-- Agent selection
-- Real-time conversation
-- Usage statistics display
-- File upload support (images, audio, video)
-
-## Extending the Framework
-
-### Creating a Custom Agent
+### 创建自定义 Agent
 
 ```python
-from src.agent.core import BaseAgent
-from src.agent.core.types import Message, ToolCall, Observation
-from src.agent.core.context import RunContext
+from omnipok_agent.core import BaseAgent
+from omnipok_agent.core.types import Message, ToolCall, Observation
+from omnipok_agent.core import RunContext
 
 class MyCustomAgent(BaseAgent):
     async def process(self, message: str, context: RunContext) -> str:
-        # Your implementation
-        return "Response"
+        # 你的实现
+        return "自定义回复"
     
-    async def execute_tool_call(self, tool_call: ToolCall, context: RunContext) -> Observation:
-        # Your implementation
+    async def execute_tool_call(
+        self, 
+        tool_call: ToolCall, 
+        context: RunContext
+    ) -> Observation:
+        # 你的工具调用实现
         pass
 ```
 
-### Adding a Tool
+### 添加工具
+
+工具需要是 LangChain Tool 实例：
 
 ```python
-from src.agent.tools import global_registry
+from langchain_core.tools import tool
+from omnipok_agent.tools import global_registry
 
+@tool
 async def my_tool(param1: str, param2: int) -> dict:
-    """Tool description."""
+    """工具描述。"""
     return {"result": "success"}
 
-global_registry.register(
-    name="my_tool",
-    description="My custom tool",
-    func=my_tool,
-    required_permissions=["permission1"]
-)
+# 注册工具
+global_registry.register(tool=my_tool)
 ```
 
-### Custom Memory Backend
+### 自定义内存后端
 
 ```python
-from src.agent.core.memory import Memory
-from src.agent.core.types import AgentState, Message
+from omnipok_agent.memory.base import Memory
+from omnipok_agent.core.types import AgentState, Message
 
 class MyMemoryBackend(Memory):
     def save(self, agent_id: str, state: AgentState) -> None:
-        # Your implementation
+        # 你的实现
         pass
     
-    # Implement other required methods
+    def load(self, agent_id: str) -> AgentState:
+        # 你的实现
+        pass
+    
+    # 实现其他必需的方法...
 ```
 
-## License
+## 📖 更多示例
+
+查看 `examples/` 目录了解更多示例：
+
+- `simple_agent_example.py` - 基础 Agent 使用
+- `memory_example.py` - 内存系统使用
+- `langgraph_orchestration_example.py` - 任务编排示例
+
+## 🛠️ 支持的 LLM 提供商
+
+- OpenAI (GPT-4, GPT-3.5)
+- 阿里云通义千问 (Qwen)
+- DeepSeek
+- ModelScope
+- 月之暗面 (Kimi/Moonshot)
+- 智谱AI (GLM)
+- Ollama (本地部署)
+- vLLM (本地部署)
+- 其他兼容 OpenAI API 的服务
+
+## 📝 开发
+
+### 运行测试
+
+```bash
+# 待实现
+pytest tests/
+```
+
+### 代码格式化
+
+```bash
+black omnipok_agent/ applications/
+ruff check omnipok_agent/ applications/
+```
+
+## 📄 License
 
 MIT
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+---
+
+**快速链接**：
+- 📖 [完整文档](./docs/)
+- 💡 [示例代码](./examples/)
+- 🔧 [配置文件示例](./config/agents.json.example)
