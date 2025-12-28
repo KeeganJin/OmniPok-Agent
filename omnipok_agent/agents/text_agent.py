@@ -20,6 +20,7 @@ class TextAgent(BaseAgent):
     def __init__(
         self,
         agent_id: str,
+        name: str = None,
         llm: Optional[OmniPokLLM] = None,
         memory: Optional[Memory] = None,
         tool_registry: Optional[ToolRegistry] = None

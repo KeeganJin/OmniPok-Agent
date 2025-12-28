@@ -2,6 +2,14 @@
 
 一个灵活且可扩展的多智能体框架，基于 Python 和 FastAPI 构建。
 
+## 初步的交互界面
+[初步交互界面](./images/UI.png)
+
+## Todo
+[] !! Update Tool USE!! 目前tool use部分出了一点小小小小bug。。。
+
+
+
 ## ✨ 特性
 
 - 🤖 **多智能体支持**：创建和管理多个专业化的智能体
@@ -72,8 +80,6 @@ OmniPok-Agent/
 ├── config/                      # 配置文件
 └── tests/                       # 测试目录
 ```
-## Todo
-[] !! Update Tool USE!! 目前tool use部分出了一点小小小小bug。。。
 
 
 ## 🚀 快速开始
