@@ -9,7 +9,7 @@ from langchain_core.tools import tool
 _db_connections: Dict[str, Any] = {}
 
 
-@tool(metadata={"required_permissions": ["db.query"]})
+@tool
 async def db_query(
     connection_string: str,  # noqa: ARG001
     query: str,
@@ -38,8 +38,11 @@ async def db_query(
         }
     ]
 
+# Set metadata after tool creation
+db_query.metadata = {"required_permissions": ["db.query"]}
 
-@tool(metadata={"required_permissions": ["db.execute"]})
+
+@tool
 async def db_execute(
     connection_string: str,  # noqa: ARG001
     statement: str,
@@ -64,4 +67,7 @@ async def db_execute(
         "parameters": parameters or {},
         "rows_affected": 0,
     }
+
+# Set metadata after tool creation
+db_execute.metadata = {"required_permissions": ["db.execute"]}
 

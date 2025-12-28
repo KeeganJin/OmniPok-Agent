@@ -2,9 +2,9 @@
 import json
 from typing import Optional, Dict, Any
 from ..core.base import BaseAgent
-from ..core.memory import Memory
-from ..core.llm import OmniPokLLM
-from ..core.tool_registry import ToolRegistry
+from ..memory.base import Memory
+from ..llm.omnipok_llm import OmniPokLLM
+from ..tools.registry import ToolRegistry
 from ..core.context import RunContext
 from ..core.types import Message, MessageRole
 

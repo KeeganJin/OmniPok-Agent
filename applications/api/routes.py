@@ -6,6 +6,7 @@ import uuid
 
 from omnipok_agent.core import RunContext, Task, TaskStatus
 from omnipok_agent.orchestration import Supervisor
+from ..services.agent_service import get_agent_service
 
 router = APIRouter(prefix="/api/v1", tags=["agents"])
 
@@ -216,4 +217,62 @@ async def list_agents(supervisor: Supervisor = Depends(get_supervisor)):
             for agent in agents
         ]
     }
+
+
+class CreateAgentRequest(BaseModel):
+    """Request model for creating an agent."""
+    agent_type: str = Field(..., description="Agent type: TextAgent, CodeAgent, or SupportAgent")
+    agent_id: str = Field(..., description="Unique agent ID")
+    name: Optional[str] = Field(None, description="Agent name")
+    programming_language: Optional[str] = Field(None, description="Programming language for CodeAgent")
+    llm_provider: Optional[str] = Field(None, description="LLM provider")
+    llm_model: Optional[str] = Field(None, description="LLM model")
+    llm_api_key_env: Optional[str] = Field(None, description="Environment variable name for API key")
+
+
+class CreateAgentResponse(BaseModel):
+    """Response model for creating an agent."""
+    agent_id: str
+    name: str
+    agent_type: str
+    message: str
+
+
+@router.post("/agents/create", response_model=CreateAgentResponse)
+async def create_agent(request: CreateAgentRequest):
+    """
+    Create a new agent instance.
+    
+    Args:
+        request: Create agent request
+        
+    Returns:
+        Create agent response
+    """
+    try:
+        agent_service = get_agent_service()
+        agent = agent_service.create_agent(
+            agent_type=request.agent_type,
+            agent_id=request.agent_id,
+            name=request.name,
+            programming_language=request.programming_language,
+            llm_provider=request.llm_provider,
+            llm_model=request.llm_model,
+            llm_api_key_env=request.llm_api_key_env
+        )
+        
+        # Update supervisor in routes
+        supervisor = agent_service.get_supervisor()
+        set_supervisor(supervisor)
+        
+        return CreateAgentResponse(
+            agent_id=agent.agent_id,
+            name=agent.name,
+            agent_type=request.agent_type,
+            message=f"Agent '{agent.name}' created successfully"
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 

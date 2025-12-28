@@ -1,8 +1,8 @@
 """Simple chat agent implementation - the most basic chatbot."""
 from typing import Optional
 from ..core.base import BaseAgent
-from ..core.memory import Memory
-from ..core.llm import OmniPokLLM
+from ..memory.base import Memory
+from ..llm.omnipok_llm import OmniPokLLM
 
 
 class ChatAgent(BaseAgent):

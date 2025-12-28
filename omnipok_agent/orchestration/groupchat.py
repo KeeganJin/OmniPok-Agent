@@ -3,7 +3,7 @@ from typing import List, Dict, Optional
 from ..core.base import BaseAgent
 from ..core.context import RunContext
 from ..core.types import Message, MessageRole
-from ..core.memory import Memory
+from ..memory.base import Memory
 
 
 class GroupChat:

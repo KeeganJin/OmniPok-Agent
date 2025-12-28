@@ -4,7 +4,7 @@ from langgraph.graph import StateGraph, END
 from ...core.base import BaseAgent
 from ...core.context import RunContext
 from ...core.types import Message, MessageRole
-from ...core.memory import Memory
+from ...memory.base import Memory
 from .state import GroupChatState
 from .nodes import agent_node
 

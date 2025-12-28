@@ -7,7 +7,7 @@ from langchain_core.tools import tool
 JSON_CONTENT_TYPE = "application/json"
 
 
-@tool(metadata={"required_permissions": ["http.get"]})
+@tool
 async def http_get(
     url: str,
     headers: Optional[Dict[str, str]] = None,
@@ -41,12 +41,15 @@ async def http_get(
             "json": response.json() if response.headers.get("content-type", "").startswith(JSON_CONTENT_TYPE) else None,
         }
 
+# Set metadata after tool creation
+http_get.metadata = {"required_permissions": ["http.get"]}
 
-@tool(metadata={"required_permissions": ["http.post"]})
+
+@tool
 async def http_post(
     url: str,
     data: Optional[Dict[str, Any]] = None,
-    json: Optional[Dict[str, Any]] = None,
+    json_data: Optional[Dict[str, Any]] = None,
     headers: Optional[Dict[str, str]] = None,
     timeout: float = 30.0
 ) -> Dict[str, Any]:
@@ -56,7 +59,7 @@ async def http_post(
     Args:
         url: The URL to request
         data: Optional form data
-        json: Optional JSON data
+        json_data: Optional JSON data
         headers: Optional headers
         timeout: Request timeout in seconds
         
@@ -67,7 +70,7 @@ async def http_post(
         response = await client.post(
             url,
             data=data,
-            json=json,
+            json=json_data,
             headers=headers or {},
             timeout=timeout
         )
@@ -79,12 +82,15 @@ async def http_post(
             "json": response.json() if response.headers.get("content-type", "").startswith(JSON_CONTENT_TYPE) else None,
         }
 
+# Set metadata after tool creation
+http_post.metadata = {"required_permissions": ["http.post"]}
 
-@tool(metadata={"required_permissions": ["http.put"]})
+
+@tool
 async def http_put(
     url: str,
     data: Optional[Dict[str, Any]] = None,
-    json: Optional[Dict[str, Any]] = None,
+    json_data: Optional[Dict[str, Any]] = None,
     headers: Optional[Dict[str, str]] = None,
     timeout: float = 30.0
 ) -> Dict[str, Any]:
@@ -94,7 +100,7 @@ async def http_put(
     Args:
         url: The URL to request
         data: Optional form data
-        json: Optional JSON data
+        json_data: Optional JSON data
         headers: Optional headers
         timeout: Request timeout in seconds
         
@@ -105,7 +111,7 @@ async def http_put(
         response = await client.put(
             url,
             data=data,
-            json=json,
+            json=json_data,
             headers=headers or {},
             timeout=timeout
         )
@@ -117,8 +123,11 @@ async def http_put(
             "json": response.json() if response.headers.get("content-type", "").startswith(JSON_CONTENT_TYPE) else None,
         }
 
+# Set metadata after tool creation
+http_put.metadata = {"required_permissions": ["http.put"]}
 
-@tool(metadata={"required_permissions": ["http.delete"]})
+
+@tool
 async def http_delete(
     url: str,
     headers: Optional[Dict[str, str]] = None,
@@ -147,4 +156,7 @@ async def http_delete(
             "headers": dict(response.headers),
             "body": response.text,
         }
+
+# Set metadata after tool creation
+http_delete.metadata = {"required_permissions": ["http.delete"]}
 

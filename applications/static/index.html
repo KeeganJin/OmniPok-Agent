@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniPok Agent - 智能体聊天</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            min-height: 600px;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 30px;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .chat-area {
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .status {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .message.user {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .message.agent {
+            background: white;
+            color: #333;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-info {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        .input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .input-area input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .input-area button {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .input-area button:hover {
+            transform: translateY(-2px);
+        }
+
+        .input-area button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .agent-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 10px;
+            background: white;
+        }
+
+        .agent-item {
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .agent-item:hover {
+            background: #e9ecef;
+        }
+
+        .agent-item.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 OmniPok Agent</h1>
+            <p>智能体聊天平台</p>
+        </div>
+        
+        <div class="content">
+            <div class="sidebar">
+                <div class="section">
+                    <h2>创建智能体</h2>
+                    <div id="createStatus"></div>
+                    <form id="createAgentForm">
+                        <div class="form-group">
+                            <label for="agentType">智能体类型</label>
+                            <select id="agentType" required>
+                                <option value="">请选择...</option>
+                                <option value="TextAgent">TextAgent - 文本处理</option>
+                                <option value="CodeAgent">CodeAgent - 代码助手</option>
+                                <option value="SupportAgent">SupportAgent - 支持助手</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="agentId">智能体ID</label>
+                            <input type="text" id="agentId" placeholder="例如: my-agent-1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="agentName">智能体名称 (可选)</label>
+                            <input type="text" id="agentName" placeholder="例如: 我的助手">
+                        </div>
+                        <div class="form-group" id="programmingLanguageGroup" style="display: none;">
+                            <label for="programmingLanguage">编程语言</label>
+                            <select id="programmingLanguage">
+                                <option value="python">Python</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="java">Java</option>
+                                <option value="cpp">C++</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">创建智能体</button>
+                    </form>
+                </div>
+
+                <div class="section">
+                    <h2>可用智能体</h2>
+                    <button class="btn btn-secondary" onclick="loadAgents()">刷新列表</button>
+                    <div id="agentList" class="agent-list"></div>
+                </div>
+            </div>
+
+            <div class="chat-area">
+                <div class="messages" id="messages">
+                    <div class="message agent">
+                        <div>👋 欢迎使用 OmniPok Agent！</div>
+                        <div class="message-info">请先创建一个智能体或选择一个已有的智能体开始对话。</div>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="输入消息..." 
+                        disabled
+                        onkeypress="handleKeyPress(event)"
+                    >
+                    <button id="sendButton" onclick="sendMessage()" disabled>发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '/api/v1';
+        let currentAgentId = null;
+        let tenantId = 'default-tenant';
+        let userId = 'default-user';
+
+        // 监听智能体类型变化，显示/隐藏编程语言选项
+        document.getElementById('agentType').addEventListener('change', function() {
+            const programmingLanguageGroup = document.getElementById('programmingLanguageGroup');
+            if (this.value === 'CodeAgent') {
+                programmingLanguageGroup.style.display = 'block';
+            } else {
+                programmingLanguageGroup.style.display = 'none';
+            }
+        });
+
+        // 创建智能体表单提交
+        document.getElementById('createAgentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const agentType = document.getElementById('agentType').value;
+            const agentId = document.getElementById('agentId').value;
+            const agentName = document.getElementById('agentName').value;
+            const programmingLanguage = document.getElementById('programmingLanguage').value;
+            
+            const createStatus = document.getElementById('createStatus');
+            createStatus.className = 'status info';
+            createStatus.textContent = '正在创建智能体...';
+            createStatus.classList.remove('hidden');
+
+            try {
+                const response = await fetch(`${API_BASE}/agents/create`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        agent_type: agentType,
+                        agent_id: agentId,
+                        name: agentName || undefined,
+                        programming_language: agentType === 'CodeAgent' ? programmingLanguage : undefined
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    createStatus.className = 'status success';
+                    createStatus.textContent = `✅ ${data.message}`;
+                    currentAgentId = data.agent_id;
+                    enableChat();
+                    loadAgents();
+                    
+                    // 添加欢迎消息
+                    addMessage('agent', `智能体 "${data.name}" 已创建并准备就绪！你可以开始对话了。`);
+                } else {
+                    createStatus.className = 'status error';
+                    createStatus.textContent = `❌ 错误: ${data.detail || '创建失败'}`;
+                }
+            } catch (error) {
+                createStatus.className = 'status error';
+                createStatus.textContent = `❌ 错误: ${error.message}`;
+            }
+        });
+
+        // 加载智能体列表
+        async function loadAgents() {
+            try {
+                const response = await fetch(`${API_BASE}/agents`);
+                const data = await response.json();
+                
+                const agentList = document.getElementById('agentList');
+                agentList.innerHTML = '';
+                
+                if (data.agents && data.agents.length > 0) {
+                    data.agents.forEach(agent => {
+                        const item = document.createElement('div');
+                        item.className = 'agent-item';
+                        if (agent.agent_id === currentAgentId) {
+                            item.classList.add('active');
+                        }
+                        item.innerHTML = `
+                            <strong>${agent.name}</strong><br>
+                            <small>ID: ${agent.agent_id}</small>
+                        `;
+                        item.onclick = () => selectAgent(agent.agent_id);
+                        agentList.appendChild(item);
+                    });
+                } else {
+                    agentList.innerHTML = '<div style="text-align: center; color: #999; padding: 20px;">暂无可用智能体</div>';
+                }
+            } catch (error) {
+                console.error('加载智能体列表失败:', error);
+            }
+        }
+
+        // 选择智能体
+        function selectAgent(agentId) {
+            currentAgentId = agentId;
+            enableChat();
+            loadAgents();
+            addMessage('agent', `已选择智能体，可以开始对话了！`);
+        }
+
+        // 启用聊天功能
+        function enableChat() {
+            document.getElementById('messageInput').disabled = false;
+            document.getElementById('sendButton').disabled = false;
+        }
+
+        // 发送消息
+        async function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message || !currentAgentId) {
+                return;
+            }
+
+            // 添加用户消息到界面
+            addMessage('user', message);
+            input.value = '';
+            
+            // 禁用输入
+            input.disabled = true;
+            document.getElementById('sendButton').disabled = true;
+            document.getElementById('sendButton').innerHTML = '<span class="loading"></span>';
+
+            try {
+                const response = await fetch(`${API_BASE}/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        agent_id: currentAgentId,
+                        tenant_id: tenantId,
+                        user_id: userId
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    addMessage('agent', data.response, {
+                        tokens: data.tokens_used,
+                        cost: data.cost_incurred,
+                        steps: data.steps_taken
+                    });
+                } else {
+                    addMessage('agent', `❌ 错误: ${data.detail || '请求失败'}`);
+                }
+            } catch (error) {
+                addMessage('agent', `❌ 错误: ${error.message}`);
+            } finally {
+                // 重新启用输入
+                input.disabled = false;
+                document.getElementById('sendButton').disabled = false;
+                document.getElementById('sendButton').textContent = '发送';
+                input.focus();
+            }
+        }
+
+        // 添加消息到界面
+        function addMessage(type, text, info = null) {
+            const messages = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            let infoHtml = '';
+            if (info) {
+                infoHtml = `
+                    <div class="message-info">
+                        Tokens: ${info.tokens} | 成本: $${info.cost.toFixed(4)} | 步骤: ${info.steps}
+                    </div>
+                `;
+            }
+            
+            messageDiv.innerHTML = `
+                <div>${text}</div>
+                ${infoHtml}
+            `;
+            
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        // 处理回车键
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        // 页面加载时加载智能体列表
+        window.addEventListener('load', () => {
+            loadAgents();
+        });
+    </script>
+</body>
+</html>
+

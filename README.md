@@ -12,6 +12,7 @@
 - 🌐 **REST API**：基于 FastAPI 的 RESTful API
 - 🎨 **Web UI**：Chainlit 交互式聊天界面，支持多模态
 - 📊 **上下文管理**：支持预算、超时和步骤限制的运行上下文
+- 📚 **RAG 支持**：检索增强生成，支持知识库管理和文档问答
 
 ## 📁 项目结构
 
@@ -45,6 +46,15 @@ OmniPok-Agent/
 │   │   └── manager.py
 │   ├── llm/                    # LLM 集成
 │   │   └── omnipok_llm.py
+│   ├── rag/                    # RAG 模块
+│   │   ├── document.py        # 文档数据模型
+│   │   ├── loader.py          # 文档加载器
+│   │   ├── splitter.py        # 文本分割器
+│   │   ├── embedding.py       # 嵌入模型
+│   │   ├── vector_store.py    # 向量存储
+│   │   ├── retriever.py       # 检索器
+│   │   ├── knowledge_base.py  # 知识库管理器
+│   │   └── rag_agent.py       # RAG Agent
 │   └── config/                 # 配置管理
 │       └── agent_config.py
 │
@@ -62,6 +72,9 @@ OmniPok-Agent/
 ├── config/                      # 配置文件
 └── tests/                       # 测试目录
 ```
+## Todo
+[] !! Update Tool USE!! 目前tool use部分出了一点小小小小bug。。。
+
 
 ## 🚀 快速开始
 
@@ -344,6 +357,100 @@ class MyMemoryBackend(Memory):
 - `simple_agent_example.py` - 基础 Agent 使用
 - `memory_example.py` - 内存系统使用
 - `langgraph_orchestration_example.py` - 任务编排示例
+- `rag_example.py` - RAG 模块使用示例
+
+## 📚 使用 RAG 模块
+
+RAG (Retrieval-Augmented Generation) 模块提供了知识库管理和检索增强生成功能。
+
+### 基本使用
+
+```python
+import asyncio
+from omnipok_agent.rag import KnowledgeBase, RAGAgent, Document, OpenAIEmbedding
+from omnipok_agent.core import RunContext
+from omnipok_agent.llm import OmniPokLLM
+from omnipok_agent.memory import InMemoryMemory
+
+async def main():
+    # 1. 创建知识库
+    kb = KnowledgeBase(
+        kb_id="my-kb",
+        embedding_model=OpenAIEmbedding(model="text-embedding-3-small")
+    )
+    
+    # 2. 添加文档到知识库
+    kb.add_document(Document(
+        content="Python是一种高级编程语言...",
+        metadata={"title": "Python介绍"}
+    ))
+    
+    # 或者从文件加载
+    # kb.add_file("document.txt")
+    # kb.add_directory("documents/", recursive=True)
+    
+    # 3. 创建 RAG Agent
+    agent = RAGAgent(
+        agent_id="rag-agent",
+        knowledge_base=kb,
+        llm=OmniPokLLM(),
+        memory=InMemoryMemory(),
+        top_k=5  # 检索前5个相关文档
+    )
+    
+    # 4. 使用 Agent 进行问答
+    context = RunContext(tenant_id="t1", user_id="u1")
+    response = await agent.process("Python是什么？", context)
+    print(response)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### 知识库管理
+
+```python
+from omnipok_agent.rag import KnowledgeBase, DocumentLoader
+
+# 创建知识库
+kb = KnowledgeBase(kb_id="my-knowledge-base")
+
+# 添加单个文档
+kb.add_document(Document(content="文档内容", metadata={"source": "doc1"}))
+
+# 从文件加载
+kb.add_file("document.txt")
+
+# 从目录加载所有支持的文件
+kb.add_directory("documents/", recursive=True)
+
+# 搜索知识库
+results = kb.search("查询内容", top_k=5)
+
+# 删除文档
+kb.delete_documents(["doc-id-1", "doc-id-2"])
+
+# 清空知识库
+kb.clear()
+```
+
+### 支持的文档格式
+
+- `.txt` - 纯文本文件
+- `.md` - Markdown 文件
+
+### RAG Agent 配置
+
+```python
+agent = RAGAgent(
+    agent_id="rag-agent",
+    knowledge_base=kb,
+    llm=OmniPokLLM(),
+    memory=InMemoryMemory(),
+    top_k=5,              # 检索文档数量
+    include_sources=True  # 是否在回答中包含来源信息
+)
+```
 
 ## 🛠️ 支持的 LLM 提供商
 

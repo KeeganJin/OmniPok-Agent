@@ -1,9 +1,9 @@
 """Text processing agent implementation."""
 from typing import Optional
 from ..core.base import BaseAgent
-from ..core.tool_registry import ToolRegistry
-from ..core.memory import Memory
-from ..core.llm import OmniPokLLM
+from ..tools.registry import ToolRegistry
+from ..memory.base import Memory
+from ..llm.omnipok_llm import OmniPokLLM
 
 
 class TextAgent(BaseAgent):

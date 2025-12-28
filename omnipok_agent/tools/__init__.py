@@ -6,6 +6,7 @@ They can be directly registered with ToolRegistry.register(tool=...).
 from .registry import ToolRegistry, ToolDefinition, global_registry
 from .http import http_get, http_post, http_put, http_delete
 from .db import db_query, db_execute
+from .search import web_search
 
 # These are LangChain Tool instances (from @tool decorator)
 __all__ = [
@@ -18,4 +19,5 @@ __all__ = [
     "http_delete",
     "db_query",
     "db_execute",
+    "web_search",
 ]

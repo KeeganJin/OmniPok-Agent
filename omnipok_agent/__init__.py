@@ -26,6 +26,13 @@ from .tools import (
 )
 from .llm import OmniPokLLM
 from .agents import SupportAgent, TextAgent, CodeAgent, ChatAgent, ReActAgent, PlanSolveAgent, ReflectionAgent
+# RAGAgent is optionally available
+try:
+    from .rag import RAGAgent, KnowledgeBase, Document
+except ImportError:
+    RAGAgent = None
+    KnowledgeBase = None
+    Document = None
 from .orchestration import (
     Router,
     SimpleRouter,
@@ -73,6 +80,10 @@ __all__ = [
     "ReActAgent",
     "PlanSolveAgent",
     "ReflectionAgent",
+    # RAG (optional)
+    "RAGAgent",
+    "KnowledgeBase",
+    "Document",
     # Orchestration
     "Router",
     "SimpleRouter",

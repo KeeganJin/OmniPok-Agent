@@ -267,14 +267,19 @@ class BaseAgent(ABC):
     async def _call_llm(
         self,
         messages: List[Dict[str, Any]],
-        tools: Optional[List[Dict[str, Any]]] = None
+        tools: Optional[List[Dict[str, Any]]] = None,
+        tool_choice: Optional[str] = None
     ) -> Dict[str, Any]:
         """Call the LLM with messages and tools."""
         # 使用新的invoke_with_tools方法（同步方法，使用to_thread包装以保持async接口）
+        kwargs = {}
+        if tool_choice:
+            kwargs["tool_choice"] = tool_choice
         response = await asyncio.to_thread(
             self.llm.invoke_with_tools,
             messages=messages,
-            tools=tools if tools else None
+            tools=tools if tools else None,
+            **kwargs
         )
         
         return response

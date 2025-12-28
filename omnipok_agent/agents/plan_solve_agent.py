@@ -2,9 +2,9 @@
 import json
 from typing import Optional, List, Dict, Any
 from ..core.base import BaseAgent
-from ..core.memory import Memory
-from ..core.llm import OmniPokLLM
-from ..core.tool_registry import ToolRegistry
+from ..memory.base import Memory
+from ..llm.omnipok_llm import OmniPokLLM
+from ..tools.registry import ToolRegistry
 from ..core.context import RunContext
 from ..core.types import Message, MessageRole
 
@@ -23,6 +23,7 @@ class PlanSolveAgent(BaseAgent):
     def __init__(
         self,
         agent_id: str,
+        name: str = None,
         llm: Optional[OmniPokLLM] = None,
         memory: Optional[Memory] = None,
         tool_registry: Optional[ToolRegistry] = None,
@@ -110,6 +111,8 @@ class PlanSolveAgent(BaseAgent):
             # 阶段1: 制定计划
             plan = await self._create_plan(message, context)
             self.current_plan = plan
+            
+            print("current_plan", self.current_plan)
             self.current_step_index = 0
             
             # 阶段2: 执行计划
@@ -172,6 +175,7 @@ class PlanSolveAgent(BaseAgent):
             context.add_cost(tokens, cost)
         
         plan_content = response.get("content", "")
+        print(plan_content)
         
         # 添加计划响应
         plan_response_msg = Message(
@@ -182,6 +186,7 @@ class PlanSolveAgent(BaseAgent):
         
         # 解析计划步骤
         plan_steps = self._parse_plan(plan_content)
+        print(plan_steps)
         return plan_steps
     
     def _parse_plan(self, plan_content: str) -> List[str]:
@@ -246,13 +251,12 @@ class PlanSolveAgent(BaseAgent):
 执行计划：
 {chr(10).join(f'{i+1}. {step}' for i, step in enumerate(self.current_plan))}
 
-请按照计划逐步执行。对于每个步骤：
-1. 如果需要使用工具，请调用相应的工具
-2. 分析工具返回的结果
-3. 继续下一步
+重要：请立即开始执行计划。对于第一步，请直接调用相应的工具，不要只是描述计划。
+执行完工具后，我会把结果返回给你，然后你继续下一步或给出最终答案。
 
 当所有步骤完成后，请给出最终答案。"""
         
+        print(execution_prompt)
         # 添加执行消息
         execution_msg = Message(role=MessageRole.USER, content=execution_prompt)
         self.add_message(execution_msg)
@@ -266,6 +270,7 @@ class PlanSolveAgent(BaseAgent):
                 break
             
             iteration += 1
+            print(f"[执行循环] 迭代 {iteration}/{self.max_iterations}")
             
             # 构建消息历史
             messages = self._build_messages()
@@ -293,6 +298,10 @@ class PlanSolveAgent(BaseAgent):
             content = response.get("content", "")
             tool_calls = response.get("tool_calls")
             
+            print(f"[LLM响应] 迭代 {iteration}: 内容长度={len(content)}, 工具调用数={len(tool_calls) if tool_calls else 0}")
+            if tool_calls:
+                print(f"[工具调用] {[tc.get('name') for tc in tool_calls]}")
+            
             # 添加助手消息
             assistant_msg = Message(
                 role=MessageRole.ASSISTANT,
@@ -300,12 +309,58 @@ class PlanSolveAgent(BaseAgent):
             )
             self.add_message(assistant_msg)
             
-            # 如果没有工具调用，说明执行完成
+            # 如果没有工具调用，检查是否是最终答案
             if not tool_calls:
+                # 检测是否是在描述要做什么，而不是最终答案
+                # 如果内容包含工具名称但没有调用工具，说明是在描述而不是执行
+                tool_names_in_content = []
+                if self.tool_registry:
+                    available_tools_list = self.tool_registry.list_tools()
+                    tool_names_in_content = [tool.name for tool in available_tools_list if tool.name in content]
+                
+                is_describing_action = (
+                    bool(tool_names_in_content) or  # 提到了工具名称
+                    ("使用" in content and ("工具" in content or "调用" in content)) or  # 提到"使用...工具"
+                    "搜索" in content or  # 提到搜索
+                    "访问" in content or  # 提到访问
+                    ("执行" in content and "完成" not in content)  # 提到执行（但不是"执行完成"）
+                )
+                
+                # 如果看起来像是在描述要做什么（而不是最终答案），继续循环
+                if is_describing_action and len(content) < 200:
+                    # 检测到只是描述，需要强制LLM调用工具
+                    print(f"[检测到动作描述] 迭代 {iteration}，内容提到了工具但未调用，强制要求执行工具。工具: {tool_names_in_content}")
+                    
+                    # 移除刚才的描述性消息，替换为强制调用工具的提示
+                    # 找到最后一条助手消息并移除
+                    if self.state.messages and self.state.messages[-1].role == MessageRole.ASSISTANT:
+                        self.state.messages.pop()
+                    
+                    # 添加强制调用工具的提示
+                    if iteration == 1:
+                        reminder_msg = Message(
+                            role=MessageRole.USER,
+                            content="你必须立即调用工具来执行任务。不要用文字描述，必须使用工具调用（function calling）。请直接调用 web_search 工具，参数为 {\"query\": \"Python 最新版本\"}。"
+                        )
+                    else:
+                        # 如果多次提示仍未调用，更强制
+                        reminder_msg = Message(
+                            role=MessageRole.USER,
+                            content="请立即调用工具。这是必须的，不要只是描述。使用 function calling 格式调用工具。"
+                        )
+                    self.add_message(reminder_msg)
+                    
+                    # 下一次调用时强制要求调用工具
+                    context.increment_step()
+                    # 在下次迭代中使用 tool_choice="required"
+                    continue
+                # 否则认为是最终答案
+                print(f"[执行完成] 最终答案: {content[:100]}...")
                 final_answer = content
                 break
             
             # 执行工具调用
+            print(f"[开始执行工具] 共 {len(tool_calls)} 个工具调用")
             observations = []
             for tool_call_data in tool_calls:
                 arguments = tool_call_data.get("arguments", {})
@@ -323,8 +378,10 @@ class PlanSolveAgent(BaseAgent):
                     arguments=arguments
                 )
                 
+                print(f"[执行工具] {tool_call.name} with args: {tool_call.arguments}")
                 observation = await self.execute_tool_call(tool_call, context)
                 observations.append(observation)
+                print(f"[工具结果] {str(observation.content)[:200]}...")
                 
                 # 添加工具消息
                 tool_msg = Message(
@@ -334,10 +391,8 @@ class PlanSolveAgent(BaseAgent):
                 )
                 self.add_message(tool_msg)
             
-            if not observations:
-                final_answer = content
-                break
-            
+            # 执行完工具后，继续循环让LLM基于结果生成最终答案
+            print("[工具执行完成] 继续循环生成最终答案")
             context.increment_step()
         
         if not final_answer:

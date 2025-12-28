@@ -201,6 +201,110 @@ class AgentService:
         self._agents = []
         self._config = None
         self.initialize(config_path)
+    
+    def create_agent(
+        self,
+        agent_type: str,
+        agent_id: str,
+        name: Optional[str] = None,
+        programming_language: Optional[str] = None,
+        llm_provider: Optional[str] = None,
+        llm_model: Optional[str] = None,
+        llm_api_key_env: Optional[str] = None
+    ):
+        """
+        Dynamically create an agent instance.
+        
+        Args:
+            agent_type: Type of agent ("TextAgent", "CodeAgent", "SupportAgent")
+            agent_id: Unique identifier for the agent
+            name: Optional name for the agent
+            programming_language: Programming language for CodeAgent (default: "python")
+            llm_provider: LLM provider (default: from config)
+            llm_model: LLM model (default: from config)
+            llm_api_key_env: Environment variable name for API key (default: from config)
+            
+        Returns:
+            Created agent instance
+            
+        Raises:
+            ValueError: If agent_type is invalid or agent_id already exists
+        """
+        # Check if agent_id already exists
+        existing_agent = next((a for a in self._agents if a.agent_id == agent_id), None)
+        if existing_agent:
+            raise ValueError(f"Agent with ID '{agent_id}' already exists")
+        
+        # Ensure service is initialized
+        if self._config is None:
+            self.initialize()
+        
+        # Register default tools if not already done
+        self._register_default_tools()
+        
+        # Create LLM
+        if llm_provider or llm_model or llm_api_key_env:
+            provider = llm_provider or self._config.default_llm_provider or "openai"
+            api_key_env = llm_api_key_env or self._config.default_llm_api_key_env
+            api_key = os.getenv(api_key_env)
+            model = llm_model or self._config.default_llm_model or "gpt-4"
+            
+            if api_key:
+                llm = OmniPokLLM(provider=provider, api_key=api_key, model=model)
+            else:
+                llm = OmniPokLLM()
+        else:
+            # Use default LLM creation logic
+            class SimpleAgentConfig:
+                def __init__(self):
+                    self.llm_provider = None
+                    self.llm_model = None
+                    self.llm_api_key_env = None
+            llm = self._create_llm(SimpleAgentConfig())
+        
+        # Create memory
+        memory = InMemoryMemory()
+        
+        # Create agent based on type
+        agent = None
+        if agent_type == "TextAgent":
+            agent = TextAgent(
+                agent_id=agent_id,
+                name=name or "Text Agent",
+                llm=llm,
+                memory=memory,
+                tool_registry=global_registry
+            )
+        elif agent_type == "CodeAgent":
+            programming_language = programming_language or "python"
+            agent = CodeAgent(
+                agent_id=agent_id,
+                llm=llm,
+                memory=memory,
+                tool_registry=global_registry,
+                programming_language=programming_language
+            )
+            if name:
+                agent.name = name
+        elif agent_type == "SupportAgent":
+            agent = SupportAgent(
+                agent_id=agent_id,
+                name=name or "Support Agent",
+                llm=llm,
+                memory=memory,
+                tool_registry=global_registry
+            )
+        else:
+            raise ValueError(f"Unknown agent type: {agent_type}. Supported types: TextAgent, CodeAgent, SupportAgent")
+        
+        # Add agent to list and update supervisor
+        if agent:
+            self._agents.append(agent)
+            # Recreate supervisor with updated agents list
+            router = SimpleRouter()
+            self._supervisor = Supervisor(agents=self._agents, router=router)
+        
+        return agent
 
 
 # Global instance accessor
