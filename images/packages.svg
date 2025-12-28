@@ -1,0 +1,570 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4972pt" height="404pt" viewBox="0.00 0.00 4971.77 404.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 400)">
+<title>packages_OmnipokAgent</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-400 4967.7697,-400 4967.7697,4 -4,4"/>
+<!-- omnipok_agent -->
+<g id="node1" class="node">
+<title>omnipok_agent</title>
+<polygon fill="none" stroke="#000000" points="2428.012,-36 2324.81,-36 2324.81,0 2428.012,0 2428.012,-36"/>
+<text text-anchor="middle" x="2376.411" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent</text>
+</g>
+<!-- omnipok_agent.agents -->
+<g id="node2" class="node">
+<title>omnipok_agent.agents</title>
+<polygon fill="none" stroke="#000000" points="1007.7769,-108 865.0451,-108 865.0451,-72 1007.7769,-72 1007.7769,-108"/>
+<text text-anchor="middle" x="936.411" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents</text>
+</g>
+<!-- omnipok_agent&#45;&gt;omnipok_agent.agents -->
+<g id="edge1" class="edge">
+<title>omnipok_agent-&gt;omnipok_agent.agents</title>
+<path fill="none" stroke="#000000" d="M2324.7361,-20.5837C2109.3498,-31.3531 1281.9728,-72.7219 1017.9118,-85.925"/>
+<polygon fill="#000000" stroke="#000000" points="1007.6329,-86.4389 1017.3956,-81.4451 1012.6266,-86.1892 1017.6204,-85.9394 1017.6204,-85.9394 1017.6204,-85.9394 1012.6266,-86.1892 1017.8451,-90.4338 1007.6329,-86.4389 1007.6329,-86.4389"/>
+</g>
+<!-- omnipok_agent.core -->
+<g id="node12" class="node">
+<title>omnipok_agent.core</title>
+<polygon fill="none" stroke="#000000" points="2057.6022,-108 1927.2198,-108 1927.2198,-72 2057.6022,-72 2057.6022,-108"/>
+<text text-anchor="middle" x="1992.411" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.core</text>
+</g>
+<!-- omnipok_agent&#45;&gt;omnipok_agent.core -->
+<g id="edge2" class="edge">
+<title>omnipok_agent-&gt;omnipok_agent.core</title>
+<path fill="none" stroke="#000000" d="M2324.6231,-27.7102C2258.4996,-40.1084 2143.5915,-61.6537 2067.7666,-75.8708"/>
+<polygon fill="#000000" stroke="#000000" points="2057.7978,-77.74 2066.7972,-71.4741 2062.7121,-76.8185 2067.6265,-75.897 2067.6265,-75.897 2067.6265,-75.897 2062.7121,-76.8185 2068.4558,-80.3199 2057.7978,-77.74 2057.7978,-77.74"/>
+</g>
+<!-- omnipok_agent.llm -->
+<g id="node17" class="node">
+<title>omnipok_agent.llm</title>
+<polygon fill="none" stroke="#000000" points="2298.1841,-108 2172.6379,-108 2172.6379,-72 2298.1841,-72 2298.1841,-108"/>
+<text text-anchor="middle" x="2235.411" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.llm</text>
+</g>
+<!-- omnipok_agent&#45;&gt;omnipok_agent.llm -->
+<g id="edge3" class="edge">
+<title>omnipok_agent-&gt;omnipok_agent.llm</title>
+<path fill="none" stroke="#000000" d="M2340.8307,-36.1686C2322.3785,-45.5911 2299.6565,-57.1938 2280.038,-67.2117"/>
+<polygon fill="#000000" stroke="#000000" points="2270.9799,-71.8372 2277.8394,-63.2816 2275.4329,-69.5633 2279.8859,-67.2893 2279.8859,-67.2893 2279.8859,-67.2893 2275.4329,-69.5633 2281.9325,-71.2971 2270.9799,-71.8372 2270.9799,-71.8372"/>
+</g>
+<!-- omnipok_agent.memory -->
+<g id="node20" class="node">
+<title>omnipok_agent.memory</title>
+<polygon fill="none" stroke="#000000" points="2537.1686,-108 2383.6534,-108 2383.6534,-72 2537.1686,-72 2537.1686,-108"/>
+<text text-anchor="middle" x="2460.411" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory</text>
+</g>
+<!-- omnipok_agent&#45;&gt;omnipok_agent.memory -->
+<g id="edge4" class="edge">
+<title>omnipok_agent-&gt;omnipok_agent.memory</title>
+<path fill="none" stroke="#000000" d="M2397.6077,-36.1686C2407.8544,-44.9515 2420.3113,-55.6288 2431.4207,-65.1511"/>
+<polygon fill="#000000" stroke="#000000" points="2439.221,-71.8372 2428.6999,-68.7459 2435.4247,-68.5832 2431.6284,-65.3292 2431.6284,-65.3292 2431.6284,-65.3292 2435.4247,-68.5832 2434.557,-61.9126 2439.221,-71.8372 2439.221,-71.8372"/>
+</g>
+<!-- omnipok_agent.orchestration -->
+<g id="node28" class="node">
+<title>omnipok_agent.orchestration</title>
+<polygon fill="none" stroke="#000000" points="3866.0937,-108 3686.7283,-108 3686.7283,-72 3866.0937,-72 3866.0937,-108"/>
+<text text-anchor="middle" x="3776.411" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration</text>
+</g>
+<!-- omnipok_agent&#45;&gt;omnipok_agent.orchestration -->
+<g id="edge5" class="edge">
+<title>omnipok_agent-&gt;omnipok_agent.orchestration</title>
+<path fill="none" stroke="#000000" d="M2428.317,-20.6695C2634.8437,-31.2908 3400.3876,-70.6617 3676.3927,-84.8562"/>
+<polygon fill="#000000" stroke="#000000" points="3686.399,-85.3708 3676.181,-89.3512 3681.4056,-85.114 3676.4122,-84.8571 3676.4122,-84.8571 3676.4122,-84.8571 3681.4056,-85.114 3676.6434,-80.363 3686.399,-85.3708 3686.399,-85.3708"/>
+</g>
+<!-- omnipok_agent.tools -->
+<g id="node38" class="node">
+<title>omnipok_agent.tools</title>
+<polygon fill="none" stroke="#000000" points="4417.2379,-108 4283.5841,-108 4283.5841,-72 4417.2379,-72 4417.2379,-108"/>
+<text text-anchor="middle" x="4350.411" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.tools</text>
+</g>
+<!-- omnipok_agent&#45;&gt;omnipok_agent.tools -->
+<g id="edge6" class="edge">
+<title>omnipok_agent-&gt;omnipok_agent.tools</title>
+<path fill="none" stroke="#000000" d="M2428.1913,-19.8303C2619.9778,-26.6167 3308.1005,-51.0326 3875.411,-72 4015.7079,-77.1853 4179.3058,-83.428 4273.2785,-87.0328"/>
+<polygon fill="#000000" stroke="#000000" points="4283.5485,-87.4269 4273.3832,-91.54 4278.5522,-87.2351 4273.5558,-87.0433 4273.5558,-87.0433 4273.5558,-87.0433 4278.5522,-87.2351 4273.7284,-82.5466 4283.5485,-87.4269 4283.5485,-87.4269"/>
+</g>
+<!-- omnipok_agent.agents.chat_agent -->
+<g id="node3" class="node">
+<title>omnipok_agent.agents.chat_agent</title>
+<polygon fill="none" stroke="#000000" points="926.4166,-180 720.4054,-180 720.4054,-144 926.4166,-144 926.4166,-180"/>
+<text text-anchor="middle" x="823.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents.chat_agent</text>
+</g>
+<!-- omnipok_agent.agents&#45;&gt;omnipok_agent.agents.chat_agent -->
+<g id="edge7" class="edge">
+<title>omnipok_agent.agents-&gt;omnipok_agent.agents.chat_agent</title>
+<path fill="none" stroke="#000000" d="M907.8963,-108.1686C893.5768,-117.2926 876.0486,-128.461 860.6772,-138.2551"/>
+<polygon fill="#000000" stroke="#000000" points="851.9165,-143.8372 857.932,-134.6684 856.1333,-141.1504 860.3501,-138.4635 860.3501,-138.4635 860.3501,-138.4635 856.1333,-141.1504 862.7682,-142.2586 851.9165,-143.8372 851.9165,-143.8372"/>
+</g>
+<!-- omnipok_agent.agents.code_agent -->
+<g id="node4" class="node">
+<title>omnipok_agent.agents.code_agent</title>
+<polygon fill="none" stroke="#000000" points="1154.0258,-180 944.7962,-180 944.7962,-144 1154.0258,-144 1154.0258,-180"/>
+<text text-anchor="middle" x="1049.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents.code_agent</text>
+</g>
+<!-- omnipok_agent.agents&#45;&gt;omnipok_agent.agents.code_agent -->
+<g id="edge8" class="edge">
+<title>omnipok_agent.agents-&gt;omnipok_agent.agents.code_agent</title>
+<path fill="none" stroke="#000000" d="M964.9257,-108.1686C979.2452,-117.2926 996.7734,-128.461 1012.1448,-138.2551"/>
+<polygon fill="#000000" stroke="#000000" points="1020.9055,-143.8372 1010.0538,-142.2586 1016.6887,-141.1504 1012.4719,-138.4635 1012.4719,-138.4635 1012.4719,-138.4635 1016.6887,-141.1504 1014.89,-134.6684 1020.9055,-143.8372 1020.9055,-143.8372"/>
+</g>
+<!-- omnipok_agent.agents.plan_solve_agent -->
+<g id="node5" class="node">
+<title>omnipok_agent.agents.plan_solve_agent</title>
+<polygon fill="none" stroke="#000000" points="1416.2513,-180 1172.5707,-180 1172.5707,-144 1416.2513,-144 1416.2513,-180"/>
+<text text-anchor="middle" x="1294.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents.plan_solve_agent</text>
+</g>
+<!-- omnipok_agent.agents&#45;&gt;omnipok_agent.agents.plan_solve_agent -->
+<g id="edge9" class="edge">
+<title>omnipok_agent.agents-&gt;omnipok_agent.agents.plan_solve_agent</title>
+<path fill="none" stroke="#000000" d="M1007.9972,-104.3972C1061.5244,-115.1625 1135.387,-130.0175 1194.6961,-141.9456"/>
+<polygon fill="#000000" stroke="#000000" points="1204.8365,-143.985 1194.1455,-146.4249 1199.9347,-142.9991 1195.0328,-142.0133 1195.0328,-142.0133 1195.0328,-142.0133 1199.9347,-142.9991 1195.9201,-137.6016 1204.8365,-143.985 1204.8365,-143.985"/>
+</g>
+<!-- omnipok_agent.agents.react_agent -->
+<g id="node6" class="node">
+<title>omnipok_agent.agents.react_agent</title>
+<polygon fill="none" stroke="#000000" points="1644.7915,-180 1434.0305,-180 1434.0305,-144 1644.7915,-144 1644.7915,-180"/>
+<text text-anchor="middle" x="1539.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents.react_agent</text>
+</g>
+<!-- omnipok_agent.agents&#45;&gt;omnipok_agent.agents.react_agent -->
+<g id="edge10" class="edge">
+<title>omnipok_agent.agents-&gt;omnipok_agent.agents.react_agent</title>
+<path fill="none" stroke="#000000" d="M1007.8035,-96.8312C1101.1046,-105.9941 1269.821,-123.3686 1424.0197,-143.8444"/>
+<polygon fill="#000000" stroke="#000000" points="1434.1546,-145.1975 1423.647,-148.3345 1429.1986,-144.5358 1424.2425,-143.8741 1424.2425,-143.8741 1424.2425,-143.8741 1429.1986,-144.5358 1424.8381,-139.4137 1434.1546,-145.1975 1434.1546,-145.1975"/>
+</g>
+<!-- omnipok_agent.agents.reflection_agent -->
+<g id="node7" class="node">
+<title>omnipok_agent.agents.reflection_agent</title>
+<polygon fill="none" stroke="#000000" points="236.7331,-180 .0889,-180 .0889,-144 236.7331,-144 236.7331,-180"/>
+<text text-anchor="middle" x="118.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents.reflection_agent</text>
+</g>
+<!-- omnipok_agent.agents&#45;&gt;omnipok_agent.agents.reflection_agent -->
+<g id="edge11" class="edge">
+<title>omnipok_agent.agents-&gt;omnipok_agent.agents.reflection_agent</title>
+<path fill="none" stroke="#000000" d="M865.1488,-94.0881C741.444,-101.5104 478.7533,-118.7079 246.9893,-143.8606"/>
+<polygon fill="#000000" stroke="#000000" points="237.0221,-144.9494 246.4743,-139.39 241.9925,-144.4064 246.963,-143.8634 246.963,-143.8634 246.963,-143.8634 241.9925,-144.4064 247.4517,-148.3368 237.0221,-144.9494 237.0221,-144.9494"/>
+</g>
+<!-- omnipok_agent.agents.support_agent -->
+<g id="node8" class="node">
+<title>omnipok_agent.agents.support_agent</title>
+<polygon fill="none" stroke="#000000" points="480.0921,-180 254.7299,-180 254.7299,-144 480.0921,-144 480.0921,-180"/>
+<text text-anchor="middle" x="367.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents.support_agent</text>
+</g>
+<!-- omnipok_agent.agents&#45;&gt;omnipok_agent.agents.support_agent -->
+<g id="edge12" class="edge">
+<title>omnipok_agent.agents-&gt;omnipok_agent.agents.support_agent</title>
+<path fill="none" stroke="#000000" d="M865.1135,-98.0284C778.8994,-107.8681 629.1183,-125.3826 490.0593,-143.9315"/>
+<polygon fill="#000000" stroke="#000000" points="480.0666,-145.2687 489.3813,-139.482 485.0224,-144.6055 489.9782,-143.9422 489.9782,-143.9422 489.9782,-143.9422 485.0224,-144.6055 490.5751,-148.4025 480.0666,-145.2687 480.0666,-145.2687"/>
+</g>
+<!-- omnipok_agent.agents.text_agent -->
+<g id="node9" class="node">
+<title>omnipok_agent.agents.text_agent</title>
+<polygon fill="none" stroke="#000000" points="702.5921,-180 498.2299,-180 498.2299,-144 702.5921,-144 702.5921,-180"/>
+<text text-anchor="middle" x="600.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.agents.text_agent</text>
+</g>
+<!-- omnipok_agent.agents&#45;&gt;omnipok_agent.agents.text_agent -->
+<g id="edge13" class="edge">
+<title>omnipok_agent.agents-&gt;omnipok_agent.agents.text_agent</title>
+<path fill="none" stroke="#000000" d="M865.154,-105.2693C815.4644,-115.9171 748.6466,-130.2352 694.5708,-141.8229"/>
+<polygon fill="#000000" stroke="#000000" points="684.6289,-143.9533 693.464,-137.4578 689.5179,-142.9056 694.4069,-141.8579 694.4069,-141.8579 694.4069,-141.8579 689.5179,-142.9056 695.3498,-146.2581 684.6289,-143.9533 684.6289,-143.9533"/>
+</g>
+<!-- omnipok_agent.config -->
+<g id="node10" class="node">
+<title>omnipok_agent.config</title>
+<polygon fill="none" stroke="#000000" points="4615.7783,-36 4473.0437,-36 4473.0437,0 4615.7783,0 4615.7783,-36"/>
+<text text-anchor="middle" x="4544.411" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.config</text>
+</g>
+<!-- omnipok_agent.config.agent_config -->
+<g id="node11" class="node">
+<title>omnipok_agent.config.agent_config</title>
+<polygon fill="none" stroke="#000000" points="4653.8634,-108 4434.9586,-108 4434.9586,-72 4653.8634,-72 4653.8634,-108"/>
+<text text-anchor="middle" x="4544.411" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.config.agent_config</text>
+</g>
+<!-- omnipok_agent.config&#45;&gt;omnipok_agent.config.agent_config -->
+<g id="edge14" class="edge">
+<title>omnipok_agent.config-&gt;omnipok_agent.config.agent_config</title>
+<path fill="none" stroke="#000000" d="M4544.411,-36.1686C4544.411,-43.869 4544.411,-53.0257 4544.411,-61.5834"/>
+<polygon fill="#000000" stroke="#000000" points="4544.411,-71.5867 4539.9111,-61.5867 4544.411,-66.5867 4544.4111,-61.5867 4544.4111,-61.5867 4544.4111,-61.5867 4544.411,-66.5867 4548.9111,-61.5868 4544.411,-71.5867 4544.411,-71.5867"/>
+</g>
+<!-- omnipok_agent.core.base -->
+<g id="node13" class="node">
+<title>omnipok_agent.core.base</title>
+<polygon fill="none" stroke="#000000" points="2071.9756,-180 1912.8464,-180 1912.8464,-144 2071.9756,-144 2071.9756,-180"/>
+<text text-anchor="middle" x="1992.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.core.base</text>
+</g>
+<!-- omnipok_agent.core&#45;&gt;omnipok_agent.core.base -->
+<g id="edge15" class="edge">
+<title>omnipok_agent.core-&gt;omnipok_agent.core.base</title>
+<path fill="none" stroke="#000000" d="M1992.411,-108.1686C1992.411,-115.869 1992.411,-125.0257 1992.411,-133.5834"/>
+<polygon fill="#000000" stroke="#000000" points="1992.411,-143.5867 1987.9111,-133.5867 1992.411,-138.5867 1992.4111,-133.5867 1992.4111,-133.5867 1992.4111,-133.5867 1992.411,-138.5867 1996.9111,-133.5868 1992.411,-143.5867 1992.411,-143.5867"/>
+</g>
+<!-- omnipok_agent.core.context -->
+<g id="node14" class="node">
+<title>omnipok_agent.core.context</title>
+<polygon fill="none" stroke="#000000" points="2093.3127,-252 1917.5093,-252 1917.5093,-216 2093.3127,-216 2093.3127,-252"/>
+<text text-anchor="middle" x="2005.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.core.context</text>
+</g>
+<!-- omnipok_agent.core&#45;&gt;omnipok_agent.core.context -->
+<g id="edge16" class="edge">
+<title>omnipok_agent.core-&gt;omnipok_agent.core.context</title>
+<path fill="none" stroke="#000000" d="M2041.4032,-108.1733C2057.0256,-116.566 2072.5453,-128.2509 2081.411,-144 2089.2598,-157.9426 2088.75,-165.7825 2081.411,-180 2075.1398,-192.1489 2064.7328,-202.1597 2053.6021,-210.1206"/>
+<polygon fill="#000000" stroke="#000000" points="2045.0058,-215.8102 2050.861,-206.5384 2049.1752,-213.0505 2053.3447,-210.2909 2053.3447,-210.2909 2053.3447,-210.2909 2049.1752,-213.0505 2055.8284,-214.0434 2045.0058,-215.8102 2045.0058,-215.8102"/>
+</g>
+<!-- omnipok_agent.core.exceptions -->
+<g id="node15" class="node">
+<title>omnipok_agent.core.exceptions</title>
+<polygon fill="none" stroke="#000000" points="1894.4714,-180 1700.3506,-180 1700.3506,-144 1894.4714,-144 1894.4714,-180"/>
+<text text-anchor="middle" x="1797.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.core.exceptions</text>
+</g>
+<!-- omnipok_agent.core&#45;&gt;omnipok_agent.core.exceptions -->
+<g id="edge17" class="edge">
+<title>omnipok_agent.core-&gt;omnipok_agent.core.exceptions</title>
+<path fill="none" stroke="#000000" d="M1943.456,-108.0757C1916.9142,-117.8757 1883.9287,-130.055 1856.0252,-140.3578"/>
+<polygon fill="#000000" stroke="#000000" points="1846.3862,-143.9169 1854.2084,-136.2316 1851.0767,-142.185 1855.7671,-140.4531 1855.7671,-140.4531 1855.7671,-140.4531 1851.0767,-142.185 1857.3259,-144.6745 1846.3862,-143.9169 1846.3862,-143.9169"/>
+</g>
+<!-- omnipok_agent.core.types -->
+<g id="node16" class="node">
+<title>omnipok_agent.core.types</title>
+<polygon fill="none" stroke="#000000" points="1833.1518,-252 1669.6702,-252 1669.6702,-216 1833.1518,-216 1833.1518,-252"/>
+<text text-anchor="middle" x="1751.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.core.types</text>
+</g>
+<!-- omnipok_agent.core&#45;&gt;omnipok_agent.core.types -->
+<g id="edge18" class="edge">
+<title>omnipok_agent.core-&gt;omnipok_agent.core.types</title>
+<path fill="none" stroke="#000000" d="M1926.9548,-92.2589C1847.612,-96.5344 1720.8353,-108.8272 1691.411,-144 1674.026,-164.7815 1695.2959,-190.726 1717.1713,-209.4128"/>
+<polygon fill="#000000" stroke="#000000" points="1725.1875,-215.946 1714.5929,-213.1166 1721.3117,-212.7872 1717.4358,-209.6284 1717.4358,-209.6284 1717.4358,-209.6284 1721.3117,-212.7872 1720.2788,-206.1401 1725.1875,-215.946 1725.1875,-215.946"/>
+</g>
+<!-- omnipok_agent.core.base&#45;&gt;omnipok_agent.core.context -->
+<g id="edge19" class="edge">
+<title>omnipok_agent.core.base-&gt;omnipok_agent.core.context</title>
+<path fill="none" stroke="#000000" d="M1995.6914,-180.1686C1997.0818,-187.869 1998.7351,-197.0257 2000.2802,-205.5834"/>
+<polygon fill="#000000" stroke="#000000" points="2002.0864,-215.5867 1995.8811,-206.5455 2001.1979,-210.6663 2000.3095,-205.7459 2000.3095,-205.7459 2000.3095,-205.7459 2001.1979,-210.6663 2004.7379,-204.9462 2002.0864,-215.5867 2002.0864,-215.5867"/>
+</g>
+<!-- omnipok_agent.core.base&#45;&gt;omnipok_agent.core.types -->
+<g id="edge20" class="edge">
+<title>omnipok_agent.core.base-&gt;omnipok_agent.core.types</title>
+<path fill="none" stroke="#000000" d="M1931.9076,-180.0757C1898.3885,-190.0897 1856.5541,-202.588 1821.6023,-213.03"/>
+<polygon fill="#000000" stroke="#000000" points="1811.9393,-215.9169 1820.2327,-208.7426 1816.7301,-214.4856 1821.5208,-213.0543 1821.5208,-213.0543 1821.5208,-213.0543 1816.7301,-214.4856 1822.809,-217.3659 1811.9393,-215.9169 1811.9393,-215.9169"/>
+</g>
+<!-- omnipok_agent.llm.omnipok_llm -->
+<g id="node18" class="node">
+<title>omnipok_agent.llm.omnipok_llm</title>
+<polygon fill="none" stroke="#000000" points="2332.6369,-180 2128.1851,-180 2128.1851,-144 2332.6369,-144 2332.6369,-180"/>
+<text text-anchor="middle" x="2230.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.llm.omnipok_llm</text>
+</g>
+<!-- omnipok_agent.llm&#45;&gt;omnipok_agent.llm.omnipok_llm -->
+<g id="edge21" class="edge">
+<title>omnipok_agent.llm-&gt;omnipok_agent.llm.omnipok_llm</title>
+<path fill="none" stroke="#000000" d="M2234.1493,-108.1686C2233.6145,-115.869 2232.9787,-125.0257 2232.3844,-133.5834"/>
+<polygon fill="#000000" stroke="#000000" points="2231.6897,-143.5867 2227.8934,-133.299 2232.0361,-138.5987 2232.3826,-133.6108 2232.3826,-133.6108 2232.3826,-133.6108 2232.0361,-138.5987 2236.8718,-133.9225 2231.6897,-143.5867 2231.6897,-143.5867"/>
+</g>
+<!-- omnipok_agent.llm.providers -->
+<g id="node19" class="node">
+<title>omnipok_agent.llm.providers</title>
+<polygon fill="none" stroke="#000000" points="4815.0551,-36 4633.7669,-36 4633.7669,0 4815.0551,0 4815.0551,-36"/>
+<text text-anchor="middle" x="4724.411" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.llm.providers</text>
+</g>
+<!-- omnipok_agent.memory.base -->
+<g id="node21" class="node">
+<title>omnipok_agent.memory.base</title>
+<polygon fill="none" stroke="#000000" points="2613.0426,-324 2431.7794,-324 2431.7794,-288 2613.0426,-288 2613.0426,-324"/>
+<text text-anchor="middle" x="2522.411" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory.base</text>
+</g>
+<!-- omnipok_agent.memory&#45;&gt;omnipok_agent.memory.base -->
+<g id="edge22" class="edge">
+<title>omnipok_agent.memory-&gt;omnipok_agent.memory.base</title>
+<path fill="none" stroke="#000000" d="M2444.2582,-108.2537C2418.5537,-139.6234 2374.1832,-204.9243 2404.411,-252 2413.1308,-265.5799 2426.2097,-275.7881 2440.5256,-283.4482"/>
+<polygon fill="#000000" stroke="#000000" points="2449.5712,-287.8958 2438.6116,-287.5216 2445.0842,-285.6896 2440.5972,-283.4834 2440.5972,-283.4834 2440.5972,-283.4834 2445.0842,-285.6896 2442.5828,-279.4451 2449.5712,-287.8958 2449.5712,-287.8958"/>
+</g>
+<!-- omnipok_agent.memory.in_memory -->
+<g id="node22" class="node">
+<title>omnipok_agent.memory.in_memory</title>
+<polygon fill="none" stroke="#000000" points="2357.2156,-252 2135.6064,-252 2135.6064,-216 2357.2156,-216 2357.2156,-252"/>
+<text text-anchor="middle" x="2246.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory.in_memory</text>
+</g>
+<!-- omnipok_agent.memory&#45;&gt;omnipok_agent.memory.in_memory -->
+<g id="edge23" class="edge">
+<title>omnipok_agent.memory-&gt;omnipok_agent.memory.in_memory</title>
+<path fill="none" stroke="#000000" d="M2433.6568,-108.237C2418.922,-118.4726 2400.4268,-131.637 2384.411,-144 2364.6809,-159.2302 2361.8839,-165.7839 2341.411,-180 2325.3703,-191.1384 2306.8696,-202.0503 2290.4807,-211.1169"/>
+<polygon fill="#000000" stroke="#000000" points="2281.622,-215.9537 2288.2424,-207.2118 2286.0105,-213.5576 2290.3989,-211.1614 2290.3989,-211.1614 2290.3989,-211.1614 2286.0105,-213.5576 2292.5555,-215.1111 2281.622,-215.9537 2281.622,-215.9537"/>
+</g>
+<!-- omnipok_agent.memory.long_term -->
+<g id="node23" class="node">
+<title>omnipok_agent.memory.long_term</title>
+<polygon fill="none" stroke="#000000" points="2901.7156,-252 2687.1064,-252 2687.1064,-216 2901.7156,-216 2901.7156,-252"/>
+<text text-anchor="middle" x="2794.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory.long_term</text>
+</g>
+<!-- omnipok_agent.memory&#45;&gt;omnipok_agent.memory.long_term -->
+<g id="edge24" class="edge">
+<title>omnipok_agent.memory-&gt;omnipok_agent.memory.long_term</title>
+<path fill="none" stroke="#000000" d="M2537.2843,-94.4298C2616.869,-100.562 2734.1455,-114.4256 2767.411,-144 2784.7725,-159.4351 2791.1734,-185.5476 2793.4356,-205.6821"/>
+<polygon fill="#000000" stroke="#000000" points="2794.2938,-215.8621 2788.9695,-206.2755 2793.8737,-210.8798 2793.4536,-205.8975 2793.4536,-205.8975 2793.4536,-205.8975 2793.8737,-210.8798 2797.9377,-205.5194 2794.2938,-215.8621 2794.2938,-215.8621"/>
+</g>
+<!-- omnipok_agent.memory.manager -->
+<g id="node24" class="node">
+<title>omnipok_agent.memory.manager</title>
+<polygon fill="none" stroke="#000000" points="2758.8634,-180 2553.9586,-180 2553.9586,-144 2758.8634,-144 2758.8634,-180"/>
+<text text-anchor="middle" x="2656.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory.manager</text>
+</g>
+<!-- omnipok_agent.memory&#45;&gt;omnipok_agent.memory.manager -->
+<g id="edge25" class="edge">
+<title>omnipok_agent.memory-&gt;omnipok_agent.memory.manager</title>
+<path fill="none" stroke="#000000" d="M2509.6171,-108.0757C2536.2949,-117.8757 2569.4496,-130.055 2597.4962,-140.3578"/>
+<polygon fill="#000000" stroke="#000000" points="2607.1847,-143.9169 2596.2463,-144.6926 2602.4913,-142.1927 2597.798,-140.4686 2597.798,-140.4686 2597.798,-140.4686 2602.4913,-142.1927 2599.3497,-136.2446 2607.1847,-143.9169 2607.1847,-143.9169"/>
+</g>
+<!-- omnipok_agent.memory.short_term -->
+<g id="node25" class="node">
+<title>omnipok_agent.memory.short_term</title>
+<polygon fill="none" stroke="#000000" points="2631.321,-252 2413.501,-252 2413.501,-216 2631.321,-216 2631.321,-252"/>
+<text text-anchor="middle" x="2522.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory.short_term</text>
+</g>
+<!-- omnipok_agent.memory&#45;&gt;omnipok_agent.memory.short_term -->
+<g id="edge26" class="edge">
+<title>omnipok_agent.memory-&gt;omnipok_agent.memory.short_term</title>
+<path fill="none" stroke="#000000" d="M2468.2633,-108.2377C2478.9315,-133.0154 2498.0969,-177.5286 2510.5303,-206.4061"/>
+<polygon fill="#000000" stroke="#000000" points="2514.6224,-215.9104 2506.5346,-208.5051 2512.6451,-211.318 2510.6678,-206.7255 2510.6678,-206.7255 2510.6678,-206.7255 2512.6451,-211.318 2514.801,-204.9459 2514.6224,-215.9104 2514.6224,-215.9104"/>
+</g>
+<!-- omnipok_agent.memory.in_memory&#45;&gt;omnipok_agent.memory.base -->
+<g id="edge27" class="edge">
+<title>omnipok_agent.memory.in_memory-&gt;omnipok_agent.memory.base</title>
+<path fill="none" stroke="#000000" d="M2315.7012,-252.0757C2354.4983,-262.1967 2403.023,-274.8553 2443.3061,-285.3639"/>
+<polygon fill="#000000" stroke="#000000" points="2453.0923,-287.9169 2442.2802,-289.7468 2448.2542,-286.6547 2443.4161,-285.3926 2443.4161,-285.3926 2443.4161,-285.3926 2448.2542,-286.6547 2444.552,-281.0383 2453.0923,-287.9169 2453.0923,-287.9169"/>
+</g>
+<!-- omnipok_agent.memory.long_term&#45;&gt;omnipok_agent.memory.base -->
+<g id="edge28" class="edge">
+<title>omnipok_agent.memory.long_term-&gt;omnipok_agent.memory.base</title>
+<path fill="none" stroke="#000000" d="M2726.125,-252.0757C2687.971,-262.1753 2640.2709,-274.8018 2600.6213,-285.2973"/>
+<polygon fill="#000000" stroke="#000000" points="2590.7251,-287.9169 2599.2406,-281.0077 2595.5586,-286.6374 2600.3921,-285.3579 2600.3921,-285.3579 2600.3921,-285.3579 2595.5586,-286.6374 2601.5437,-289.708 2590.7251,-287.9169 2590.7251,-287.9169"/>
+</g>
+<!-- omnipok_agent.memory.storage.sqlite_store -->
+<g id="node27" class="node">
+<title>omnipok_agent.memory.storage.sqlite_store</title>
+<polygon fill="none" stroke="#000000" points="3039.1349,-324 2773.6871,-324 2773.6871,-288 3039.1349,-288 3039.1349,-324"/>
+<text text-anchor="middle" x="2906.411" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory.storage.sqlite_store</text>
+</g>
+<!-- omnipok_agent.memory.long_term&#45;&gt;omnipok_agent.memory.storage.sqlite_store -->
+<g id="edge29" class="edge">
+<title>omnipok_agent.memory.long_term-&gt;omnipok_agent.memory.storage.sqlite_store</title>
+<path fill="none" stroke="#000000" d="M2822.6733,-252.1686C2836.8662,-261.2926 2854.2392,-272.461 2869.4746,-282.2551"/>
+<polygon fill="#000000" stroke="#000000" points="2878.1577,-287.8372 2867.3125,-286.2149 2873.9518,-285.1334 2869.7459,-282.4296 2869.7459,-282.4296 2869.7459,-282.4296 2873.9518,-285.1334 2872.1793,-278.6442 2878.1577,-287.8372 2878.1577,-287.8372"/>
+</g>
+<!-- omnipok_agent.memory.manager&#45;&gt;omnipok_agent.memory.base -->
+<g id="edge30" class="edge">
+<title>omnipok_agent.memory.manager-&gt;omnipok_agent.memory.base</title>
+<path fill="none" stroke="#000000" d="M2657.8595,-180.1826C2658.4537,-199.8915 2656.4405,-231.2941 2640.411,-252 2629.8622,-265.6263 2615.083,-275.9306 2599.5431,-283.6816"/>
+<polygon fill="#000000" stroke="#000000" points="2590.3318,-287.9561 2597.5085,-279.6648 2594.8672,-285.8514 2599.4027,-283.7467 2599.4027,-283.7467 2599.4027,-283.7467 2594.8672,-285.8514 2601.2969,-287.8287 2590.3318,-287.9561 2590.3318,-287.9561"/>
+</g>
+<!-- omnipok_agent.memory.manager&#45;&gt;omnipok_agent.memory.long_term -->
+<g id="edge31" class="edge">
+<title>omnipok_agent.memory.manager-&gt;omnipok_agent.memory.long_term</title>
+<path fill="none" stroke="#000000" d="M2691.2342,-180.1686C2709.2121,-189.5484 2731.3313,-201.0888 2750.4726,-211.0756"/>
+<polygon fill="#000000" stroke="#000000" points="2759.5989,-215.8372 2748.6515,-215.2011 2755.166,-213.5243 2750.7331,-211.2115 2750.7331,-211.2115 2750.7331,-211.2115 2755.166,-213.5243 2752.8146,-207.2218 2759.5989,-215.8372 2759.5989,-215.8372"/>
+</g>
+<!-- omnipok_agent.memory.manager&#45;&gt;omnipok_agent.memory.short_term -->
+<g id="edge32" class="edge">
+<title>omnipok_agent.memory.manager-&gt;omnipok_agent.memory.short_term</title>
+<path fill="none" stroke="#000000" d="M2622.5971,-180.1686C2605.1403,-189.5484 2583.6623,-201.0888 2565.0758,-211.0756"/>
+<polygon fill="#000000" stroke="#000000" points="2556.214,-215.8372 2562.893,-207.1399 2560.6185,-213.4706 2565.023,-211.104 2565.023,-211.104 2565.023,-211.104 2560.6185,-213.4706 2567.1529,-215.068 2556.214,-215.8372 2556.214,-215.8372"/>
+</g>
+<!-- omnipok_agent.memory.short_term&#45;&gt;omnipok_agent.memory.base -->
+<g id="edge33" class="edge">
+<title>omnipok_agent.memory.short_term-&gt;omnipok_agent.memory.base</title>
+<path fill="none" stroke="#000000" d="M2522.411,-252.1686C2522.411,-259.869 2522.411,-269.0257 2522.411,-277.5834"/>
+<polygon fill="#000000" stroke="#000000" points="2522.411,-287.5867 2517.9111,-277.5867 2522.411,-282.5867 2522.4111,-277.5867 2522.4111,-277.5867 2522.4111,-277.5867 2522.411,-282.5867 2526.9111,-277.5868 2522.411,-287.5867 2522.411,-287.5867"/>
+</g>
+<!-- omnipok_agent.memory.storage -->
+<g id="node26" class="node">
+<title>omnipok_agent.memory.storage</title>
+<polygon fill="none" stroke="#000000" points="3117.0935,-252 2919.7285,-252 2919.7285,-216 3117.0935,-216 3117.0935,-252"/>
+<text text-anchor="middle" x="3018.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.memory.storage</text>
+</g>
+<!-- omnipok_agent.memory.storage&#45;&gt;omnipok_agent.memory.storage.sqlite_store -->
+<g id="edge34" class="edge">
+<title>omnipok_agent.memory.storage-&gt;omnipok_agent.memory.storage.sqlite_store</title>
+<path fill="none" stroke="#000000" d="M2990.1487,-252.1686C2975.9558,-261.2926 2958.5828,-272.461 2943.3474,-282.2551"/>
+<polygon fill="#000000" stroke="#000000" points="2934.6643,-287.8372 2940.6427,-278.6442 2938.8702,-285.1334 2943.0761,-282.4296 2943.0761,-282.4296 2943.0761,-282.4296 2938.8702,-285.1334 2945.5095,-286.2149 2934.6643,-287.8372 2934.6643,-287.8372"/>
+</g>
+<!-- omnipok_agent.orchestration.groupchat -->
+<g id="node29" class="node">
+<title>omnipok_agent.orchestration.groupchat</title>
+<polygon fill="none" stroke="#000000" points="3565.0739,-180 3325.7481,-180 3325.7481,-144 3565.0739,-144 3565.0739,-180"/>
+<text text-anchor="middle" x="3445.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.groupchat</text>
+</g>
+<!-- omnipok_agent.orchestration&#45;&gt;omnipok_agent.orchestration.groupchat -->
+<g id="edge35" class="edge">
+<title>omnipok_agent.orchestration-&gt;omnipok_agent.orchestration.groupchat</title>
+<path fill="none" stroke="#000000" d="M3693.313,-108.0757C3646.1048,-118.3446 3586.8871,-131.2257 3538.1684,-141.8232"/>
+<polygon fill="#000000" stroke="#000000" points="3528.2561,-143.9793 3537.0711,-137.4565 3533.1418,-142.9165 3538.0276,-141.8537 3538.0276,-141.8537 3538.0276,-141.8537 3533.1418,-142.9165 3538.9841,-146.2509 3528.2561,-143.9793 3528.2561,-143.9793"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph -->
+<g id="node30" class="node">
+<title>omnipok_agent.orchestration.langgraph</title>
+<polygon fill="none" stroke="#000000" points="3822.0739,-180 3582.7481,-180 3582.7481,-144 3822.0739,-144 3822.0739,-180"/>
+<text text-anchor="middle" x="3702.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.langgraph</text>
+</g>
+<!-- omnipok_agent.orchestration&#45;&gt;omnipok_agent.orchestration.langgraph -->
+<g id="edge36" class="edge">
+<title>omnipok_agent.orchestration-&gt;omnipok_agent.orchestration.langgraph</title>
+<path fill="none" stroke="#000000" d="M3757.7377,-108.1686C3748.8861,-116.781 3738.1624,-127.2149 3728.5215,-136.5952"/>
+<polygon fill="#000000" stroke="#000000" points="3721.0784,-143.8372 3725.1075,-133.6383 3724.662,-140.3504 3728.2456,-136.8636 3728.2456,-136.8636 3728.2456,-136.8636 3724.662,-140.3504 3731.3837,-140.0889 3721.0784,-143.8372 3721.0784,-143.8372"/>
+</g>
+<!-- omnipok_agent.orchestration.policies -->
+<g id="node35" class="node">
+<title>omnipok_agent.orchestration.policies</title>
+<polygon fill="none" stroke="#000000" points="4112.6392,-252 3886.1828,-252 3886.1828,-216 4112.6392,-216 4112.6392,-252"/>
+<text text-anchor="middle" x="3999.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.policies</text>
+</g>
+<!-- omnipok_agent.orchestration&#45;&gt;omnipok_agent.orchestration.policies -->
+<g id="edge37" class="edge">
+<title>omnipok_agent.orchestration-&gt;omnipok_agent.orchestration.policies</title>
+<path fill="none" stroke="#000000" d="M3795.0168,-108.3526C3820.9247,-133.857 3865.1861,-177.2238 3869.411,-180 3889.1595,-192.9768 3912.5355,-203.8544 3933.9815,-212.3674"/>
+<polygon fill="#000000" stroke="#000000" points="3943.3575,-215.9904 3932.4077,-216.5835 3938.6936,-214.1882 3934.0297,-212.386 3934.0297,-212.386 3934.0297,-212.386 3938.6936,-214.1882 3935.6517,-208.1884 3943.3575,-215.9904 3943.3575,-215.9904"/>
+</g>
+<!-- omnipok_agent.orchestration.router -->
+<g id="node36" class="node">
+<title>omnipok_agent.orchestration.router</title>
+<polygon fill="none" stroke="#000000" points="4347.5202,-252 4131.3018,-252 4131.3018,-216 4347.5202,-216 4347.5202,-252"/>
+<text text-anchor="middle" x="4239.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.router</text>
+</g>
+<!-- omnipok_agent.orchestration&#45;&gt;omnipok_agent.orchestration.router -->
+<g id="edge38" class="edge">
+<title>omnipok_agent.orchestration-&gt;omnipok_agent.orchestration.router</title>
+<path fill="none" stroke="#000000" d="M3866.4078,-97.607C3955.3252,-106.2145 4084.3736,-121.9611 4129.411,-144 4150.3077,-154.2257 4149.6315,-164.9959 4167.411,-180 4179.5388,-190.2346 4193.376,-200.8477 4205.6575,-209.9282"/>
+<polygon fill="#000000" stroke="#000000" points="4213.8714,-215.9463 4203.1452,-213.666 4209.8381,-212.9912 4205.8048,-210.0361 4205.8048,-210.0361 4205.8048,-210.0361 4209.8381,-212.9912 4208.4644,-206.4061 4213.8714,-215.9463 4213.8714,-215.9463"/>
+</g>
+<!-- omnipok_agent.orchestration.supervisor -->
+<g id="node37" class="node">
+<title>omnipok_agent.orchestration.supervisor</title>
+<polygon fill="none" stroke="#000000" points="4120.4095,-180 3878.4125,-180 3878.4125,-144 4120.4095,-144 4120.4095,-180"/>
+<text text-anchor="middle" x="3999.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.supervisor</text>
+</g>
+<!-- omnipok_agent.orchestration&#45;&gt;omnipok_agent.orchestration.supervisor -->
+<g id="edge39" class="edge">
+<title>omnipok_agent.orchestration-&gt;omnipok_agent.orchestration.supervisor</title>
+<path fill="none" stroke="#000000" d="M3832.3955,-108.0757C3863.146,-118.0041 3901.4598,-130.3745 3933.6315,-140.7618"/>
+<polygon fill="#000000" stroke="#000000" points="3943.4035,-143.9169 3932.5045,-145.1266 3938.6453,-142.3806 3933.8872,-140.8443 3933.8872,-140.8443 3933.8872,-140.8443 3938.6453,-142.3806 3935.2699,-136.5619 3943.4035,-143.9169 3943.4035,-143.9169"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.groupchat_graph -->
+<g id="node31" class="node">
+<title>omnipok_agent.orchestration.langgraph.groupchat_graph</title>
+<polygon fill="none" stroke="#000000" points="3471.9297,-252 3134.8923,-252 3134.8923,-216 3471.9297,-216 3471.9297,-252"/>
+<text text-anchor="middle" x="3303.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.langgraph.groupchat_graph</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph&#45;&gt;omnipok_agent.orchestration.langgraph.groupchat_graph -->
+<g id="edge40" class="edge">
+<title>omnipok_agent.orchestration.langgraph-&gt;omnipok_agent.orchestration.langgraph.groupchat_graph</title>
+<path fill="none" stroke="#000000" d="M3602.4987,-180.0293C3545.0005,-190.4049 3472.6587,-203.4591 3413.5252,-214.1298"/>
+<polygon fill="#000000" stroke="#000000" points="3403.4004,-215.9568 3412.4423,-209.7524 3408.3209,-215.0688 3413.2415,-214.1809 3413.2415,-214.1809 3413.2415,-214.1809 3408.3209,-215.0688 3414.0406,-218.6094 3403.4004,-215.9568 3403.4004,-215.9568"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.state -->
+<g id="node33" class="node">
+<title>omnipok_agent.orchestration.langgraph.state</title>
+<polygon fill="none" stroke="#000000" points="3711.729,-396 3443.093,-396 3443.093,-360 3711.729,-360 3711.729,-396"/>
+<text text-anchor="middle" x="3577.411" y="-373.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.langgraph.state</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph&#45;&gt;omnipok_agent.orchestration.langgraph.state -->
+<g id="edge41" class="edge">
+<title>omnipok_agent.orchestration.langgraph-&gt;omnipok_agent.orchestration.langgraph.state</title>
+<path fill="none" stroke="#000000" d="M3767.7585,-180.0568C3798.5914,-190.029 3830.5635,-203.0027 3839.411,-216 3848.4144,-229.2264 3847.9271,-238.4547 3839.411,-252 3804.3653,-307.7418 3737.0023,-339.3924 3679.3591,-357.0301"/>
+<polygon fill="#000000" stroke="#000000" points="3669.4606,-359.9525 3677.7772,-352.805 3674.256,-358.5367 3679.0514,-357.1209 3679.0514,-357.1209 3679.0514,-357.1209 3674.256,-358.5367 3680.3256,-361.4367 3669.4606,-359.9525 3669.4606,-359.9525"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.supervisor_graph -->
+<g id="node34" class="node">
+<title>omnipok_agent.orchestration.langgraph.supervisor_graph</title>
+<polygon fill="none" stroke="#000000" points="3830.2646,-252 3490.5574,-252 3490.5574,-216 3830.2646,-216 3830.2646,-252"/>
+<text text-anchor="middle" x="3660.411" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.langgraph.supervisor_graph</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph&#45;&gt;omnipok_agent.orchestration.langgraph.supervisor_graph -->
+<g id="edge42" class="edge">
+<title>omnipok_agent.orchestration.langgraph-&gt;omnipok_agent.orchestration.langgraph.supervisor_graph</title>
+<path fill="none" stroke="#000000" d="M3691.8126,-180.1686C3687.1233,-188.2075 3681.5082,-197.8334 3676.3312,-206.7082"/>
+<polygon fill="#000000" stroke="#000000" points="3671.1521,-215.5867 3672.3038,-204.6815 3673.6715,-211.2678 3676.1908,-206.9489 3676.1908,-206.9489 3676.1908,-206.9489 3673.6715,-211.2678 3680.0778,-209.2164 3671.1521,-215.5867 3671.1521,-215.5867"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.nodes -->
+<g id="node32" class="node">
+<title>omnipok_agent.orchestration.langgraph.nodes</title>
+<polygon fill="none" stroke="#000000" points="3632.2332,-324 3356.5888,-324 3356.5888,-288 3632.2332,-288 3632.2332,-324"/>
+<text text-anchor="middle" x="3494.411" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.orchestration.langgraph.nodes</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.groupchat_graph&#45;&gt;omnipok_agent.orchestration.langgraph.nodes -->
+<g id="edge43" class="edge">
+<title>omnipok_agent.orchestration.langgraph.groupchat_graph-&gt;omnipok_agent.orchestration.langgraph.nodes</title>
+<path fill="none" stroke="#000000" d="M3351.6084,-252.1686C3377.6076,-261.9694 3409.8646,-274.1291 3437.1391,-284.4106"/>
+<polygon fill="#000000" stroke="#000000" points="3446.5602,-287.962 3435.6156,-288.6454 3441.8816,-286.1983 3437.203,-284.4346 3437.203,-284.4346 3437.203,-284.4346 3441.8816,-286.1983 3438.7903,-280.2238 3446.5602,-287.962 3446.5602,-287.962"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.groupchat_graph&#45;&gt;omnipok_agent.orchestration.langgraph.state -->
+<g id="edge44" class="edge">
+<title>omnipok_agent.orchestration.langgraph.groupchat_graph-&gt;omnipok_agent.orchestration.langgraph.state</title>
+<path fill="none" stroke="#000000" d="M3307.3369,-252.1337C3312.758,-272.7132 3324.5692,-305.7789 3347.411,-324 3364.3653,-337.5245 3406.5608,-349.0902 3450.2504,-358.0074"/>
+<polygon fill="#000000" stroke="#000000" points="3460.1785,-359.9849 3449.4921,-362.4447 3455.2748,-359.0082 3450.3711,-358.0314 3450.3711,-358.0314 3450.3711,-358.0314 3455.2748,-359.0082 3451.2502,-353.6181 3460.1785,-359.9849 3460.1785,-359.9849"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.nodes&#45;&gt;omnipok_agent.orchestration.langgraph.state -->
+<g id="edge45" class="edge">
+<title>omnipok_agent.orchestration.langgraph.nodes-&gt;omnipok_agent.orchestration.langgraph.state</title>
+<path fill="none" stroke="#000000" d="M3515.3554,-324.1686C3525.4801,-332.9515 3537.7887,-343.6288 3548.7658,-353.1511"/>
+<polygon fill="#000000" stroke="#000000" points="3556.4733,-359.8372 3545.9706,-356.6836 3552.6963,-356.5608 3548.9194,-353.2844 3548.9194,-353.2844 3548.9194,-353.2844 3552.6963,-356.5608 3551.8681,-349.8851 3556.4733,-359.8372 3556.4733,-359.8372"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.supervisor_graph&#45;&gt;omnipok_agent.orchestration.langgraph.nodes -->
+<g id="edge46" class="edge">
+<title>omnipok_agent.orchestration.langgraph.supervisor_graph-&gt;omnipok_agent.orchestration.langgraph.nodes</title>
+<path fill="none" stroke="#000000" d="M3618.5222,-252.1686C3596.3207,-261.7982 3568.8688,-273.705 3545.4326,-283.8701"/>
+<polygon fill="#000000" stroke="#000000" points="3535.9986,-287.962 3543.3822,-279.8544 3540.5857,-285.9724 3545.1728,-283.9828 3545.1728,-283.9828 3545.1728,-283.9828 3540.5857,-285.9724 3546.9635,-288.1112 3535.9986,-287.962 3535.9986,-287.962"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.supervisor_graph&#45;&gt;omnipok_agent.orchestration.langgraph.state -->
+<g id="edge47" class="edge">
+<title>omnipok_agent.orchestration.langgraph.supervisor_graph-&gt;omnipok_agent.orchestration.langgraph.state</title>
+<path fill="none" stroke="#000000" d="M3660.0001,-252.1583C3658.8212,-271.2819 3654.7717,-301.6604 3641.411,-324 3634.6399,-335.3216 3624.6278,-345.4018 3614.5231,-353.6981"/>
+<polygon fill="#000000" stroke="#000000" points="3606.4597,-359.9588 3611.5986,-350.2716 3610.409,-356.8924 3614.3584,-353.826 3614.3584,-353.826 3614.3584,-353.826 3610.409,-356.8924 3617.1181,-357.3805 3606.4597,-359.9588 3606.4597,-359.9588"/>
+</g>
+<!-- omnipok_agent.orchestration.supervisor&#45;&gt;omnipok_agent.orchestration.policies -->
+<g id="edge48" class="edge">
+<title>omnipok_agent.orchestration.supervisor-&gt;omnipok_agent.orchestration.policies</title>
+<path fill="none" stroke="#000000" d="M3999.411,-180.1686C3999.411,-187.869 3999.411,-197.0257 3999.411,-205.5834"/>
+<polygon fill="#000000" stroke="#000000" points="3999.411,-215.5867 3994.9111,-205.5867 3999.411,-210.5867 3999.4111,-205.5867 3999.4111,-205.5867 3999.4111,-205.5867 3999.411,-210.5867 4003.9111,-205.5868 3999.411,-215.5867 3999.411,-215.5867"/>
+</g>
+<!-- omnipok_agent.orchestration.supervisor&#45;&gt;omnipok_agent.orchestration.router -->
+<g id="edge49" class="edge">
+<title>omnipok_agent.orchestration.supervisor-&gt;omnipok_agent.orchestration.router</title>
+<path fill="none" stroke="#000000" d="M4059.6633,-180.0757C4093.0433,-190.0897 4134.7042,-202.588 4169.5109,-213.03"/>
+<polygon fill="#000000" stroke="#000000" points="4179.1339,-215.9169 4168.2625,-217.3535 4174.3447,-214.4801 4169.5556,-213.0433 4169.5556,-213.0433 4169.5556,-213.0433 4174.3447,-214.4801 4170.8487,-208.7331 4179.1339,-215.9169 4179.1339,-215.9169"/>
+</g>
+<!-- omnipok_agent.tools.db -->
+<g id="node39" class="node">
+<title>omnipok_agent.tools.db</title>
+<polygon fill="none" stroke="#000000" points="4704.2382,-180 4552.5838,-180 4552.5838,-144 4704.2382,-144 4704.2382,-180"/>
+<text text-anchor="middle" x="4628.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.tools.db</text>
+</g>
+<!-- omnipok_agent.tools&#45;&gt;omnipok_agent.tools.db -->
+<g id="edge50" class="edge">
+<title>omnipok_agent.tools-&gt;omnipok_agent.tools.db</title>
+<path fill="none" stroke="#000000" d="M4417.3527,-107.3374C4456.9174,-117.5844 4507.2481,-130.6197 4548.8358,-141.3906"/>
+<polygon fill="#000000" stroke="#000000" points="4558.6593,-143.9348 4547.8504,-145.7838 4553.819,-142.6812 4548.9787,-141.4275 4548.9787,-141.4275 4548.9787,-141.4275 4553.819,-142.6812 4550.107,-137.0713 4558.6593,-143.9348 4558.6593,-143.9348"/>
+</g>
+<!-- omnipok_agent.tools.http -->
+<g id="node40" class="node">
+<title>omnipok_agent.tools.http</title>
+<polygon fill="none" stroke="#000000" points="4336.019,-180 4176.803,-180 4176.803,-144 4336.019,-144 4336.019,-180"/>
+<text text-anchor="middle" x="4256.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.tools.http</text>
+</g>
+<!-- omnipok_agent.tools&#45;&gt;omnipok_agent.tools.http -->
+<g id="edge51" class="edge">
+<title>omnipok_agent.tools-&gt;omnipok_agent.tools.http</title>
+<path fill="none" stroke="#000000" d="M4326.6908,-108.1686C4315.0016,-117.1221 4300.7422,-128.0442 4288.1301,-137.7045"/>
+<polygon fill="#000000" stroke="#000000" points="4280.1236,-143.8372 4285.326,-134.1839 4284.093,-140.7968 4288.0624,-137.7564 4288.0624,-137.7564 4288.0624,-137.7564 4284.093,-140.7968 4290.7987,-141.3288 4280.1236,-143.8372 4280.1236,-143.8372"/>
+</g>
+<!-- omnipok_agent.tools.registry -->
+<g id="node41" class="node">
+<title>omnipok_agent.tools.registry</title>
+<polygon fill="none" stroke="#000000" points="4534.4994,-180 4354.3226,-180 4354.3226,-144 4534.4994,-144 4534.4994,-180"/>
+<text text-anchor="middle" x="4444.411" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.tools.registry</text>
+</g>
+<!-- omnipok_agent.tools&#45;&gt;omnipok_agent.tools.registry -->
+<g id="edge52" class="edge">
+<title>omnipok_agent.tools-&gt;omnipok_agent.tools.registry</title>
+<path fill="none" stroke="#000000" d="M4374.1312,-108.1686C4385.8204,-117.1221 4400.0798,-128.0442 4412.6919,-137.7045"/>
+<polygon fill="#000000" stroke="#000000" points="4420.6984,-143.8372 4410.0233,-141.3288 4416.729,-140.7968 4412.7596,-137.7564 4412.7596,-137.7564 4412.7596,-137.7564 4416.729,-140.7968 4415.496,-134.1839 4420.6984,-143.8372 4420.6984,-143.8372"/>
+</g>
+<!-- omnipok_agent.utils -->
+<g id="node42" class="node">
+<title>omnipok_agent.utils</title>
+<polygon fill="none" stroke="#000000" points="4963.6287,-36 4833.1933,-36 4833.1933,0 4963.6287,0 4963.6287,-36"/>
+<text text-anchor="middle" x="4898.411" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">omnipok_agent.utils</text>
+</g>
+</g>
+</svg>

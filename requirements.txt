@@ -3,13 +3,16 @@ fastapi>=0.104.0
 uvicorn[standard]>=0.24.0
 pydantic>=2.5.0
 httpx>=0.25.0
+python-dotenv>=1.0.0
 
 # UI dependencies
 chainlit>=1.0.0
-gradio>=4.0.0
 
 # LLM dependencies
 openai>=1.0.0  # For OpenAI integration
+
+# LangChain dependencies
+langchain-core>=0.1.0
 
 # Optional dependencies
 # anthropic>=0.7.0  # For Anthropic integration

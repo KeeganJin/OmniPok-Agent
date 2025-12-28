@@ -1,0 +1,32 @@
+{
+  "defaults": {
+    "llm_provider": "openai",
+    "llm_model": "gpt-4",
+    "llm_api_key_env": "OPENAI_API_KEY"
+  },
+  "agents": [
+    {
+      "agent_type": "TextAgent",
+      "agent_id": "text-agent-1",
+      "name": "Text Agent",
+      "enabled": true,
+      "tools": ["http_get", "http_post"]
+    },
+    {
+      "agent_type": "CodeAgent",
+      "agent_id": "code-agent-1",
+      "name": "Code Agent (Python)",
+      "enabled": true,
+      "programming_language": "python",
+      "tools": ["http_get", "http_post"]
+    },
+    {
+      "agent_type": "SupportAgent",
+      "agent_id": "support-agent-1",
+      "name": "Support Agent",
+      "enabled": false,
+      "tools": ["http_get"]
+    }
+  ]
+}
+

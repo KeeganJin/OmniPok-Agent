@@ -1,0 +1,818 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7550pt" height="1453pt" viewBox="0.00 0.00 7549.88 1453.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1449)">
+<title>classes_OmnipokAgent</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1449 7545.8823,-1449 7545.8823,4 -4,4"/>
+<!-- omnipok_agent.config.agent_config.AgentConfig -->
+<g id="node1" class="node">
+<title>omnipok_agent.config.agent_config.AgentConfig</title>
+<polygon fill="none" stroke="#000000" points="0,-.5 0,-209.3 232.9426,-209.3 232.9426,-.5 0,-.5"/>
+<text text-anchor="start" x="79.9215" y="-192.7" font-family="Times,serif" font-size="14.00" fill="#000000">AgentConfig</text>
+<polyline fill="none" stroke="#000000" points="0,-184.5 232.9426,-184.5 "/>
+<text text-anchor="start" x="8" y="-167.9" font-family="Times,serif" font-size="14.00" fill="#000000">agent_id : str</text>
+<text text-anchor="start" x="8" y="-151.1" font-family="Times,serif" font-size="14.00" fill="#000000">agent_type : str</text>
+<text text-anchor="start" x="8" y="-134.3" font-family="Times,serif" font-size="14.00" fill="#000000">enabled : bool</text>
+<text text-anchor="start" x="8" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">llm_api_key_env : Optional[str]</text>
+<text text-anchor="start" x="8" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">llm_model : Optional[str]</text>
+<text text-anchor="start" x="8" y="-83.9" font-family="Times,serif" font-size="14.00" fill="#000000">llm_provider : Optional[str]</text>
+<text text-anchor="start" x="8" y="-67.1" font-family="Times,serif" font-size="14.00" fill="#000000">name : Optional[str]</text>
+<text text-anchor="start" x="8" y="-50.3" font-family="Times,serif" font-size="14.00" fill="#000000">programming_language : Optional[str]</text>
+<text text-anchor="start" x="8" y="-33.5" font-family="Times,serif" font-size="14.00" fill="#000000">tools : List[str]</text>
+<polyline fill="none" stroke="#000000" points="0,-25.3 232.9426,-25.3 "/>
+<text text-anchor="start" x="114.7213" y="-8.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.config.agent_config.AgentServiceConfig -->
+<g id="node2" class="node">
+<title>omnipok_agent.config.agent_config.AgentServiceConfig</title>
+<polygon fill="none" stroke="#000000" points="251.3864,-42.5 251.3864,-167.3 469.5562,-167.3 469.5562,-42.5 251.3864,-42.5"/>
+<text text-anchor="start" x="302.9327" y="-150.7" font-family="Times,serif" font-size="14.00" fill="#000000">AgentServiceConfig</text>
+<polyline fill="none" stroke="#000000" points="251.3864,-142.5 469.5562,-142.5 "/>
+<text text-anchor="start" x="259.3864" y="-125.9" font-family="Times,serif" font-size="14.00" fill="#000000">agents : List[AgentConfig]</text>
+<text text-anchor="start" x="259.3864" y="-109.1" font-family="Times,serif" font-size="14.00" fill="#000000">default_llm_api_key_env : str</text>
+<text text-anchor="start" x="259.3864" y="-92.3" font-family="Times,serif" font-size="14.00" fill="#000000">default_llm_model : Optional[str]</text>
+<text text-anchor="start" x="259.3864" y="-75.5" font-family="Times,serif" font-size="14.00" fill="#000000">default_llm_provider : Optional[str]</text>
+<polyline fill="none" stroke="#000000" points="251.3864,-67.3 469.5562,-67.3 "/>
+<text text-anchor="start" x="358.7213" y="-50.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.core.types.AgentState -->
+<g id="node3" class="node">
+<title>omnipok_agent.core.types.AgentState</title>
+<polygon fill="none" stroke="#000000" points="689.3159,-305.1 689.3159,-463.5 943.6267,-463.5 943.6267,-305.1 689.3159,-305.1"/>
+<text text-anchor="start" x="785.3689" y="-446.9" font-family="Times,serif" font-size="14.00" fill="#000000">AgentState</text>
+<polyline fill="none" stroke="#000000" points="689.3159,-438.7 943.6267,-438.7 "/>
+<text text-anchor="start" x="744.5533" y="-422.1" font-family="Times,serif" font-size="14.00" fill="#000000">created_at : datetime</text>
+<text text-anchor="start" x="744.5533" y="-405.3" font-family="Times,serif" font-size="14.00" fill="#000000">current_step : int</text>
+<text text-anchor="start" x="744.5533" y="-388.5" font-family="Times,serif" font-size="14.00" fill="#000000">messages : List[Message]</text>
+<text text-anchor="start" x="744.5533" y="-371.7" font-family="Times,serif" font-size="14.00" fill="#000000">metadata : Dict[str, Any]</text>
+<text text-anchor="start" x="744.5533" y="-354.9" font-family="Times,serif" font-size="14.00" fill="#000000">updated_at : datetime</text>
+<polyline fill="none" stroke="#000000" points="689.3159,-346.7 943.6267,-346.7 "/>
+<text text-anchor="start" x="697.3159" y="-330.1" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(message: Message): None</text>
+<text text-anchor="start" x="697.3159" y="-313.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_conversation_history(): List[Message]</text>
+</g>
+<!-- omnipok_agent.core.base.BaseAgent -->
+<g id="node4" class="node">
+<title>omnipok_agent.core.base.BaseAgent</title>
+<polygon fill="none" stroke="#000000" points="2300.8716,-559.3 2300.8716,-868.9 2760.071,-868.9 2760.071,-559.3 2300.8716,-559.3"/>
+<text text-anchor="start" x="2499.7602" y="-852.3" font-family="Times,serif" font-size="14.00" fill="#000000">BaseAgent</text>
+<polyline fill="none" stroke="#000000" points="2300.8716,-844.1 2760.071,-844.1 "/>
+<text text-anchor="start" x="2423.1571" y="-827.5" font-family="Times,serif" font-size="14.00" fill="#000000">agent_id : str</text>
+<text text-anchor="start" x="2423.1571" y="-810.7" font-family="Times,serif" font-size="14.00" fill="#000000">llm</text>
+<text text-anchor="start" x="2423.1571" y="-793.9" font-family="Times,serif" font-size="14.00" fill="#000000">max_iterations : int</text>
+<text text-anchor="start" x="2423.1571" y="-777.1" font-family="Times,serif" font-size="14.00" fill="#000000">memory : Optional[Memory]</text>
+<text text-anchor="start" x="2423.1571" y="-760.3" font-family="Times,serif" font-size="14.00" fill="#000000">name : str</text>
+<text text-anchor="start" x="2423.1571" y="-743.5" font-family="Times,serif" font-size="14.00" fill="#000000">state</text>
+<text text-anchor="start" x="2423.1571" y="-726.7" font-family="Times,serif" font-size="14.00" fill="#000000">system_prompt : Optional[str]</text>
+<text text-anchor="start" x="2423.1571" y="-709.9" font-family="Times,serif" font-size="14.00" fill="#000000">tool_registry : Optional[ToolRegistry]</text>
+<polyline fill="none" stroke="#000000" points="2300.8716,-701.7 2760.071,-701.7 "/>
+<text text-anchor="start" x="2308.8716" y="-685.1" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(message: Message): None</text>
+<text text-anchor="start" x="2308.8716" y="-668.3" font-family="Times,serif" font-size="14.00" fill="#000000">clear_state(): None</text>
+<text text-anchor="start" x="2308.8716" y="-651.5" font-family="Times,serif" font-size="14.00" fill="#000000">execute_tool_call(tool_call: ToolCall, context: RunContext): Observation</text>
+<text text-anchor="start" x="2308.8716" y="-634.7" font-family="Times,serif" font-size="14.00" fill="#000000">get_available_tools(user_permissions: Optional[List[str]]): List[Dict[str, Any]]</text>
+<text text-anchor="start" x="2308.8716" y="-617.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_state(): AgentState</text>
+<text text-anchor="start" x="2308.8716" y="-601.1" font-family="Times,serif" font-size="14.00" fill="#000000">load_state(): None</text>
+<text text-anchor="start" x="2308.8716" y="-584.3" font-family="Times,serif" font-size="14.00" fill="#000000">process(message: str, context: RunContext): str</text>
+<text text-anchor="start" x="2308.8716" y="-567.5" font-family="Times,serif" font-size="14.00" fill="#000000">save_state(): None</text>
+</g>
+<!-- omnipok_agent.core.types.AgentState&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge26" class="edge">
+<title>omnipok_agent.core.types.AgentState-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M889.3522,-463.7166C908.3403,-480.1616 929.8689,-495.6193 952.4713,-506 1185.0295,-612.8086 1907.129,-673.9977 2288.6376,-699.668"/>
+<polygon fill="#000000" stroke="#000000" points="2288.6912,-699.6715 2294.945,-696.0812 2300.6644,-700.4731 2294.4106,-704.0634 2288.6912,-699.6715"/>
+<text text-anchor="middle" x="1059.2988" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">state</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.BudgetPolicy -->
+<g id="node5" class="node">
+<title>omnipok_agent.orchestration.policies.BudgetPolicy</title>
+<polygon fill="none" stroke="#000000" points="3923.2682,-50.9 3923.2682,-158.9 4243.6744,-158.9 4243.6744,-50.9 3923.2682,-50.9"/>
+<text text-anchor="start" x="4045.3612" y="-142.3" font-family="Times,serif" font-size="14.00" fill="#000000">BudgetPolicy</text>
+<polyline fill="none" stroke="#000000" points="3923.2682,-134.1 4243.6744,-134.1 "/>
+<text text-anchor="start" x="3958.6809" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">per_agent_budget : Optional[Dict[str, float]]</text>
+<text text-anchor="start" x="3958.6809" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">per_task_budget : Optional[float]</text>
+<text text-anchor="start" x="3958.6809" y="-83.9" font-family="Times,serif" font-size="14.00" fill="#000000">total_budget : float</text>
+<polyline fill="none" stroke="#000000" points="3923.2682,-75.7 4243.6744,-75.7 "/>
+<text text-anchor="start" x="3931.2682" y="-59.1" font-family="Times,serif" font-size="14.00" fill="#000000">can_allocate(agent_id: str, estimated_cost: float): bool</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.OrchestrationPolicy -->
+<g id="node22" class="node">
+<title>omnipok_agent.orchestration.policies.OrchestrationPolicy</title>
+<polygon fill="none" stroke="#000000" points="4055.2279,-330.3 4055.2279,-438.3 4443.7147,-438.3 4443.7147,-330.3 4055.2279,-330.3"/>
+<text text-anchor="start" x="4193.4881" y="-421.7" font-family="Times,serif" font-size="14.00" fill="#000000">OrchestrationPolicy</text>
+<polyline fill="none" stroke="#000000" points="4055.2279,-413.5 4443.7147,-413.5 "/>
+<text text-anchor="start" x="4114.1543" y="-396.9" font-family="Times,serif" font-size="14.00" fill="#000000">budget_policy : Optional[BudgetPolicy]</text>
+<text text-anchor="start" x="4114.1543" y="-380.1" font-family="Times,serif" font-size="14.00" fill="#000000">permission_policy : Optional[PermissionPolicy]</text>
+<text text-anchor="start" x="4114.1543" y="-363.3" font-family="Times,serif" font-size="14.00" fill="#000000">retry_policy</text>
+<polyline fill="none" stroke="#000000" points="4055.2279,-355.1 4443.7147,-355.1 "/>
+<text text-anchor="start" x="4063.2279" y="-338.5" font-family="Times,serif" font-size="14.00" fill="#000000">validate_task(task: Task, agent_id: str, context: RunContext): bool</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.BudgetPolicy&#45;&gt;omnipok_agent.orchestration.policies.OrchestrationPolicy -->
+<g id="edge29" class="edge">
+<title>omnipok_agent.orchestration.policies.BudgetPolicy-&gt;omnipok_agent.orchestration.policies.OrchestrationPolicy</title>
+<path fill="none" stroke="#000000" d="M4115.6746,-159.1024C4142.9926,-205.0823 4182.2394,-271.1399 4211.1657,-319.8266"/>
+<polygon fill="none" stroke="#000000" points="4211.2282,-319.9319 4217.7318,-323.047 4217.3576,-330.2484 4210.8541,-327.1333 4211.2282,-319.9319"/>
+<text text-anchor="middle" x="4206.5218" y="-232" font-family="Times,serif" font-size="14.00" fill="#00ff00">budget_policy</text>
+</g>
+<!-- omnipok_agent.agents.chat_agent.ChatAgent -->
+<g id="node6" class="node">
+<title>omnipok_agent.agents.chat_agent.ChatAgent</title>
+<polygon fill="none" stroke="#000000" points="961.7896,-338.7 961.7896,-429.9 1193.153,-429.9 1193.153,-338.7 961.7896,-338.7"/>
+<text text-anchor="start" x="1047.1445" y="-413.3" font-family="Times,serif" font-size="14.00" fill="#000000">ChatAgent</text>
+<polyline fill="none" stroke="#000000" points="961.7896,-405.1 1193.153,-405.1 "/>
+<polyline fill="none" stroke="#000000" points="961.7896,-380.3 1193.153,-380.3 "/>
+<text text-anchor="start" x="969.7896" y="-363.7" font-family="Times,serif" font-size="14.00" fill="#000000">chat(message: str, context): str</text>
+<text text-anchor="start" x="969.7896" y="-346.9" font-family="Times,serif" font-size="14.00" fill="#000000">chat_stream(message: str, context): str</text>
+</g>
+<!-- omnipok_agent.agents.chat_agent.ChatAgent&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge1" class="edge">
+<title>omnipok_agent.agents.chat_agent.ChatAgent-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M1112.1328,-430.0144C1134.8406,-456.5606 1166.8489,-488.1851 1202.4713,-506 1388.7832,-599.1751 1961.0706,-663.5989 2290.395,-694.0589"/>
+<polygon fill="none" stroke="#000000" points="2290.2727,-697.5624 2300.5516,-694.9947 2290.9149,-690.5919 2290.2727,-697.5624"/>
+</g>
+<!-- omnipok_agent.agents.code_agent.CodeAgent -->
+<g id="node7" class="node">
+<title>omnipok_agent.agents.code_agent.CodeAgent</title>
+<polygon fill="none" stroke="#000000" points="1211.1571,-347.1 1211.1571,-421.5 1385.7855,-421.5 1385.7855,-347.1 1211.1571,-347.1"/>
+<text text-anchor="start" x="1266.5898" y="-404.9" font-family="Times,serif" font-size="14.00" fill="#000000">CodeAgent</text>
+<polyline fill="none" stroke="#000000" points="1211.1571,-396.7 1385.7855,-396.7 "/>
+<text text-anchor="start" x="1219.1571" y="-380.1" font-family="Times,serif" font-size="14.00" fill="#000000">programming_language : str</text>
+<polyline fill="none" stroke="#000000" points="1211.1571,-371.9 1385.7855,-371.9 "/>
+<text text-anchor="start" x="1296.7213" y="-355.3" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.agents.code_agent.CodeAgent&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge2" class="edge">
+<title>omnipok_agent.agents.code_agent.CodeAgent-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M1318.1117,-421.7452C1334.6852,-449.5 1361.044,-485.8698 1394.4713,-506 1542.048,-594.872 2003.3455,-658.1973 2290.7074,-690.2294"/>
+<polygon fill="none" stroke="#000000" points="2290.5305,-693.7312 2300.8555,-691.3557 2291.3027,-686.7739 2290.5305,-693.7312"/>
+</g>
+<!-- omnipok_agent.orchestration.groupchat.GroupChat -->
+<g id="node8" class="node">
+<title>omnipok_agent.orchestration.groupchat.GroupChat</title>
+<polygon fill="none" stroke="#000000" points="5043.711,-.5 5043.711,-209.3 5547.2316,-209.3 5547.2316,-.5 5043.711,-.5"/>
+<text text-anchor="start" x="5264.3668" y="-192.7" font-family="Times,serif" font-size="14.00" fill="#000000">GroupChat</text>
+<polyline fill="none" stroke="#000000" points="5043.711,-184.5 5547.2316,-184.5 "/>
+<text text-anchor="start" x="5179.2209" y="-167.9" font-family="Times,serif" font-size="14.00" fill="#000000">agents</text>
+<text text-anchor="start" x="5179.2209" y="-151.1" font-family="Times,serif" font-size="14.00" fill="#000000">conversation_history : List[Message], list</text>
+<text text-anchor="start" x="5179.2209" y="-134.3" font-family="Times,serif" font-size="14.00" fill="#000000">current_round : int</text>
+<text text-anchor="start" x="5179.2209" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">max_rounds : int</text>
+<text text-anchor="start" x="5179.2209" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">memory : Optional[Memory]</text>
+<polyline fill="none" stroke="#000000" points="5043.711,-92.5 5547.2316,-92.5 "/>
+<text text-anchor="start" x="5051.711" y="-75.9" font-family="Times,serif" font-size="14.00" fill="#000000">add_agent(agent: BaseAgent): None</text>
+<text text-anchor="start" x="5051.711" y="-59.1" font-family="Times,serif" font-size="14.00" fill="#000000">clear_history(): None</text>
+<text text-anchor="start" x="5051.711" y="-42.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_conversation_history(): List[Message]</text>
+<text text-anchor="start" x="5051.711" y="-25.5" font-family="Times,serif" font-size="14.00" fill="#000000">process_message(message: str, sender_id: str, context: RunContext): List[Dict[str, str]]</text>
+<text text-anchor="start" x="5051.711" y="-8.7" font-family="Times,serif" font-size="14.00" fill="#000000">remove_agent(agent_id: str): None</text>
+</g>
+<!-- omnipok_agent.core.types.Message -->
+<g id="node17" class="node">
+<title>omnipok_agent.core.types.Message</title>
+<polygon fill="none" stroke="#000000" points="5180.5526,-296.7 5180.5526,-471.9 5410.39,-471.9 5410.39,-296.7 5180.5526,-296.7"/>
+<text text-anchor="start" x="5270.9825" y="-455.3" font-family="Times,serif" font-size="14.00" fill="#000000">Message</text>
+<polyline fill="none" stroke="#000000" points="5180.5526,-447.1 5410.39,-447.1 "/>
+<text text-anchor="start" x="5188.5526" y="-430.5" font-family="Times,serif" font-size="14.00" fill="#000000">content : str</text>
+<text text-anchor="start" x="5188.5526" y="-413.7" font-family="Times,serif" font-size="14.00" fill="#000000">metadata : Optional[Dict[str, Any]]</text>
+<text text-anchor="start" x="5188.5526" y="-396.9" font-family="Times,serif" font-size="14.00" fill="#000000">name : Optional[str]</text>
+<text text-anchor="start" x="5188.5526" y="-380.1" font-family="Times,serif" font-size="14.00" fill="#000000">role</text>
+<text text-anchor="start" x="5188.5526" y="-363.3" font-family="Times,serif" font-size="14.00" fill="#000000">timestamp : datetime</text>
+<text text-anchor="start" x="5188.5526" y="-346.5" font-family="Times,serif" font-size="14.00" fill="#000000">tool_call_id : Optional[str]</text>
+<text text-anchor="start" x="5188.5526" y="-329.7" font-family="Times,serif" font-size="14.00" fill="#000000">tool_calls : Optional[List['ToolCall']]</text>
+<polyline fill="none" stroke="#000000" points="5180.5526,-321.5 5410.39,-321.5 "/>
+<text text-anchor="start" x="5228.4092" y="-304.9" font-family="Times,serif" font-size="14.00" fill="#000000">to_dict(): Dict[str, Any]</text>
+</g>
+<!-- omnipok_agent.orchestration.groupchat.GroupChat&#45;&gt;omnipok_agent.core.types.Message -->
+<g id="edge17" class="edge">
+<title>omnipok_agent.orchestration.groupchat.GroupChat-&gt;omnipok_agent.core.types.Message</title>
+<path fill="none" stroke="#000000" d="M5295.4713,-209.3356C5295.4713,-234.5381 5295.4713,-261.3789 5295.4713,-286.2758"/>
+<polygon fill="#000000" stroke="#000000" points="5295.4713,-296.4465 5290.9714,-286.4465 5295.4713,-291.4465 5295.4714,-286.4465 5295.4714,-286.4465 5295.4714,-286.4465 5295.4713,-291.4465 5299.9714,-286.4465 5295.4713,-296.4465 5295.4713,-296.4465"/>
+<text text-anchor="middle" x="5354.1796" y="-232" font-family="Times,serif" font-size="14.00" fill="#00ff00">conversation_history</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.state.GroupChatState -->
+<g id="node9" class="node">
+<title>omnipok_agent.orchestration.langgraph.state.GroupChatState</title>
+<polygon fill="none" stroke="#000000" points="5007.2791,-601.3 5007.2791,-826.9 5231.6635,-826.9 5231.6635,-601.3 5007.2791,-601.3"/>
+<text text-anchor="start" x="5074.3703" y="-810.3" font-family="Times,serif" font-size="14.00" fill="#000000">GroupChatState</text>
+<polyline fill="none" stroke="#000000" points="5007.2791,-802.1 5231.6635,-802.1 "/>
+<text text-anchor="start" x="5015.2791" y="-785.5" font-family="Times,serif" font-size="14.00" fill="#000000">agents : List[BaseAgent]</text>
+<text text-anchor="start" x="5015.2791" y="-768.7" font-family="Times,serif" font-size="14.00" fill="#000000">context</text>
+<text text-anchor="start" x="5015.2791" y="-751.9" font-family="Times,serif" font-size="14.00" fill="#000000">conversation_history : List[Message]</text>
+<text text-anchor="start" x="5015.2791" y="-735.1" font-family="Times,serif" font-size="14.00" fill="#000000">current_agent_index : int</text>
+<text text-anchor="start" x="5015.2791" y="-718.3" font-family="Times,serif" font-size="14.00" fill="#000000">max_rounds : int</text>
+<text text-anchor="start" x="5015.2791" y="-701.5" font-family="Times,serif" font-size="14.00" fill="#000000">message : str</text>
+<text text-anchor="start" x="5015.2791" y="-684.7" font-family="Times,serif" font-size="14.00" fill="#000000">responses : List[Dict[str, str]]</text>
+<text text-anchor="start" x="5015.2791" y="-667.9" font-family="Times,serif" font-size="14.00" fill="#000000">round : int</text>
+<text text-anchor="start" x="5015.2791" y="-651.1" font-family="Times,serif" font-size="14.00" fill="#000000">sender_id : str</text>
+<text text-anchor="start" x="5015.2791" y="-634.3" font-family="Times,serif" font-size="14.00" fill="#000000">should_continue : bool</text>
+<polyline fill="none" stroke="#000000" points="5007.2791,-626.1 5231.6635,-626.1 "/>
+<text text-anchor="start" x="5117.7213" y="-609.5" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.core.context.RunContext -->
+<g id="node30" class="node">
+<title>omnipok_agent.core.context.RunContext</title>
+<polygon fill="none" stroke="#000000" points="4963.4134,-922.7 4963.4134,-1316.3 5197.5292,-1316.3 5197.5292,-922.7 4963.4134,-922.7"/>
+<text text-anchor="start" x="5046.6368" y="-1299.7" font-family="Times,serif" font-size="14.00" fill="#000000">RunContext</text>
+<polyline fill="none" stroke="#000000" points="4963.4134,-1291.5 5197.5292,-1291.5 "/>
+<text text-anchor="start" x="4993.7721" y="-1274.9" font-family="Times,serif" font-size="14.00" fill="#000000">budget : Optional[float]</text>
+<text text-anchor="start" x="4993.7721" y="-1258.1" font-family="Times,serif" font-size="14.00" fill="#000000">cost_incurred : float</text>
+<text text-anchor="start" x="4993.7721" y="-1241.3" font-family="Times,serif" font-size="14.00" fill="#000000">created_at : datetime</text>
+<text text-anchor="start" x="4993.7721" y="-1224.5" font-family="Times,serif" font-size="14.00" fill="#000000">end_time : Optional[datetime]</text>
+<text text-anchor="start" x="4993.7721" y="-1207.7" font-family="Times,serif" font-size="14.00" fill="#000000">max_steps : Optional[int]</text>
+<text text-anchor="start" x="4993.7721" y="-1190.9" font-family="Times,serif" font-size="14.00" fill="#000000">metadata : Dict[str, Any]</text>
+<text text-anchor="start" x="4993.7721" y="-1174.1" font-family="Times,serif" font-size="14.00" fill="#000000">request_id : str</text>
+<text text-anchor="start" x="4993.7721" y="-1157.3" font-family="Times,serif" font-size="14.00" fill="#000000">start_time : Optional[datetime]</text>
+<text text-anchor="start" x="4993.7721" y="-1140.5" font-family="Times,serif" font-size="14.00" fill="#000000">steps_taken : int</text>
+<text text-anchor="start" x="4993.7721" y="-1123.7" font-family="Times,serif" font-size="14.00" fill="#000000">tenant_id : str</text>
+<text text-anchor="start" x="4993.7721" y="-1106.9" font-family="Times,serif" font-size="14.00" fill="#000000">timeout : Optional[float]</text>
+<text text-anchor="start" x="4993.7721" y="-1090.1" font-family="Times,serif" font-size="14.00" fill="#000000">tokens_used : int</text>
+<text text-anchor="start" x="4993.7721" y="-1073.3" font-family="Times,serif" font-size="14.00" fill="#000000">user_id : str</text>
+<polyline fill="none" stroke="#000000" points="4963.4134,-1065.1 5197.5292,-1065.1 "/>
+<text text-anchor="start" x="4971.4134" y="-1048.5" font-family="Times,serif" font-size="14.00" fill="#000000">add_cost(tokens: int, cost: float): None</text>
+<text text-anchor="start" x="4971.4134" y="-1031.7" font-family="Times,serif" font-size="14.00" fill="#000000">end(): None</text>
+<text text-anchor="start" x="4971.4134" y="-1014.9" font-family="Times,serif" font-size="14.00" fill="#000000">increment_step(): None</text>
+<text text-anchor="start" x="4971.4134" y="-998.1" font-family="Times,serif" font-size="14.00" fill="#000000">is_budget_exceeded(): bool</text>
+<text text-anchor="start" x="4971.4134" y="-981.3" font-family="Times,serif" font-size="14.00" fill="#000000">is_max_steps_reached(): bool</text>
+<text text-anchor="start" x="4971.4134" y="-964.5" font-family="Times,serif" font-size="14.00" fill="#000000">is_timeout(): bool</text>
+<text text-anchor="start" x="4971.4134" y="-947.7" font-family="Times,serif" font-size="14.00" fill="#000000">start(): None</text>
+<text text-anchor="start" x="4971.4134" y="-930.9" font-family="Times,serif" font-size="14.00" fill="#000000">to_dict(): Dict[str, Any]</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.state.GroupChatState&#45;&gt;omnipok_agent.core.context.RunContext -->
+<g id="edge15" class="edge">
+<title>omnipok_agent.orchestration.langgraph.state.GroupChatState-&gt;omnipok_agent.core.context.RunContext</title>
+<path fill="none" stroke="#000000" d="M5108.6076,-827.0265C5106.0359,-853.7589 5103.2131,-883.1019 5100.3788,-912.5643"/>
+<polygon fill="#000000" stroke="#000000" points="5099.4175,-922.5569 5095.8958,-912.1718 5099.8963,-917.5798 5100.3752,-912.6028 5100.3752,-912.6028 5100.3752,-912.6028 5099.8963,-917.5798 5104.8545,-913.0338 5099.4175,-922.5569 5099.4175,-922.5569"/>
+<text text-anchor="middle" x="5123.0765" y="-891.6" font-family="Times,serif" font-size="14.00" fill="#00ff00">context</text>
+</g>
+<!-- omnipok_agent.memory.in_memory.InMemoryMemory -->
+<g id="node10" class="node">
+<title>omnipok_agent.memory.in_memory.InMemoryMemory</title>
+<polygon fill="none" stroke="#000000" points="487.8222,-34.1 487.8222,-175.7 861.1204,-175.7 861.1204,-34.1 487.8222,-34.1"/>
+<text text-anchor="start" x="620.4306" y="-159.1" font-family="Times,serif" font-size="14.00" fill="#000000">InMemoryMemory</text>
+<polyline fill="none" stroke="#000000" points="487.8222,-150.9 861.1204,-150.9 "/>
+<polyline fill="none" stroke="#000000" points="487.8222,-126.1 861.1204,-126.1 "/>
+<text text-anchor="start" x="495.8222" y="-109.5" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(agent_id: str, message: Message): None</text>
+<text text-anchor="start" x="495.8222" y="-92.7" font-family="Times,serif" font-size="14.00" fill="#000000">clear(agent_id: str): None</text>
+<text text-anchor="start" x="495.8222" y="-75.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_messages(agent_id: str, limit: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="495.8222" y="-59.1" font-family="Times,serif" font-size="14.00" fill="#000000">load(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="495.8222" y="-42.3" font-family="Times,serif" font-size="14.00" fill="#000000">save(agent_id: str, state: AgentState): None</text>
+</g>
+<!-- omnipok_agent.memory.base.Memory -->
+<g id="node15" class="node">
+<title>omnipok_agent.memory.base.Memory</title>
+<polygon fill="none" stroke="#000000" points="1403.8222,-320.5 1403.8222,-448.1 1777.1204,-448.1 1777.1204,-320.5 1403.8222,-320.5"/>
+<text text-anchor="start" x="1566.3661" y="-431.5" font-family="Times,serif" font-size="14.00" fill="#000000">Memory</text>
+<polyline fill="none" stroke="#000000" points="1403.8222,-423.3 1777.1204,-423.3 "/>
+<polyline fill="none" stroke="#000000" points="1403.8222,-398.5 1777.1204,-398.5 "/>
+<text text-anchor="start" x="1411.8222" y="-382.9" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">add_message</text>
+<text text-anchor="start" x="1486.4604" y="-382.9" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str, message: Message): None</text>
+<text text-anchor="start" x="1411.8222" y="-368.9" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">clear</text>
+<text text-anchor="start" x="1439.0172" y="-368.9" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str): None</text>
+<text text-anchor="start" x="1411.8222" y="-354.9" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">get_messages</text>
+<text text-anchor="start" x="1488.7956" y="-354.9" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str, limit: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="1411.8222" y="-340.9" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">load</text>
+<text text-anchor="start" x="1435.9274" y="-340.9" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="1411.8222" y="-326.9" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">save</text>
+<text text-anchor="start" x="1436.696" y="-326.9" font-family="Times,serif" font-size="14.00" fill="#000000">(agent_id: str, state: AgentState): None</text>
+</g>
+<!-- omnipok_agent.memory.in_memory.InMemoryMemory&#45;&gt;omnipok_agent.memory.base.Memory -->
+<g id="edge9" class="edge">
+<title>omnipok_agent.memory.in_memory.InMemoryMemory-&gt;omnipok_agent.memory.base.Memory</title>
+<path fill="none" stroke="#000000" d="M789.1223,-175.8089C815.0617,-189.1095 843.0602,-201.4432 870.4713,-209.8 1094.3656,-278.0586 1172.8848,-187.1856 1394.4713,-262.6 1430.3437,-274.8087 1466.4702,-294.6144 1497.7639,-314.7347"/>
+<polygon fill="none" stroke="#000000" points="1496.1713,-317.8749 1506.4579,-320.412 1499.9986,-312.0138 1496.1713,-317.8749"/>
+</g>
+<!-- omnipok_agent.core.exceptions.LLMException -->
+<g id="node11" class="node">
+<title>omnipok_agent.core.exceptions.LLMException</title>
+<polygon fill="none" stroke="#000000" points="5565.3149,-67.7 5565.3149,-142.1 5667.6277,-142.1 5667.6277,-67.7 5565.3149,-67.7"/>
+<text text-anchor="start" x="5573.3149" y="-125.5" font-family="Times,serif" font-size="14.00" fill="#ff0000">LLMException</text>
+<polyline fill="none" stroke="#000000" points="5565.3149,-117.3 5667.6277,-117.3 "/>
+<polyline fill="none" stroke="#000000" points="5565.3149,-92.5 5667.6277,-92.5 "/>
+<text text-anchor="start" x="5614.7213" y="-75.9" font-family="Times,serif" font-size="14.00" fill="#ff0000"> </text>
+</g>
+<!-- omnipok_agent.core.exceptions.OmniPokAgentException -->
+<g id="node20" class="node">
+<title>omnipok_agent.core.exceptions.OmniPokAgentException</title>
+<polygon fill="none" stroke="#000000" points="5536.1487,-347.1 5536.1487,-421.5 5696.7939,-421.5 5696.7939,-347.1 5536.1487,-347.1"/>
+<text text-anchor="start" x="5544.1487" y="-404.9" font-family="Times,serif" font-size="14.00" fill="#ff0000">OmniPokAgentException</text>
+<polyline fill="none" stroke="#000000" points="5536.1487,-396.7 5696.7939,-396.7 "/>
+<polyline fill="none" stroke="#000000" points="5536.1487,-371.9 5696.7939,-371.9 "/>
+<text text-anchor="start" x="5614.7213" y="-355.3" font-family="Times,serif" font-size="14.00" fill="#ff0000"> </text>
+</g>
+<!-- omnipok_agent.core.exceptions.LLMException&#45;&gt;omnipok_agent.core.exceptions.OmniPokAgentException -->
+<g id="edge8" class="edge">
+<title>omnipok_agent.core.exceptions.LLMException-&gt;omnipok_agent.core.exceptions.OmniPokAgentException</title>
+<path fill="none" stroke="#000000" d="M5616.4713,-142.2912C5616.4713,-192.442 5616.4713,-281.5323 5616.4713,-336.5008"/>
+<polygon fill="none" stroke="#000000" points="5612.9714,-336.684 5616.4713,-346.6841 5619.9714,-336.6841 5612.9714,-336.684"/>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.groupchat_graph.LangGraphGroupChat -->
+<g id="node12" class="node">
+<title>omnipok_agent.orchestration.langgraph.groupchat_graph.LangGraphGroupChat</title>
+<polygon fill="none" stroke="#000000" points="5685.4207,-.5 5685.4207,-209.3 6141.5219,-209.3 6141.5219,-.5 5685.4207,-.5"/>
+<text text-anchor="start" x="5850.4923" y="-192.7" font-family="Times,serif" font-size="14.00" fill="#000000">LangGraphGroupChat</text>
+<polyline fill="none" stroke="#000000" points="5685.4207,-184.5 6141.5219,-184.5 "/>
+<text text-anchor="start" x="5831.4355" y="-167.9" font-family="Times,serif" font-size="14.00" fill="#000000">agents</text>
+<text text-anchor="start" x="5831.4355" y="-151.1" font-family="Times,serif" font-size="14.00" fill="#000000">compiled</text>
+<text text-anchor="start" x="5831.4355" y="-134.3" font-family="Times,serif" font-size="14.00" fill="#000000">graph</text>
+<text text-anchor="start" x="5831.4355" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">max_rounds : int</text>
+<text text-anchor="start" x="5831.4355" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">memory : Optional[Memory]</text>
+<polyline fill="none" stroke="#000000" points="5685.4207,-92.5 6141.5219,-92.5 "/>
+<text text-anchor="start" x="5693.4207" y="-76.9" font-family="Times,serif" font-size="14.00" fill="#000000">add_agent(agent: BaseAgent): None</text>
+<text text-anchor="start" x="5693.4207" y="-62.9" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">clear_history</text>
+<text text-anchor="start" x="5766.5021" y="-62.9" font-family="Times,serif" font-size="14.00" fill="#000000">(): None</text>
+<text text-anchor="start" x="5693.4207" y="-48.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_conversation_history(): List[Message]</text>
+<text text-anchor="start" x="5693.4207" y="-34.9" font-family="Times,serif" font-size="14.00" fill="#000000">process_message(message: str, sender_id: str, context: RunContext): List[dict]</text>
+<text text-anchor="start" x="5693.4207" y="-20.9" font-family="Times,serif" font-size="14.00" fill="#000000">remove_agent(agent_id: str): None</text>
+<text text-anchor="start" x="5693.4207" y="-6.9" font-family="Times,serif" font-size="14.00" fill="#000000">visualize(output_path: Optional[str]): None</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.supervisor_graph.LangGraphSupervisor -->
+<g id="node13" class="node">
+<title>omnipok_agent.orchestration.langgraph.supervisor_graph.LangGraphSupervisor</title>
+<polygon fill="none" stroke="#000000" points="3757.4772,-576.1 3757.4772,-852.1 4107.4654,-852.1 4107.4654,-576.1 3757.4772,-576.1"/>
+<text text-anchor="start" x="3870.27" y="-835.5" font-family="Times,serif" font-size="14.00" fill="#000000">LangGraphSupervisor</text>
+<polyline fill="none" stroke="#000000" points="3757.4772,-827.3 4107.4654,-827.3 "/>
+<text text-anchor="start" x="3824.3878" y="-810.7" font-family="Times,serif" font-size="14.00" fill="#000000">agents</text>
+<text text-anchor="start" x="3824.3878" y="-793.9" font-family="Times,serif" font-size="14.00" fill="#000000">compiled</text>
+<text text-anchor="start" x="3824.3878" y="-777.1" font-family="Times,serif" font-size="14.00" fill="#000000">graph</text>
+<text text-anchor="start" x="3824.3878" y="-760.3" font-family="Times,serif" font-size="14.00" fill="#000000">max_retries : int</text>
+<text text-anchor="start" x="3824.3878" y="-743.5" font-family="Times,serif" font-size="14.00" fill="#000000">policy : Optional[OrchestrationPolicy]</text>
+<text text-anchor="start" x="3824.3878" y="-726.7" font-family="Times,serif" font-size="14.00" fill="#000000">router</text>
+<polyline fill="none" stroke="#000000" points="3757.4772,-718.5 4107.4654,-718.5 "/>
+<text text-anchor="start" x="3765.4772" y="-701.9" font-family="Times,serif" font-size="14.00" fill="#000000">assign_task(task: Task, context: RunContext): Optional[str]</text>
+<text text-anchor="start" x="3765.4772" y="-685.1" font-family="Times,serif" font-size="14.00" fill="#000000">get_agent(agent_id: str): Optional[BaseAgent]</text>
+<text text-anchor="start" x="3765.4772" y="-668.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_task(task_id: str): Optional[Task]</text>
+<text text-anchor="start" x="3765.4772" y="-651.5" font-family="Times,serif" font-size="14.00" fill="#000000">list_agents(): List[BaseAgent]</text>
+<text text-anchor="start" x="3765.4772" y="-634.7" font-family="Times,serif" font-size="14.00" fill="#000000">list_tasks(status: Optional[TaskStatus]): List[Task]</text>
+<text text-anchor="start" x="3765.4772" y="-617.9" font-family="Times,serif" font-size="14.00" fill="#000000">register_agent(agent: BaseAgent): None</text>
+<text text-anchor="start" x="3765.4772" y="-601.1" font-family="Times,serif" font-size="14.00" fill="#000000">unregister_agent(agent_id: str): None</text>
+<text text-anchor="start" x="3765.4772" y="-584.3" font-family="Times,serif" font-size="14.00" fill="#000000">visualize(output_path: Optional[str]): None</text>
+</g>
+<!-- omnipok_agent.orchestration.router.SimpleRouter -->
+<g id="node33" class="node">
+<title>omnipok_agent.orchestration.router.SimpleRouter</title>
+<polygon fill="none" stroke="#000000" points="3983.1847,-1082.3 3983.1847,-1156.7 4421.7579,-1156.7 4421.7579,-1082.3 3983.1847,-1082.3"/>
+<text text-anchor="start" x="4163.5856" y="-1140.1" font-family="Times,serif" font-size="14.00" fill="#000000">SimpleRouter</text>
+<polyline fill="none" stroke="#000000" points="3983.1847,-1131.9 4421.7579,-1131.9 "/>
+<text text-anchor="start" x="4135.9902" y="-1115.3" font-family="Times,serif" font-size="14.00" fill="#000000">agent_capabilities : dict</text>
+<polyline fill="none" stroke="#000000" points="3983.1847,-1107.1 4421.7579,-1107.1 "/>
+<text text-anchor="start" x="3991.1847" y="-1090.5" font-family="Times,serif" font-size="14.00" fill="#000000">route(task: Task, available_agents: List[BaseAgent]): Optional[BaseAgent]</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.supervisor_graph.LangGraphSupervisor&#45;&gt;omnipok_agent.orchestration.router.SimpleRouter -->
+<g id="edge24" class="edge">
+<title>omnipok_agent.orchestration.langgraph.supervisor_graph.LangGraphSupervisor-&gt;omnipok_agent.orchestration.router.SimpleRouter</title>
+<path fill="none" stroke="#000000" d="M4024.4462,-852.1987C4075.6926,-929.1442 4136.1763,-1019.9593 4171.8151,-1073.4703"/>
+<polygon fill="#000000" stroke="#000000" points="4177.5303,-1082.0515 4168.2417,-1076.223 4174.7587,-1077.89 4171.987,-1073.7285 4171.987,-1073.7285 4171.987,-1073.7285 4174.7587,-1077.89 4175.7324,-1071.234 4177.5303,-1082.0515 4177.5303,-1082.0515"/>
+<text text-anchor="middle" x="4068.1845" y="-891.6" font-family="Times,serif" font-size="14.00" fill="#00ff00">router</text>
+</g>
+<!-- omnipok_agent.memory.long_term.LongTermMemory -->
+<g id="node14" class="node">
+<title>omnipok_agent.memory.long_term.LongTermMemory</title>
+<polygon fill="none" stroke="#000000" points="879.3628,-17.3 879.3628,-192.5 1581.5798,-192.5 1581.5798,-17.3 879.3628,-17.3"/>
+<text text-anchor="start" x="1176.4306" y="-175.9" font-family="Times,serif" font-size="14.00" fill="#000000">LongTermMemory</text>
+<polyline fill="none" stroke="#000000" points="879.3628,-167.7 1581.5798,-167.7 "/>
+<polyline fill="none" stroke="#000000" points="879.3628,-142.9 1581.5798,-142.9 "/>
+<text text-anchor="start" x="887.3628" y="-126.3" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(agent_id: str, message: Message, importance: Optional[int]): None</text>
+<text text-anchor="start" x="887.3628" y="-109.5" font-family="Times,serif" font-size="14.00" fill="#000000">clear(agent_id: str): None</text>
+<text text-anchor="start" x="887.3628" y="-92.7" font-family="Times,serif" font-size="14.00" fill="#000000">delete_old_messages(agent_id: str, before: datetime): int</text>
+<text text-anchor="start" x="887.3628" y="-75.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_messages(agent_id: str, limit: Optional[int], since: Optional[datetime], min_importance: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="887.3628" y="-59.1" font-family="Times,serif" font-size="14.00" fill="#000000">load(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="887.3628" y="-42.3" font-family="Times,serif" font-size="14.00" fill="#000000">save(agent_id: str, state: AgentState): None</text>
+<text text-anchor="start" x="887.3628" y="-25.5" font-family="Times,serif" font-size="14.00" fill="#000000">set_session_id(session_id: str): None</text>
+</g>
+<!-- omnipok_agent.memory.long_term.LongTermMemory&#45;&gt;omnipok_agent.memory.base.Memory -->
+<g id="edge10" class="edge">
+<title>omnipok_agent.memory.long_term.LongTermMemory-&gt;omnipok_agent.memory.base.Memory</title>
+<path fill="none" stroke="#000000" d="M1343.3898,-192.5373C1393.8758,-231.7201 1452.5778,-277.2793 1500.0934,-314.1567"/>
+<polygon fill="none" stroke="#000000" points="1498.178,-317.1006 1508.2238,-320.4668 1502.4698,-311.5706 1498.178,-317.1006"/>
+</g>
+<!-- omnipok_agent.memory.base.Memory&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge28" class="edge">
+<title>omnipok_agent.memory.base.Memory-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M1681.7229,-448.4131C1713.772,-468.8851 1750.7212,-490.2832 1786.4713,-506 1948.0067,-577.0158 2140.0078,-630.0004 2288.4983,-664.7309"/>
+<polygon fill="none" stroke="#000000" points="2288.7766,-664.7956 2295.5264,-662.2578 2300.465,-667.5124 2293.7152,-670.0501 2288.7766,-664.7956"/>
+<text text-anchor="middle" x="1887.7995" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">memory</text>
+</g>
+<!-- omnipok_agent.memory.manager.MemoryManager -->
+<g id="node16" class="node">
+<title>omnipok_agent.memory.manager.MemoryManager</title>
+<polygon fill="none" stroke="#000000" points="1599.3628,-17.3 1599.3628,-192.5 2301.5798,-192.5 2301.5798,-17.3 1599.3628,-17.3"/>
+<text text-anchor="start" x="1901.4916" y="-175.9" font-family="Times,serif" font-size="14.00" fill="#000000">MemoryManager</text>
+<polyline fill="none" stroke="#000000" points="1599.3628,-167.7 2301.5798,-167.7 "/>
+<polyline fill="none" stroke="#000000" points="1599.3628,-142.9 2301.5798,-142.9 "/>
+<text text-anchor="start" x="1607.3628" y="-126.3" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(agent_id: str, message: Message, importance: Optional[int]): None</text>
+<text text-anchor="start" x="1607.3628" y="-109.5" font-family="Times,serif" font-size="14.00" fill="#000000">clear(agent_id: str): None</text>
+<text text-anchor="start" x="1607.3628" y="-92.7" font-family="Times,serif" font-size="14.00" fill="#000000">get_long_term_memory(): LongTermMemory</text>
+<text text-anchor="start" x="1607.3628" y="-75.9" font-family="Times,serif" font-size="14.00" fill="#000000">get_messages(agent_id: str, limit: Optional[int], since: Optional[datetime], min_importance: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="1607.3628" y="-59.1" font-family="Times,serif" font-size="14.00" fill="#000000">get_short_term_memory(): ShortTermMemory</text>
+<text text-anchor="start" x="1607.3628" y="-42.3" font-family="Times,serif" font-size="14.00" fill="#000000">load(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="1607.3628" y="-25.5" font-family="Times,serif" font-size="14.00" fill="#000000">save(agent_id: str, state: AgentState): None</text>
+</g>
+<!-- omnipok_agent.memory.manager.MemoryManager&#45;&gt;omnipok_agent.memory.base.Memory -->
+<g id="edge11" class="edge">
+<title>omnipok_agent.memory.manager.MemoryManager-&gt;omnipok_agent.memory.base.Memory</title>
+<path fill="none" stroke="#000000" d="M1837.5528,-192.5373C1787.0668,-231.7201 1728.3648,-277.2793 1680.8492,-314.1567"/>
+<polygon fill="none" stroke="#000000" points="1678.4728,-311.5706 1672.7188,-320.4668 1682.7646,-317.1006 1678.4728,-311.5706"/>
+</g>
+<!-- omnipok_agent.core.types.MessageRole -->
+<g id="node18" class="node">
+<title>omnipok_agent.core.types.MessageRole</title>
+<polygon fill="none" stroke="#000000" points="5249.7616,-676.9 5249.7616,-751.3 5341.181,-751.3 5341.181,-676.9 5249.7616,-676.9"/>
+<text text-anchor="start" x="5257.7616" y="-734.7" font-family="Times,serif" font-size="14.00" fill="#000000">MessageRole</text>
+<polyline fill="none" stroke="#000000" points="5249.7616,-726.5 5341.181,-726.5 "/>
+<text text-anchor="start" x="5280.3114" y="-709.9" font-family="Times,serif" font-size="14.00" fill="#000000">name</text>
+<polyline fill="none" stroke="#000000" points="5249.7616,-701.7 5341.181,-701.7 "/>
+<text text-anchor="start" x="5293.7213" y="-685.1" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.core.types.Message&#45;&gt;omnipok_agent.core.types.MessageRole -->
+<g id="edge18" class="edge">
+<title>omnipok_agent.core.types.Message-&gt;omnipok_agent.core.types.MessageRole</title>
+<path fill="none" stroke="#000000" d="M5295.4713,-472.2471C5295.4713,-534.7286 5295.4713,-616.2107 5295.4713,-666.8353"/>
+<polygon fill="#000000" stroke="#000000" points="5295.4713,-676.8427 5290.9714,-666.8426 5295.4713,-671.8427 5295.4714,-666.8427 5295.4714,-666.8427 5295.4714,-666.8427 5295.4713,-671.8427 5299.9714,-666.8427 5295.4713,-676.8427 5295.4713,-676.8427"/>
+<text text-anchor="middle" x="5306.3542" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">role</text>
+</g>
+<!-- omnipok_agent.core.types.Observation -->
+<g id="node19" class="node">
+<title>omnipok_agent.core.types.Observation</title>
+<polygon fill="none" stroke="#000000" points="6159.5007,-34.1 6159.5007,-175.7 6371.4419,-175.7 6371.4419,-34.1 6159.5007,-34.1"/>
+<text text-anchor="start" x="6231.2602" y="-159.1" font-family="Times,serif" font-size="14.00" fill="#000000">Observation</text>
+<polyline fill="none" stroke="#000000" points="6159.5007,-150.9 6371.4419,-150.9 "/>
+<text text-anchor="start" x="6167.5007" y="-134.3" font-family="Times,serif" font-size="14.00" fill="#000000">content : Union[str, Dict[str, Any]]</text>
+<text text-anchor="start" x="6167.5007" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">error_message : Optional[str]</text>
+<text text-anchor="start" x="6167.5007" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">is_error : bool</text>
+<text text-anchor="start" x="6167.5007" y="-83.9" font-family="Times,serif" font-size="14.00" fill="#000000">timestamp : datetime</text>
+<text text-anchor="start" x="6167.5007" y="-67.1" font-family="Times,serif" font-size="14.00" fill="#000000">tool_call_id : str</text>
+<polyline fill="none" stroke="#000000" points="6159.5007,-58.9 6371.4419,-58.9 "/>
+<text text-anchor="start" x="6263.7213" y="-42.3" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.llm.omnipok_llm.OmniPokLLM -->
+<g id="node21" class="node">
+<title>omnipok_agent.llm.omnipok_llm.OmniPokLLM</title>
+<polygon fill="none" stroke="#000000" points="1795.3446,-263.1 1795.3446,-505.5 2371.598,-505.5 2371.598,-263.1 1795.3446,-263.1"/>
+<text text-anchor="start" x="2041.8612" y="-488.9" font-family="Times,serif" font-size="14.00" fill="#000000">OmniPokLLM</text>
+<polyline fill="none" stroke="#000000" points="1795.3446,-480.7 2371.598,-480.7 "/>
+<text text-anchor="start" x="2007.6508" y="-464.1" font-family="Times,serif" font-size="14.00" fill="#000000">api_key</text>
+<text text-anchor="start" x="2007.6508" y="-447.3" font-family="Times,serif" font-size="14.00" fill="#000000">base_url</text>
+<text text-anchor="start" x="2007.6508" y="-430.5" font-family="Times,serif" font-size="14.00" fill="#000000">kwargs : dict</text>
+<text text-anchor="start" x="2007.6508" y="-413.7" font-family="Times,serif" font-size="14.00" fill="#000000">max_tokens : Optional[int]</text>
+<text text-anchor="start" x="2007.6508" y="-396.9" font-family="Times,serif" font-size="14.00" fill="#000000">model : NoneType, str</text>
+<text text-anchor="start" x="2007.6508" y="-380.1" font-family="Times,serif" font-size="14.00" fill="#000000">provider : str</text>
+<text text-anchor="start" x="2007.6508" y="-363.3" font-family="Times,serif" font-size="14.00" fill="#000000">temperature : float</text>
+<text text-anchor="start" x="2007.6508" y="-346.5" font-family="Times,serif" font-size="14.00" fill="#000000">timeout</text>
+<polyline fill="none" stroke="#000000" points="1795.3446,-338.3 2371.598,-338.3 "/>
+<text text-anchor="start" x="1803.3446" y="-321.7" font-family="Times,serif" font-size="14.00" fill="#000000">invoke(messages: list[dict[str, str]]): str</text>
+<text text-anchor="start" x="1803.3446" y="-304.9" font-family="Times,serif" font-size="14.00" fill="#000000">invoke_with_tools(messages: list[dict[str, Any]], tools: Optional[list[dict[str, Any]]]): dict[str, Any]</text>
+<text text-anchor="start" x="1803.3446" y="-288.1" font-family="Times,serif" font-size="14.00" fill="#000000">stream_invoke(messages: list[dict[str, str]]): Iterator[str]</text>
+<text text-anchor="start" x="1803.3446" y="-271.3" font-family="Times,serif" font-size="14.00" fill="#000000">think(messages: list[dict[str, str]], temperature: Optional[float]): Iterator[str]</text>
+</g>
+<!-- omnipok_agent.llm.omnipok_llm.OmniPokLLM&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge27" class="edge">
+<title>omnipok_agent.llm.omnipok_llm.OmniPokLLM-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M2248.0133,-505.7003C2268.5212,-520.8312 2289.7423,-536.4883 2310.9162,-552.1106"/>
+<polygon fill="#000000" stroke="#000000" points="2310.9825,-552.1595 2318.1855,-552.503 2320.6388,-559.2839 2313.4358,-558.9405 2310.9825,-552.1595"/>
+<text text-anchor="middle" x="2303.8072" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">llm</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.OrchestrationPolicy&#45;&gt;omnipok_agent.orchestration.langgraph.supervisor_graph.LangGraphSupervisor -->
+<g id="edge30" class="edge">
+<title>omnipok_agent.orchestration.policies.OrchestrationPolicy-&gt;omnipok_agent.orchestration.langgraph.supervisor_graph.LangGraphSupervisor</title>
+<path fill="none" stroke="#000000" d="M4197.4802,-438.3905C4163.6524,-473.5842 4117.7777,-521.3112 4073.7051,-567.1634"/>
+<polygon fill="none" stroke="#000000" points="4073.5258,-567.35 4072.2517,-574.4477 4065.21,-576.0015 4066.484,-568.9038 4073.5258,-567.35"/>
+<text text-anchor="middle" x="4127.9692" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">policy</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.RetryPolicy -->
+<g id="node27" class="node">
+<title>omnipok_agent.orchestration.policies.RetryPolicy</title>
+<polygon fill="none" stroke="#000000" points="4125.4162,-651.7 4125.4162,-776.5 4373.5264,-776.5 4373.5264,-651.7 4125.4162,-651.7"/>
+<text text-anchor="start" x="4216.0309" y="-759.9" font-family="Times,serif" font-size="14.00" fill="#000000">RetryPolicy</text>
+<polyline fill="none" stroke="#000000" points="4125.4162,-751.7 4373.5264,-751.7 "/>
+<text text-anchor="start" x="4147.6276" y="-735.1" font-family="Times,serif" font-size="14.00" fill="#000000">backoff_factor : float</text>
+<text text-anchor="start" x="4147.6276" y="-718.3" font-family="Times,serif" font-size="14.00" fill="#000000">max_retries : int</text>
+<text text-anchor="start" x="4147.6276" y="-701.5" font-family="Times,serif" font-size="14.00" fill="#000000">retryable_errors : Optional[List[str]]</text>
+<polyline fill="none" stroke="#000000" points="4125.4162,-693.3 4373.5264,-693.3 "/>
+<text text-anchor="start" x="4133.4162" y="-676.7" font-family="Times,serif" font-size="14.00" fill="#000000">get_backoff_delay(attempt: int): float</text>
+<text text-anchor="start" x="4133.4162" y="-659.9" font-family="Times,serif" font-size="14.00" fill="#000000">should_retry(error: str, attempt: int): bool</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.OrchestrationPolicy&#45;&gt;omnipok_agent.orchestration.policies.RetryPolicy -->
+<g id="edge23" class="edge">
+<title>omnipok_agent.orchestration.policies.OrchestrationPolicy-&gt;omnipok_agent.orchestration.policies.RetryPolicy</title>
+<path fill="none" stroke="#000000" d="M4249.4713,-438.3905C4249.4713,-493.6696 4249.4713,-579.8702 4249.4713,-641.158"/>
+<polygon fill="#000000" stroke="#000000" points="4249.4713,-651.5338 4244.9714,-641.5338 4249.4713,-646.5338 4249.4714,-641.5338 4249.4714,-641.5338 4249.4714,-641.5338 4249.4713,-646.5338 4253.9714,-641.5339 4249.4713,-651.5338 4249.4713,-651.5338"/>
+<text text-anchor="middle" x="4283.6824" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">retry_policy</text>
+</g>
+<!-- omnipok_agent.orchestration.supervisor.Supervisor -->
+<g id="node34" class="node">
+<title>omnipok_agent.orchestration.supervisor.Supervisor</title>
+<polygon fill="none" stroke="#000000" points="4391.4772,-601.3 4391.4772,-826.9 4741.4654,-826.9 4741.4654,-601.3 4391.4772,-601.3"/>
+<text text-anchor="start" x="4536.1445" y="-810.3" font-family="Times,serif" font-size="14.00" fill="#000000">Supervisor</text>
+<polyline fill="none" stroke="#000000" points="4391.4772,-802.1 4741.4654,-802.1 "/>
+<text text-anchor="start" x="4458.3878" y="-785.5" font-family="Times,serif" font-size="14.00" fill="#000000">agents</text>
+<text text-anchor="start" x="4458.3878" y="-768.7" font-family="Times,serif" font-size="14.00" fill="#000000">policy : Optional[OrchestrationPolicy]</text>
+<text text-anchor="start" x="4458.3878" y="-751.9" font-family="Times,serif" font-size="14.00" fill="#000000">router</text>
+<text text-anchor="start" x="4458.3878" y="-735.1" font-family="Times,serif" font-size="14.00" fill="#000000">tasks : Dict[str, Task]</text>
+<polyline fill="none" stroke="#000000" points="4391.4772,-726.9 4741.4654,-726.9 "/>
+<text text-anchor="start" x="4399.4772" y="-710.3" font-family="Times,serif" font-size="14.00" fill="#000000">assign_task(task: Task, context: RunContext): Optional[str]</text>
+<text text-anchor="start" x="4399.4772" y="-693.5" font-family="Times,serif" font-size="14.00" fill="#000000">get_agent(agent_id: str): Optional[BaseAgent]</text>
+<text text-anchor="start" x="4399.4772" y="-676.7" font-family="Times,serif" font-size="14.00" fill="#000000">get_task(task_id: str): Optional[Task]</text>
+<text text-anchor="start" x="4399.4772" y="-659.9" font-family="Times,serif" font-size="14.00" fill="#000000">list_agents(): List[BaseAgent]</text>
+<text text-anchor="start" x="4399.4772" y="-643.1" font-family="Times,serif" font-size="14.00" fill="#000000">list_tasks(status: Optional[TaskStatus]): List[Task]</text>
+<text text-anchor="start" x="4399.4772" y="-626.3" font-family="Times,serif" font-size="14.00" fill="#000000">register_agent(agent: BaseAgent): None</text>
+<text text-anchor="start" x="4399.4772" y="-609.5" font-family="Times,serif" font-size="14.00" fill="#000000">unregister_agent(agent_id: str): None</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.OrchestrationPolicy&#45;&gt;omnipok_agent.orchestration.supervisor.Supervisor -->
+<g id="edge31" class="edge">
+<title>omnipok_agent.orchestration.policies.OrchestrationPolicy-&gt;omnipok_agent.orchestration.supervisor.Supervisor</title>
+<path fill="none" stroke="#000000" d="M4301.4624,-438.3905C4341.5614,-480.1086 4398.588,-539.4378 4449.4747,-592.3793"/>
+<polygon fill="none" stroke="#000000" points="4449.5965,-592.506 4456.6383,-594.0598 4457.9123,-601.1575 4450.8706,-599.6037 4449.5965,-592.506"/>
+<text text-anchor="middle" x="4415.9692" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">policy</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.PermissionPolicy -->
+<g id="node23" class="node">
+<title>omnipok_agent.orchestration.policies.PermissionPolicy</title>
+<polygon fill="none" stroke="#000000" points="4261.8506,-59.3 4261.8506,-150.5 4567.092,-150.5 4567.092,-59.3 4261.8506,-59.3"/>
+<text text-anchor="start" x="4365.4727" y="-133.9" font-family="Times,serif" font-size="14.00" fill="#000000">PermissionPolicy</text>
+<polyline fill="none" stroke="#000000" points="4261.8506,-125.7 4567.092,-125.7 "/>
+<text text-anchor="start" x="4269.8506" y="-109.1" font-family="Times,serif" font-size="14.00" fill="#000000">agent_permissions : Dict[str, List[str]]</text>
+<text text-anchor="start" x="4269.8506" y="-92.3" font-family="Times,serif" font-size="14.00" fill="#000000">required_permissions : Optional[Dict[str, List[str]]]</text>
+<polyline fill="none" stroke="#000000" points="4261.8506,-84.1 4567.092,-84.1 "/>
+<text text-anchor="start" x="4289.8853" y="-67.5" font-family="Times,serif" font-size="14.00" fill="#000000">can_access(agent_id: str, resource: str): bool</text>
+</g>
+<!-- omnipok_agent.orchestration.policies.PermissionPolicy&#45;&gt;omnipok_agent.orchestration.policies.OrchestrationPolicy -->
+<g id="edge32" class="edge">
+<title>omnipok_agent.orchestration.policies.PermissionPolicy-&gt;omnipok_agent.orchestration.policies.OrchestrationPolicy</title>
+<path fill="none" stroke="#000000" d="M4387.4097,-150.7244C4360.2956,-196.6374 4318.3123,-267.7293 4287.7823,-319.4267"/>
+<polygon fill="none" stroke="#000000" points="4287.7461,-319.488 4288.1394,-326.6884 4281.6441,-329.8208 4281.2509,-322.6204 4287.7461,-319.488"/>
+<text text-anchor="middle" x="4394.1873" y="-232" font-family="Times,serif" font-size="14.00" fill="#00ff00">permission_policy</text>
+</g>
+<!-- omnipok_agent.agents.plan_solve_agent.PlanSolveAgent -->
+<g id="node24" class="node">
+<title>omnipok_agent.agents.plan_solve_agent.PlanSolveAgent</title>
+<polygon fill="none" stroke="#000000" points="2390.088,-330.3 2390.088,-438.3 2670.8546,-438.3 2670.8546,-330.3 2390.088,-330.3"/>
+<text text-anchor="start" x="2484.9776" y="-421.7" font-family="Times,serif" font-size="14.00" fill="#000000">PlanSolveAgent</text>
+<polyline fill="none" stroke="#000000" points="2390.088,-413.5 2670.8546,-413.5 "/>
+<text text-anchor="start" x="2404.9039" y="-396.9" font-family="Times,serif" font-size="14.00" fill="#000000">current_plan : NoneType, Optional[List[str]]</text>
+<text text-anchor="start" x="2404.9039" y="-380.1" font-family="Times,serif" font-size="14.00" fill="#000000">current_step_index : int</text>
+<text text-anchor="start" x="2404.9039" y="-363.3" font-family="Times,serif" font-size="14.00" fill="#000000">enable_plan_revision : bool</text>
+<polyline fill="none" stroke="#000000" points="2390.088,-355.1 2670.8546,-355.1 "/>
+<text text-anchor="start" x="2398.088" y="-338.5" font-family="Times,serif" font-size="14.00" fill="#000000">process(message: str, context: RunContext): str</text>
+</g>
+<!-- omnipok_agent.agents.plan_solve_agent.PlanSolveAgent&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge3" class="edge">
+<title>omnipok_agent.agents.plan_solve_agent.PlanSolveAgent-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M2530.4713,-438.3905C2530.4713,-468.9667 2530.4713,-509.0033 2530.4713,-549.0516"/>
+<polygon fill="none" stroke="#000000" points="2526.9714,-549.2279 2530.4713,-559.2279 2533.9714,-549.2279 2526.9714,-549.2279"/>
+</g>
+<!-- omnipok_agent.agents.react_agent.ReActAgent -->
+<g id="node25" class="node">
+<title>omnipok_agent.agents.react_agent.ReActAgent</title>
+<polygon fill="none" stroke="#000000" points="2689.088,-347.1 2689.088,-421.5 2969.8546,-421.5 2969.8546,-347.1 2689.088,-347.1"/>
+<text text-anchor="start" x="2794.4839" y="-404.9" font-family="Times,serif" font-size="14.00" fill="#000000">ReActAgent</text>
+<polyline fill="none" stroke="#000000" points="2689.088,-396.7 2969.8546,-396.7 "/>
+<polyline fill="none" stroke="#000000" points="2689.088,-371.9 2969.8546,-371.9 "/>
+<text text-anchor="start" x="2697.088" y="-355.3" font-family="Times,serif" font-size="14.00" fill="#000000">process(message: str, context: RunContext): str</text>
+</g>
+<!-- omnipok_agent.agents.react_agent.ReActAgent&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge4" class="edge">
+<title>omnipok_agent.agents.react_agent.ReActAgent-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M2795.4633,-421.8112C2766.2001,-454.0888 2721.8422,-503.016 2677.7428,-551.658"/>
+<polygon fill="none" stroke="#000000" points="2675.0792,-549.3851 2670.9555,-559.1445 2680.2652,-554.0868 2675.0792,-549.3851"/>
+</g>
+<!-- omnipok_agent.agents.reflection_agent.ReflectionAgent -->
+<g id="node26" class="node">
+<title>omnipok_agent.agents.reflection_agent.ReflectionAgent</title>
+<polygon fill="none" stroke="#000000" points="2988.088,-347.1 2988.088,-421.5 3268.8546,-421.5 3268.8546,-347.1 2988.088,-347.1"/>
+<text text-anchor="start" x="3082.209" y="-404.9" font-family="Times,serif" font-size="14.00" fill="#000000">ReflectionAgent</text>
+<polyline fill="none" stroke="#000000" points="2988.088,-396.7 3268.8546,-396.7 "/>
+<text text-anchor="start" x="3050.7118" y="-380.1" font-family="Times,serif" font-size="14.00" fill="#000000">max_reflection_rounds : int</text>
+<polyline fill="none" stroke="#000000" points="2988.088,-371.9 3268.8546,-371.9 "/>
+<text text-anchor="start" x="2996.088" y="-355.3" font-family="Times,serif" font-size="14.00" fill="#000000">process(message: str, context: RunContext): str</text>
+</g>
+<!-- omnipok_agent.agents.reflection_agent.ReflectionAgent&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge5" class="edge">
+<title>omnipok_agent.agents.reflection_agent.ReflectionAgent-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M3088.2038,-421.5764C3059.1266,-447.3093 3018.1506,-481.2206 2978.4713,-506 2913.2945,-546.7024 2838.86,-584.4058 2769.6328,-616.2234"/>
+<polygon fill="none" stroke="#000000" points="2767.9793,-613.1309 2760.3412,-620.4732 2770.8909,-619.4967 2767.9793,-613.1309"/>
+</g>
+<!-- omnipok_agent.orchestration.router.RoundRobinRouter -->
+<g id="node28" class="node">
+<title>omnipok_agent.orchestration.router.RoundRobinRouter</title>
+<polygon fill="none" stroke="#000000" points="3526.1847,-1082.3 3526.1847,-1156.7 3964.7579,-1156.7 3964.7579,-1082.3 3526.1847,-1082.3"/>
+<text text-anchor="start" x="3690.6382" y="-1140.1" font-family="Times,serif" font-size="14.00" fill="#000000">RoundRobinRouter</text>
+<polyline fill="none" stroke="#000000" points="3526.1847,-1131.9 3964.7579,-1131.9 "/>
+<polyline fill="none" stroke="#000000" points="3526.1847,-1107.1 3964.7579,-1107.1 "/>
+<text text-anchor="start" x="3534.1847" y="-1090.5" font-family="Times,serif" font-size="14.00" fill="#000000">route(task: Task, available_agents: List[BaseAgent]): Optional[BaseAgent]</text>
+</g>
+<!-- omnipok_agent.orchestration.router.Router -->
+<g id="node29" class="node">
+<title>omnipok_agent.orchestration.router.Router</title>
+<polygon fill="none" stroke="#000000" points="3647.1847,-1370.1 3647.1847,-1444.5 4085.7579,-1444.5 4085.7579,-1370.1 3647.1847,-1370.1"/>
+<text text-anchor="start" x="3847.4201" y="-1427.9" font-family="Times,serif" font-size="14.00" fill="#000000">Router</text>
+<polyline fill="none" stroke="#000000" points="3647.1847,-1419.7 4085.7579,-1419.7 "/>
+<polyline fill="none" stroke="#000000" points="3647.1847,-1394.9 4085.7579,-1394.9 "/>
+<text text-anchor="start" x="3655.1847" y="-1379.3" font-family="Times,serif" font-style="italic" font-size="14.00" fill="#000000">route</text>
+<text text-anchor="start" x="3683.9505" y="-1379.3" font-family="Times,serif" font-size="14.00" fill="#000000">(task: Task, available_agents: List[BaseAgent]): Optional[BaseAgent]</text>
+</g>
+<!-- omnipok_agent.orchestration.router.RoundRobinRouter&#45;&gt;omnipok_agent.orchestration.router.Router -->
+<g id="edge13" class="edge">
+<title>omnipok_agent.orchestration.router.RoundRobinRouter-&gt;omnipok_agent.orchestration.router.Router</title>
+<path fill="none" stroke="#000000" d="M3761.1659,-1156.8298C3783.1084,-1209.0203 3822.9401,-1303.7606 3846.8257,-1360.5728"/>
+<polygon fill="none" stroke="#000000" points="3843.7023,-1362.1745 3850.8045,-1370.0364 3850.1552,-1359.4614 3843.7023,-1362.1745"/>
+</g>
+<!-- omnipok_agent.memory.storage.sqlite_store.SQLiteStore -->
+<g id="node31" class="node">
+<title>omnipok_agent.memory.storage.sqlite_store.SQLiteStore</title>
+<polygon fill="none" stroke="#000000" points="6389.3628,-25.7 6389.3628,-184.1 7091.5798,-184.1 7091.5798,-25.7 6389.3628,-25.7"/>
+<text text-anchor="start" x="6705.4783" y="-167.5" font-family="Times,serif" font-size="14.00" fill="#000000">SQLiteStore</text>
+<polyline fill="none" stroke="#000000" points="6389.3628,-159.3 7091.5798,-159.3 "/>
+<text text-anchor="start" x="6676.3184" y="-142.7" font-family="Times,serif" font-size="14.00" fill="#000000">db_path : Optional[str]</text>
+<polyline fill="none" stroke="#000000" points="6389.3628,-134.5 7091.5798,-134.5 "/>
+<text text-anchor="start" x="6397.3628" y="-117.9" font-family="Times,serif" font-size="14.00" fill="#000000">clear_agent_memory(agent_id: str): None</text>
+<text text-anchor="start" x="6397.3628" y="-101.1" font-family="Times,serif" font-size="14.00" fill="#000000">delete_old_messages(agent_id: str, before: datetime): int</text>
+<text text-anchor="start" x="6397.3628" y="-84.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_messages(agent_id: str, limit: Optional[int], since: Optional[datetime], min_importance: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="6397.3628" y="-67.5" font-family="Times,serif" font-size="14.00" fill="#000000">load_state(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="6397.3628" y="-50.7" font-family="Times,serif" font-size="14.00" fill="#000000">save_message(agent_id: str, message: Message, importance: int, session_id: Optional[str]): int</text>
+<text text-anchor="start" x="6397.3628" y="-33.9" font-family="Times,serif" font-size="14.00" fill="#000000">save_state(agent_id: str, state: AgentState): None</text>
+</g>
+<!-- omnipok_agent.memory.short_term.ShortTermMemory -->
+<g id="node32" class="node">
+<title>omnipok_agent.memory.short_term.ShortTermMemory</title>
+<polygon fill="none" stroke="#000000" points="2319.8222,-25.7 2319.8222,-184.1 2693.1204,-184.1 2693.1204,-25.7 2319.8222,-25.7"/>
+<text text-anchor="start" x="2452.04" y="-167.5" font-family="Times,serif" font-size="14.00" fill="#000000">ShortTermMemory</text>
+<polyline fill="none" stroke="#000000" points="2319.8222,-159.3 2693.1204,-159.3 "/>
+<polyline fill="none" stroke="#000000" points="2319.8222,-134.5 2693.1204,-134.5 "/>
+<text text-anchor="start" x="2327.8222" y="-117.9" font-family="Times,serif" font-size="14.00" fill="#000000">add_message(agent_id: str, message: Message): None</text>
+<text text-anchor="start" x="2327.8222" y="-101.1" font-family="Times,serif" font-size="14.00" fill="#000000">clear(agent_id: str): None</text>
+<text text-anchor="start" x="2327.8222" y="-84.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_all_agent_ids(): List[str]</text>
+<text text-anchor="start" x="2327.8222" y="-67.5" font-family="Times,serif" font-size="14.00" fill="#000000">get_messages(agent_id: str, limit: Optional[int]): List[Message]</text>
+<text text-anchor="start" x="2327.8222" y="-50.7" font-family="Times,serif" font-size="14.00" fill="#000000">load(agent_id: str): Optional[AgentState]</text>
+<text text-anchor="start" x="2327.8222" y="-33.9" font-family="Times,serif" font-size="14.00" fill="#000000">save(agent_id: str, state: AgentState): None</text>
+</g>
+<!-- omnipok_agent.memory.short_term.ShortTermMemory&#45;&gt;omnipok_agent.memory.base.Memory -->
+<g id="edge12" class="edge">
+<title>omnipok_agent.memory.short_term.ShortTermMemory-&gt;omnipok_agent.memory.base.Memory</title>
+<path fill="none" stroke="#000000" d="M2375.0607,-184.1137C2354.0292,-194.163 2332.0679,-203.2158 2310.4713,-209.8 2086.577,-278.0586 2008.0578,-187.1856 1786.4713,-262.6 1750.5989,-274.8087 1714.4724,-294.6144 1683.1787,-314.7347"/>
+<polygon fill="none" stroke="#000000" points="1680.944,-312.0138 1674.4847,-320.412 1684.7713,-317.8749 1680.944,-312.0138"/>
+</g>
+<!-- omnipok_agent.orchestration.router.SimpleRouter&#45;&gt;omnipok_agent.orchestration.router.Router -->
+<g id="edge14" class="edge">
+<title>omnipok_agent.orchestration.router.SimpleRouter-&gt;omnipok_agent.orchestration.router.Router</title>
+<path fill="none" stroke="#000000" d="M4159.5215,-1156.7084C4113.579,-1196.4615 4038.5292,-1261.2631 3973.4713,-1316.8 3955.6593,-1332.0053 3936.1143,-1348.571 3918.658,-1363.3243"/>
+<polygon fill="none" stroke="#000000" points="3916.1787,-1360.837 3910.7982,-1369.9639 3920.6959,-1366.1844 3916.1787,-1360.837"/>
+</g>
+<!-- omnipok_agent.orchestration.supervisor.Supervisor&#45;&gt;omnipok_agent.orchestration.router.SimpleRouter -->
+<g id="edge25" class="edge">
+<title>omnipok_agent.orchestration.supervisor.Supervisor-&gt;omnipok_agent.orchestration.router.SimpleRouter</title>
+<path fill="none" stroke="#000000" d="M4465.077,-827.0265C4391.5946,-908.8665 4296.1433,-1015.1741 4242.9045,-1074.4681"/>
+<polygon fill="#000000" stroke="#000000" points="4235.9946,-1082.1639 4239.3272,-1071.7167 4239.3351,-1078.4435 4242.6755,-1074.7231 4242.6755,-1074.7231 4242.6755,-1074.7231 4239.3351,-1078.4435 4246.0239,-1077.7295 4235.9946,-1082.1639 4235.9946,-1082.1639"/>
+<text text-anchor="middle" x="4423.1845" y="-891.6" font-family="Times,serif" font-size="14.00" fill="#00ff00">router</text>
+</g>
+<!-- omnipok_agent.core.types.Task -->
+<g id="node37" class="node">
+<title>omnipok_agent.core.types.Task</title>
+<polygon fill="none" stroke="#000000" points="4654.1066,-1023.5 4654.1066,-1215.5 4838.836,-1215.5 4838.836,-1023.5 4654.1066,-1023.5"/>
+<text text-anchor="start" x="4732.8654" y="-1198.9" font-family="Times,serif" font-size="14.00" fill="#000000">Task</text>
+<polyline fill="none" stroke="#000000" points="4654.1066,-1190.7 4838.836,-1190.7 "/>
+<text text-anchor="start" x="4662.1066" y="-1174.1" font-family="Times,serif" font-size="14.00" fill="#000000">assigned_agent : Optional[str]</text>
+<text text-anchor="start" x="4662.1066" y="-1157.3" font-family="Times,serif" font-size="14.00" fill="#000000">created_at : datetime</text>
+<text text-anchor="start" x="4662.1066" y="-1140.5" font-family="Times,serif" font-size="14.00" fill="#000000">description : str</text>
+<text text-anchor="start" x="4662.1066" y="-1123.7" font-family="Times,serif" font-size="14.00" fill="#000000">error : Optional[str]</text>
+<text text-anchor="start" x="4662.1066" y="-1106.9" font-family="Times,serif" font-size="14.00" fill="#000000">id : str</text>
+<text text-anchor="start" x="4662.1066" y="-1090.1" font-family="Times,serif" font-size="14.00" fill="#000000">result : Optional[Any]</text>
+<text text-anchor="start" x="4662.1066" y="-1073.3" font-family="Times,serif" font-size="14.00" fill="#000000">status</text>
+<text text-anchor="start" x="4662.1066" y="-1056.5" font-family="Times,serif" font-size="14.00" fill="#000000">updated_at : datetime</text>
+<polyline fill="none" stroke="#000000" points="4654.1066,-1048.3 4838.836,-1048.3 "/>
+<text text-anchor="start" x="4744.7213" y="-1031.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.orchestration.supervisor.Supervisor&#45;&gt;omnipok_agent.core.types.Task -->
+<g id="edge20" class="edge">
+<title>omnipok_agent.orchestration.supervisor.Supervisor-&gt;omnipok_agent.core.types.Task</title>
+<path fill="none" stroke="#000000" d="M4616.6113,-827.0265C4642.5763,-885.5054 4674.0881,-956.477 4699.5676,-1013.8623"/>
+<polygon fill="#000000" stroke="#000000" points="4703.7648,-1023.3155 4695.5939,-1016.002 4701.7357,-1018.7457 4699.7067,-1014.1758 4699.7067,-1014.1758 4699.7067,-1014.1758 4701.7357,-1018.7457 4703.8195,-1012.3497 4703.7648,-1023.3155 4703.7648,-1023.3155"/>
+<text text-anchor="middle" x="4660.4685" y="-891.6" font-family="Times,serif" font-size="14.00" fill="#00ff00">tasks</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.state.SupervisorState -->
+<g id="node35" class="node">
+<title>omnipok_agent.orchestration.langgraph.state.SupervisorState</title>
+<polygon fill="none" stroke="#000000" points="4759.9558,-609.7 4759.9558,-818.5 4988.9868,-818.5 4988.9868,-609.7 4759.9558,-609.7"/>
+<text text-anchor="start" x="4830.148" y="-801.9" font-family="Times,serif" font-size="14.00" fill="#000000">SupervisorState</text>
+<polyline fill="none" stroke="#000000" points="4759.9558,-793.7 4988.9868,-793.7 "/>
+<text text-anchor="start" x="4767.9558" y="-777.1" font-family="Times,serif" font-size="14.00" fill="#000000">context</text>
+<text text-anchor="start" x="4767.9558" y="-760.3" font-family="Times,serif" font-size="14.00" fill="#000000">error : Optional[str]</text>
+<text text-anchor="start" x="4767.9558" y="-743.5" font-family="Times,serif" font-size="14.00" fill="#000000">history : List[Dict[str, Any]]</text>
+<text text-anchor="start" x="4767.9558" y="-726.7" font-family="Times,serif" font-size="14.00" fill="#000000">max_retries : int</text>
+<text text-anchor="start" x="4767.9558" y="-709.9" font-family="Times,serif" font-size="14.00" fill="#000000">result : Optional[str]</text>
+<text text-anchor="start" x="4767.9558" y="-693.1" font-family="Times,serif" font-size="14.00" fill="#000000">retry_count : int</text>
+<text text-anchor="start" x="4767.9558" y="-676.3" font-family="Times,serif" font-size="14.00" fill="#000000">selected_agent : Optional[BaseAgent]</text>
+<text text-anchor="start" x="4767.9558" y="-659.5" font-family="Times,serif" font-size="14.00" fill="#000000">status</text>
+<text text-anchor="start" x="4767.9558" y="-642.7" font-family="Times,serif" font-size="14.00" fill="#000000">task</text>
+<polyline fill="none" stroke="#000000" points="4759.9558,-634.5 4988.9868,-634.5 "/>
+<text text-anchor="start" x="4872.7213" y="-617.9" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.state.SupervisorState&#45;&gt;omnipok_agent.core.context.RunContext -->
+<g id="edge16" class="edge">
+<title>omnipok_agent.orchestration.langgraph.state.SupervisorState-&gt;omnipok_agent.core.context.RunContext</title>
+<path fill="none" stroke="#000000" d="M4927.5214,-818.5006C4942.3409,-847.6648 4958.9806,-880.4111 4975.6831,-913.2809"/>
+<polygon fill="#000000" stroke="#000000" points="4980.3942,-922.5522 4971.8523,-915.6757 4978.1292,-918.0947 4975.8641,-913.6371 4975.8641,-913.6371 4975.8641,-913.6371 4978.1292,-918.0947 4979.8759,-911.5986 4980.3942,-922.5522 4980.3942,-922.5522"/>
+<text text-anchor="middle" x="4986.0765" y="-891.6" font-family="Times,serif" font-size="14.00" fill="#00ff00">context</text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.state.SupervisorState&#45;&gt;omnipok_agent.core.types.Task -->
+<g id="edge19" class="edge">
+<title>omnipok_agent.orchestration.langgraph.state.SupervisorState-&gt;omnipok_agent.core.types.Task</title>
+<path fill="none" stroke="#000000" d="M4841.5081,-818.5006C4822.5981,-878.3921 4798.9183,-953.3906 4779.9264,-1013.5413"/>
+<polygon fill="#000000" stroke="#000000" points="4776.7998,-1023.4439 4775.5196,-1012.553 4778.3053,-1018.6759 4779.8107,-1013.9079 4779.8107,-1013.9079 4779.8107,-1013.9079 4778.3053,-1018.6759 4784.1019,-1015.2629 4776.7998,-1023.4439 4776.7998,-1023.4439"/>
+<text text-anchor="middle" x="4829.7462" y="-891.6" font-family="Times,serif" font-size="14.00" fill="#00ff00">task</text>
+</g>
+<!-- omnipok_agent.core.types.TaskStatus -->
+<g id="node38" class="node">
+<title>omnipok_agent.core.types.TaskStatus</title>
+<polygon fill="none" stroke="#000000" points="4791.7539,-1370.1 4791.7539,-1444.5 4869.1887,-1444.5 4869.1887,-1370.1 4791.7539,-1370.1"/>
+<text text-anchor="start" x="4799.7539" y="-1427.9" font-family="Times,serif" font-size="14.00" fill="#000000">TaskStatus</text>
+<polyline fill="none" stroke="#000000" points="4791.7539,-1419.7 4869.1887,-1419.7 "/>
+<text text-anchor="start" x="4815.3114" y="-1403.1" font-family="Times,serif" font-size="14.00" fill="#000000">name</text>
+<polyline fill="none" stroke="#000000" points="4791.7539,-1394.9 4869.1887,-1394.9 "/>
+<text text-anchor="start" x="4828.7213" y="-1378.3" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.orchestration.langgraph.state.SupervisorState&#45;&gt;omnipok_agent.core.types.TaskStatus -->
+<g id="edge22" class="edge">
+<title>omnipok_agent.orchestration.langgraph.state.SupervisorState-&gt;omnipok_agent.core.types.TaskStatus</title>
+<path fill="none" stroke="#000000" d="M4878.8373,-818.554C4882.1729,-945.602 4881.59,-1166.0872 4848.4713,-1351.6 4847.969,-1354.4137 4847.3598,-1357.2815 4846.6732,-1360.1575"/>
+<polygon fill="#000000" stroke="#000000" points="4844.084,-1369.9007 4842.3033,-1359.0804 4845.3682,-1365.0684 4846.6524,-1360.2362 4846.6524,-1360.2362 4846.6524,-1360.2362 4845.3682,-1365.0684 4851.0014,-1361.3919 4844.084,-1369.9007 4844.084,-1369.9007"/>
+<text text-anchor="middle" x="4896.4138" y="-1115.3" font-family="Times,serif" font-size="14.00" fill="#00ff00">status</text>
+</g>
+<!-- omnipok_agent.agents.support_agent.SupportAgent -->
+<g id="node36" class="node">
+<title>omnipok_agent.agents.support_agent.SupportAgent</title>
+<polygon fill="none" stroke="#000000" points="3287.1985,-347.1 3287.1985,-421.5 3381.7441,-421.5 3381.7441,-347.1 3287.1985,-347.1"/>
+<text text-anchor="start" x="3295.1985" y="-404.9" font-family="Times,serif" font-size="14.00" fill="#000000">SupportAgent</text>
+<polyline fill="none" stroke="#000000" points="3287.1985,-396.7 3381.7441,-396.7 "/>
+<polyline fill="none" stroke="#000000" points="3287.1985,-371.9 3381.7441,-371.9 "/>
+<text text-anchor="start" x="3332.7213" y="-355.3" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.agents.support_agent.SupportAgent&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge6" class="edge">
+<title>omnipok_agent.agents.support_agent.SupportAgent-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M3325.9304,-421.6222C3317.8452,-448.7534 3303.0301,-484.3744 3277.4713,-506 3200.5471,-571.0867 2958.1606,-631.2109 2770.1238,-669.9208"/>
+<polygon fill="none" stroke="#000000" points="2769.1777,-666.5419 2760.0838,-671.978 2770.5829,-673.3994 2769.1777,-666.5419"/>
+</g>
+<!-- omnipok_agent.core.types.Task&#45;&gt;omnipok_agent.core.types.TaskStatus -->
+<g id="edge21" class="edge">
+<title>omnipok_agent.core.types.Task-&gt;omnipok_agent.core.types.TaskStatus</title>
+<path fill="none" stroke="#000000" d="M4774.5589,-1215.7334C4788.7004,-1264.1848 4805.2141,-1320.7641 4816.61,-1359.8084"/>
+<polygon fill="#000000" stroke="#000000" points="4819.5371,-1369.8372 4812.4154,-1361.4986 4818.1361,-1365.0375 4816.7352,-1360.2377 4816.7352,-1360.2377 4816.7352,-1360.2377 4818.1361,-1365.0375 4821.055,-1358.9769 4819.5371,-1369.8372 4819.5371,-1369.8372"/>
+<text text-anchor="middle" x="4828.4138" y="-1339" font-family="Times,serif" font-size="14.00" fill="#00ff00">status</text>
+</g>
+<!-- omnipok_agent.agents.text_agent.TextAgent -->
+<g id="node39" class="node">
+<title>omnipok_agent.agents.text_agent.TextAgent</title>
+<polygon fill="none" stroke="#000000" points="3399.5365,-347.1 3399.5365,-421.5 3475.4061,-421.5 3475.4061,-347.1 3399.5365,-347.1"/>
+<text text-anchor="start" x="3407.5365" y="-404.9" font-family="Times,serif" font-size="14.00" fill="#000000">TextAgent</text>
+<polyline fill="none" stroke="#000000" points="3399.5365,-396.7 3475.4061,-396.7 "/>
+<polyline fill="none" stroke="#000000" points="3399.5365,-371.9 3475.4061,-371.9 "/>
+<text text-anchor="start" x="3435.7213" y="-355.3" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.agents.text_agent.TextAgent&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge7" class="edge">
+<title>omnipok_agent.agents.text_agent.TextAgent-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M3432.3286,-421.6814C3426.644,-448.8432 3414.8251,-484.4765 3390.4713,-506 3299.2857,-586.5881 2991.5525,-647.1349 2770.245,-681.5789"/>
+<polygon fill="none" stroke="#000000" points="2769.4503,-678.1601 2760.1033,-683.1485 2770.521,-685.0777 2769.4503,-678.1601"/>
+</g>
+<!-- omnipok_agent.core.types.ToolCall -->
+<g id="node40" class="node">
+<title>omnipok_agent.core.types.ToolCall</title>
+<polygon fill="none" stroke="#000000" points="7109.6052,-42.5 7109.6052,-167.3 7273.3374,-167.3 7273.3374,-42.5 7109.6052,-42.5"/>
+<text text-anchor="start" x="7166.5835" y="-150.7" font-family="Times,serif" font-size="14.00" fill="#000000">ToolCall</text>
+<polyline fill="none" stroke="#000000" points="7109.6052,-142.5 7273.3374,-142.5 "/>
+<text text-anchor="start" x="7117.6052" y="-125.9" font-family="Times,serif" font-size="14.00" fill="#000000">arguments : Dict[str, Any]</text>
+<text text-anchor="start" x="7117.6052" y="-109.1" font-family="Times,serif" font-size="14.00" fill="#000000">id : str</text>
+<text text-anchor="start" x="7117.6052" y="-92.3" font-family="Times,serif" font-size="14.00" fill="#000000">name : str</text>
+<text text-anchor="start" x="7117.6052" y="-75.5" font-family="Times,serif" font-size="14.00" fill="#000000">timestamp : datetime</text>
+<polyline fill="none" stroke="#000000" points="7109.6052,-67.3 7273.3374,-67.3 "/>
+<text text-anchor="start" x="7189.7213" y="-50.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.tools.registry.ToolDefinition -->
+<g id="node41" class="node">
+<title>omnipok_agent.tools.registry.ToolDefinition</title>
+<polygon fill="none" stroke="#000000" points="7291.0603,-42.5 7291.0603,-167.3 7541.8823,-167.3 7541.8823,-42.5 7291.0603,-42.5"/>
+<text text-anchor="start" x="7374.4776" y="-150.7" font-family="Times,serif" font-size="14.00" fill="#000000">ToolDefinition</text>
+<polyline fill="none" stroke="#000000" points="7291.0603,-142.5 7541.8823,-142.5 "/>
+<text text-anchor="start" x="7299.0603" y="-125.9" font-family="Times,serif" font-size="14.00" fill="#000000">description : str</text>
+<text text-anchor="start" x="7299.0603" y="-109.1" font-family="Times,serif" font-size="14.00" fill="#000000">name : str</text>
+<text text-anchor="start" x="7299.0603" y="-92.3" font-family="Times,serif" font-size="14.00" fill="#000000">required_permissions : Optional[List[str]]</text>
+<text text-anchor="start" x="7299.0603" y="-75.5" font-family="Times,serif" font-size="14.00" fill="#000000">tool</text>
+<polyline fill="none" stroke="#000000" points="7291.0603,-67.3 7541.8823,-67.3 "/>
+<text text-anchor="start" x="7414.7213" y="-50.7" font-family="Times,serif" font-size="14.00" fill="#000000"> </text>
+</g>
+<!-- omnipok_agent.tools.registry.ToolRegistry -->
+<g id="node42" class="node">
+<title>omnipok_agent.tools.registry.ToolRegistry</title>
+<polygon fill="none" stroke="#000000" points="3493.8828,-313.5 3493.8828,-455.1 4037.0598,-455.1 4037.0598,-313.5 3493.8828,-313.5"/>
+<text text-anchor="start" x="3728.5309" y="-438.5" font-family="Times,serif" font-size="14.00" fill="#000000">ToolRegistry</text>
+<polyline fill="none" stroke="#000000" points="3493.8828,-430.3 4037.0598,-430.3 "/>
+<polyline fill="none" stroke="#000000" points="3493.8828,-405.5 4037.0598,-405.5 "/>
+<text text-anchor="start" x="3501.8828" y="-388.9" font-family="Times,serif" font-size="14.00" fill="#000000">execute(name: str, arguments: Dict[str, Any]): Any</text>
+<text text-anchor="start" x="3501.8828" y="-372.1" font-family="Times,serif" font-size="14.00" fill="#000000">get_tool(name: str): Optional[ToolDefinition]</text>
+<text text-anchor="start" x="3501.8828" y="-355.3" font-family="Times,serif" font-size="14.00" fill="#000000">get_tool_schema(name: str): Optional[Dict[str, Any]]</text>
+<text text-anchor="start" x="3501.8828" y="-338.5" font-family="Times,serif" font-size="14.00" fill="#000000">list_tools(user_permissions: Optional[List[str]]): List[ToolDefinition]</text>
+<text text-anchor="start" x="3501.8828" y="-321.7" font-family="Times,serif" font-size="14.00" fill="#000000">register(tool: BaseTool, name: Optional[str], required_permissions: Optional[List[str]]): None</text>
+</g>
+<!-- omnipok_agent.tools.registry.ToolRegistry&#45;&gt;omnipok_agent.core.base.BaseAgent -->
+<g id="edge33" class="edge">
+<title>omnipok_agent.tools.registry.ToolRegistry-&gt;omnipok_agent.core.base.BaseAgent</title>
+<path fill="none" stroke="#000000" d="M3611.135,-455.1566C3570.3441,-472.7745 3526.0808,-490.9175 3484.4713,-506 3249.222,-591.2725 2968.0882,-647.3952 2772.1967,-679.6334"/>
+<polygon fill="none" stroke="#000000" points="2772.1419,-679.6423 2766.8662,-684.5583 2760.2992,-681.5793 2765.5749,-676.6632 2772.1419,-679.6423"/>
+<text text-anchor="middle" x="3446.2427" y="-528.2" font-family="Times,serif" font-size="14.00" fill="#00ff00">tool_registry</text>
+</g>
+</g>
+</svg>

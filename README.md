@@ -10,7 +10,7 @@ A flexible and extensible multi-agent framework built with Python and FastAPI.
 - **Orchestration**: Supervisor pattern for task routing and coordination
 - **Group Chat**: Multi-agent collaboration and conversation
 - **REST API**: FastAPI-based RESTful API for agent interactions
-- **Web UI**: Chainlit and Gradio interfaces for interactive agent chat
+- **Web UI**: Chainlit interface for interactive agent chat with multimodal support
 - **Context Management**: Run context with budget, timeout, and step limits
 
 ## Project Structure
@@ -21,8 +21,11 @@ src/
 │  ├─ api/                      # FastAPI routes
 │  ├─ ui/                       # UI interfaces
 │  │  ├─ chainlit_app.py        # Chainlit UI
-│  │  ├─ gradio_app.py          # Gradio UI
 │  │  └─ chainlit_main.py       # Chainlit entry point
+│  ├─ config/                   # Configuration management
+│  │  └─ agent_config.py        # Agent configuration
+│  └─ services/                 # Service layer
+│     └─ agent_service.py       # Agent service (singleton)
 │  └─ main.py                   # FastAPI app entry
 ├─ agent/
 │  ├─ core/                     # 核心抽象和接口
@@ -47,8 +50,8 @@ src/
 └─ common/                      # 通用工具
 ```
 
-![Packages Relations](./images/Class_Relation.svg)
-![Project UML](./images/Project_UMLProject_UML.svg)
+![Packages Relations](./images/packages.svg)
+![Project UML](./images/UML.svg)
 
 ## Todo:
 [] 重新定义 Agent
@@ -66,8 +69,7 @@ pip install -r requirements.txt
 ### 1. Basic Usage
 
 ```python
-from src.agent.core import RunContext, InMemoryMemory, global_registry, OmniPokLLM, HelloAgentsLLM
-from src.agent.agents import BaseAgentImpl
+from src.agent.core import RunContext, InMemoryMemory, global_registry, OmniPokLLM, BaseAgent
 from src.agent.tools import http_get
 
 # Register a tool
@@ -78,15 +80,15 @@ global_registry.register(
 )
 
 # Create LLM instance - framework auto-detects provider
-llm = HelloAgentsLLM()
+llm = OmniPokLLM()
 
 # Or manually specify provider (optional)
-# llm = HelloAgentsLLM(provider="openai", model="gpt-4")
-# llm = HelloAgentsLLM(provider="modelscope", model="qwen/Qwen2.5-7B-Instruct")
+# llm = OmniPokLLM(provider="openai", model="gpt-4")
+# llm = OmniPokLLM(provider="modelscope", model="qwen/Qwen2.5-7B-Instruct")
 
 # Create an agent
 memory = InMemoryMemory()
-agent = BaseAgentImpl(
+agent = BaseAgent(
     agent_id="agent-1",
     name="AI助手",
     llm=llm,
@@ -134,7 +136,46 @@ uvicorn src.app.main:app --reload
 
 Then visit `http://localhost:8000/docs` for API documentation.
 
-### 4. Running Chainlit UI
+### 4. Agent Configuration
+
+The agent service uses a centralized configuration system. You can configure agents via:
+
+**Option 1: Environment Variables**
+```bash
+export OPENAI_API_KEY="your-api-key"
+export DEFAULT_LLM_MODEL="gpt-4"
+export AGENTS_CONFIG='[{"agent_type":"TextAgent","agent_id":"text-agent-1","name":"Text Agent","enabled":true}]'
+```
+
+**Option 2: Configuration File (recommended)**
+Create `config/agents.json` (see `config/agents.json.example` for template):
+```json
+{
+  "defaults": {
+    "llm_provider": "openai",
+    "llm_model": "gpt-4",
+    "llm_api_key_env": "OPENAI_API_KEY"
+  },
+  "agents": [
+    {
+      "agent_type": "TextAgent",
+      "agent_id": "text-agent-1",
+      "name": "Text Agent",
+      "enabled": true
+    },
+    {
+      "agent_type": "CodeAgent",
+      "agent_id": "code-agent-1",
+      "programming_language": "python",
+      "enabled": true
+    }
+  ]
+}
+```
+
+The service automatically loads configuration on startup. The FastAPI backend and Chainlit UI share the same agent service instance (singleton pattern).
+
+### 5. Running Chainlit UI
 
 **Option 1: Using the convenience script (recommended)**
 ```bash
@@ -155,20 +196,6 @@ python -m chainlit run src/app/ui/chainlit_main.py
 
 Then visit `http://localhost:8000` (default Chainlit port).
 
-### 5. Running Gradio UI
-
-```bash
-python src/app/ui/gradio_main.py
-```
-
-Or with custom options:
-
-```bash
-python src/app/ui/gradio_main.py --port 7860 --host 0.0.0.0 --share
-```
-
-Then visit `http://localhost:7860`.
-
 ## API Endpoints
 
 - `POST /api/v1/chat` - Chat with an agent
@@ -179,16 +206,11 @@ Then visit `http://localhost:7860`.
 ## UI Features
 
 ### Chainlit UI
-- Interactive chat interface
+- Interactive chat interface with multimodal support
 - Agent selection
 - Real-time conversation
 - Usage statistics display
-
-### Gradio UI
-- Web-based chat interface
-- Agent dropdown selection
-- Conversation history
-- Agent information display
+- File upload support (images, audio, video)
 
 ## Extending the Framework
 
