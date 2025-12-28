@@ -1,6 +1,38 @@
-# OmniPok Agent Framework
+# OmniPok Agent Framework 企业级多Agent系统
 
 一个灵活且可扩展的多智能体框架，基于 Python 和 FastAPI 构建。
+
+## 🛠️ 技术栈
+
+### 核心框架
+- **Python 3.8+** - 编程语言
+- **FastAPI** - 现代、快速的 Web 框架，用于构建 REST API
+- **Uvicorn** - 高性能 ASGI 服务器
+- **Pydantic** - 数据验证和设置管理
+
+### LLM 集成
+- **OpenAI SDK** - OpenAI API 集成
+- **LangChain Core** - LLM 应用开发框架
+- **LangGraph** - 多智能体编排和状态管理
+
+### 用户界面
+- **Chainlit** - 交互式聊天界面框架
+- **HTML/CSS/JavaScript** - 前端 Web 界面
+
+### 工具与集成
+- **httpx** - 异步 HTTP 客户端
+- **LangChain Tools** - 工具系统集成
+
+### RAG (检索增强生成)
+- **ChromaDB** - 向量数据库，用于文档存储和检索
+
+### 搜索功能
+- **SerpAPI** - 网络搜索 API 集成
+
+### 开发工具
+- **python-dotenv** - 环境变量管理
+- **Black** - 代码格式化
+- **Ruff** - 代码检查和格式化
 
 ## 初步的交互界面
 [初步交互界面](./images/UI.png)
